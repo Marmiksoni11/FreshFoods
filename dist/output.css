@@ -1,0 +1,1605 @@
+/*
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.-m-4 {
+  margin: -1rem;
+}
+
+.-mx-8 {
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-52 {
+  margin-left: 13rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-1\/5 {
+  width: 20%;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.bg-indigo-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.fill-current {
+  fill: currentColor;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.shadow-custom {
+  --tw-shadow: 0 1px 5px 5px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --tw-shadow-colored: 0 1px 5px 5px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+*{
+  margin:0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family:Helvetica,Arial,sans-serif;
+}
+
+#logo img{
+  height: 5em;
+}
+
+.photo img{
+  height: 10rem;
+  width:10rem;
+}
+
+#navbar{
+  /* position: sticky; */
+  /* position: relative; */
+  background: white;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  /* background: rgb(255, 196, 196); */
+  /* box-shadow: 0px -5px 26px 7px #888888; */
+  box-shadow: 0px -11px 32px 5px #888888;
+}
+
+#logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 8%;
+  font-family: 'Kaushan Script', cursive;
+}
+
+#logo p{
+  padding-left: 0.2rem;
+  font-size: 1.8rem;
+}
+
+#links{
+  list-style: none;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40rem;
+}
+
+#links li {
+  padding: 0rem 2rem;
+  margin: 0rem 0.5rem;
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#links li:hover{
+  /* background: #fff4e9; */
+  /* background: #ffdab5; */
+  /* background: #ffdab5; */
+  background: #e0f1ff;
+  border-radius: 37px;
+  cursor: pointer;
+}
+
+#links li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  font-family:Helvetica,Arial,sans-serif;
+}
+
+#cart{
+  width: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: #f2bc87; */
+  background: #ffdab5;
+}
+
+#cart a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  height: 8vh;
+  position: relative;
+  /* top: 18%; */
+  align-items: center;
+  justify-content: center;
+}
+
+#cart a svg{
+  position: relative;
+  fill: #000;
+  height: 50%;
+  width: 85%;
+  stroke: #000;
+  /* right: 34%; */
+}
+
+#cart a svg path{
+  stroke-width: 0.45px;
+}
+
+#cart a span{
+  position: relative;
+  font-weight: 600;
+  bottom: 2%;
+  color: #000;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  transition: opacity 0.5s ease-in;
+}
+
+/* to make the cart span hidden if it becomes 0 */
+
+.hidden {
+  display: none;
+}
+
+#search{
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchBox{
+  z-index: 1;
+  position: relative;
+  width: 50vw;
+  height: 18vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchInput{
+  height: 5vh;
+  width: 35vw;
+  padding-left: 1rem;
+  border: 2px solid black;
+  font-size: 1.1rem;
+}
+
+#submitInput{
+  height: 5vh;
+  width: 9vw;
+  font-size: 1.2rem;
+  background: aliceblue;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+#search::after{
+  content: "";
+  background: url(/images/top-view-circular-food-frame.jpg)center center/cover no-repeat;
+  height: 85vh;
+  position: absolute;
+  width: 98.957vw;
+}
+
+/* .sticky {
+    position: sticky;
+    transition: position 1s ease-in;
+    top: 0;
+    width: 100%;
+  }
+   */
+
+#categories{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+#categories h1{
+  font-size: 3rem;
+  margin-top: 0rem;
+  margin-bottom: 3.5rem;
+  background: #fff4e8;
+  height: 14%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 19px
+}
+
+#categoryBox{
+  display: flex;
+  flex-direction: row;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.categoryBox::-webkit-scrollbar {
+  display: none;
+}
+
+.category{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 3.7rem;
+  border:  1px solid #dadada;
+  height: 45.2vh;
+  /* box-shadow: 0px -11px 32px 5px #888888; */
+}
+
+.category h2{
+  padding: 2rem 1rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: 'Assistant', sans-serif;
+}
+
+.card{
+  position: relative;
+  width: 24rem;
+  height: 17rem;
+  overflow: hidden;
+}
+
+.category img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all .2s cubic-bezier(.15,.69,.83,.67);
+  /* border-radius: 14px; */
+}
+
+.category img:hover{
+  transform: scale(1.2,1.2);
+  cursor: pointer;
+  /* position: relative; */
+}
+
+/* #bestSellers{ */
+
+/* background: #e0f1ff; */
+
+/* background: #fff4e880; */
+
+/* background: url("/static/images/flip.jpg")center center/cover no-repeat; */
+
+/* } */
+
+/* #bestSellers::before {
+    content: "";
+    transform: scaleY(-1);
+    background: url(/static/images/flip.jpg)center center/cover no-repeat;
+
+    height: 130vh;
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+} */
+
+#bestSellers{
+  border-top:1px solid black;
+  /* border-bottom:1px solid black; */
+}
+
+#best-seller-box{
+  /* transform:none; */
+  display: flex;
+  flex-direction: column;
+  height: 143vh;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#best-seller-box h1{
+  font-size: 3rem;
+}
+
+.item{
+  border-radius: 10px;
+  border: 1px solid #c3c3c3;
+  background: #fff4ed;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 84%;
+  margin: 3rem 2.5rem;
+}
+
+.twoItems{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.item .photo{
+  position: relative;
+  height: 15.5rem;
+  width: 23rem;
+  border-radius: 10px;
+  overflow: hidden;
+  top: 5%;
+  left: 6.5%;
+}
+
+.item img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+
+.item img:hover{
+  transform: scale(1.2,1.2);
+  cursor: pointer;
+  /* position: relative; */
+}
+
+.details{
+  width: 74%;
+  position: relative;
+  left: 7%;
+  /* top: 10%; */
+}
+
+.details p {
+  line-height: 1.8rem;
+}
+
+#detailBox input{
+  height: 2rem;
+  width: 6rem;
+  font-size: 1rem;
+  /* background: #c3e2ff; */
+  font-weight: 600;
+  /* margin-top: 0.5rem; */
+  border-radius: 30px;
+  /* margin-left: 14rem; */
+  border: none;
+  /* background-color: rgb(255, 210, 210); */
+  transition: backgroung-image 1s cubic-bezier(.15,.69,.83,.67);
+  background-image: linear-gradient(to right,#f5914e,#e85826);
+  color: #fff!important;
+}
+
+#detailBox input:hover{
+  cursor: pointer;
+  background: #c3e2ff;
+  /* background-color: rgb(255, 210, 210); */
+  background-image: linear-gradient(to left,#f5914e,#e85826);
+}
+
+.details p:nth-child(1), .details p:nth-child(2){
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.details p:nth-child(3){
+  color: #4a4a4a;
+}
+
+#best-seller-box h1{
+  background: #e0f1ff;
+  font-size: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  height: 6%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 19px;
+}
+
+#detailBox{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+
+/* * ReachUs Section */
+
+#reachUs{
+  display: flex;
+  flex-direction: row;
+  height: 26vh;
+  border-top: 1px solid #e7e7e7;
+}
+
+#lefthelp{
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 7rem;
+}
+
+.helpbox{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 3rem;
+}
+
+.helpbox h2{
+  margin: 1rem 0rem;
+  color: #a5afb6;
+  font-size: 1rem;
+  font-weight:600;
+}
+
+.helpbox svg{
+  display: inline;
+}
+
+#righthelp a img{
+  height: 2.5rem;
+  display: inline;
+  vertical-align: 0%;
+}
+
+#reachUs a{
+  text-decoration: none;
+  margin: 0.5rem 0rem;
+  color: #5c6c79;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+
+#reachUs a:hover{
+  /* color: rgb(255, 210, 210); */
+  color: rgb(255, 71, 71);
+  cursor: pointer;
+}
+
+#righthelp{
+  position: relative;
+  left: 20%;
+  top: 50%;
+  height: 16%;
+  width: 27%;
+}
+
+#righthelp a{
+  margin: 0rem 0.2rem;
+}
+
+#righthelp a svg{
+  margin: 0rem 0.2rem;
+  display: inline;
+  vertical-align: 0%;
+}
+
+#righthelp a:nth-child(3){
+  position: relative;
+  bottom:27%;
+}
+
+#righthelp a:nth-child(4){
+  position: relative;
+  bottom:27%;
+}
+
+#righthelp a:nth-child(5){
+  position: relative;
+  bottom:27%;
+}
+
+#righthelp a:nth-child(3) path{
+  transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+
+#righthelp a:nth-child(4) path{
+  transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+
+#righthelp a:nth-child(5) path{
+  transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+
+#righthelp a:nth-child(3) path:hover{
+  fill:#648EDE;
+}
+
+#righthelp a:nth-child(4) path:hover{
+  fill:#0EB3FF;
+}
+
+#righthelp a:nth-child(5) path:hover{
+  fill:rgb(203, 0, 243);
+}
+
+.helpbox a path{
+  fill:black;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5c5c5c;
+  height: 7vh;
+  border-top: 1px solid #e4e4e4;
+}
+
+/* Shopping Cart */
+
+#cart {
+  position: relative;
+  cursor: pointer;
+}
+
+#cart-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-width: 200px;
+  display: none;
+  /* Hide the cart content by default */
+  z-index: 1;
+}
+
+/* bootstrap icons and increment order */
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 16px;
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+
+.bi-dash-lg {
+  color: red;
+}
+
+.bi-dash-lg:hover{
+  cursor: pointer;
+}
+
+.bi-plus-lg {
+  color: green;
+}
+
+.bi-plus-lg:hover{
+  cursor: pointer;
+}
+
+#orderSec{
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+
+#orderSec a{
+  margin-top: 0.8em;
+}
+
+/* for shopping cart */
+
+#summary {
+  background-color: #f6f6f6;
+}
+
+/* slider */
+
+/* PRODUCTS */
+
+.categoryBox::-webkit-scrollbar {
+  display: none;
+}
+
+.category:hover{
+  opacity: 1;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 4vw;
+  height: 100%;
+  position: relative;
+  /* top: 506px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%); */
+  cursor: pointer;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+/* .pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+} */
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+.btns{
+  display: flex;
+  /* background: red; */
+  height: 5vh;
+  margin-top: 36px;
+}
+
+.hover\:scale-125:hover {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-indigo-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-1\/4 {
+    width: 25%;
+  }
+}

@@ -1,0 +1,27 @@
+
+1. Add shopping cart functionality ---- (DONE)
+
+2. Dynamically add products using Backend ---- (DONE (w/o Node.js - Only Vanilla JS))
+
+// here starts MERN/Node.js : 
+
+3. After adding products implement searching and sorting functionalities
+
+4. add the searching functionality in search bar and make frontend for the searching and sorting using axios. 
+
+5. take contact form submissions.
+
+6. add login and authentication.
+
+7. Improve UI.(if you want to.)
+
+
+tommorow : 
+
+Best seller section is remaining to be made dynamic.  ---- (DONE)
+ 
+add navbar js in all the html files  ---- (DONE)
+
+tommorow :
+
+3. After adding products implement searching and sorting functionalities

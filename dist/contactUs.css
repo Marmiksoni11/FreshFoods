@@ -1,0 +1,318 @@
+/* Boiler Plate */
+
+*{
+    margin:0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+body{
+    font-family:Helvetica,Arial,sans-serif;
+}
+
+
+/* Navbar */
+
+#logo img{
+    height: 5em;
+}
+
+.photo img{
+    height: 10rem;
+    width:10rem;
+}
+
+#navbar{
+    /* position: sticky; */
+    /* position: relative; */
+    background: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    /* background: rgb(255, 196, 196); */
+    /* box-shadow: 0px -5px 26px 7px #888888; */
+    box-shadow: 0px -11px 32px 5px #888888;
+}
+#logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 8%;
+    font-family: 'Kaushan Script', cursive;
+}
+#logo p{
+    padding-left: 0.2rem;
+    font-size: 1.8rem;
+}
+#links{
+    list-style: none;
+    list-style: none;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40rem;
+}
+#links li {
+    padding: 0rem 2rem;
+    margin: 0rem 0.5rem;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#links li:hover{
+    /* background: #fff4e9; */
+    /* background: #ffdab5; */
+    /* background: #ffdab5; */
+    background: #e0f1ff;
+    border-radius: 37px;
+    cursor: pointer;
+} 
+
+#links li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    font-family:Helvetica,Arial,sans-serif;
+}
+#cart{
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: #f2bc87; */
+    background: #ffdab5;
+}
+#cart a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    height: 8vh;
+    position: relative;
+    /* top: 18%; */
+    align-items: center;
+    justify-content: center;
+}
+
+#cart a svg{
+    position: relative;
+    fill: #000;
+    height: 50%;
+    width: 85%;
+    stroke: #000;
+    /* right: 34%; */
+}
+#cart a svg path{
+    stroke-width: 0.45px;
+}
+#cart a span{
+    position: relative;
+    font-weight: 600;
+    bottom: 2%;
+    color: #000;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    transition: opacity 0.5s ease-in;
+}
+
+
+/* footer */
+
+
+#reachUs{
+    display: flex;
+    flex-direction: row; 
+    height: 26vh;
+    border-top: 1px solid #e7e7e7;
+}
+#lefthelp{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 7rem;
+}
+.helpbox{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 3rem;
+}
+.helpbox h2{
+    margin: 1rem 0rem;
+    color: #a5afb6;
+    font-size: 1rem;
+}
+#righthelp a img{
+    height: 2.5rem;
+}
+#reachUs a{
+    text-decoration: none;
+    margin: 0.5rem 0rem;
+    color: #5c6c79;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all .2s cubic-bezier(.15,.69,.83,.67);
+    
+}
+#reachUs a:hover{
+    /* color: rgb(255, 210, 210); */
+    color: rgb(255, 71, 71);
+    cursor: pointer;
+}
+#righthelp{
+    position: relative;
+    left: 20%;
+    top: 50%;
+    height: 16%;
+    width: 27%;
+}
+#righthelp a{
+    margin: 0rem 0.2rem;
+}
+#righthelp a:nth-child(3){
+    position: relative;
+    bottom:27%;
+}
+#righthelp a:nth-child(4){
+    position: relative;
+    bottom:27%;
+}
+#righthelp a:nth-child(5){
+    position: relative;
+    bottom:27%;
+}
+
+#righthelp a:nth-child(3) path{
+    transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+#righthelp a:nth-child(4) path{
+    transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+#righthelp a:nth-child(5) path{
+    transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+
+#righthelp a:nth-child(3) path:hover{
+    fill:#648EDE;
+}
+#righthelp a:nth-child(4) path:hover{
+    fill:#0EB3FF;
+}
+#righthelp a:nth-child(5) path:hover{
+    fill:rgb(203, 0, 243);
+}
+
+.helpbox a path{
+    fill:black;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5c5c5c;
+    height: 7vh;
+    border-top: 1px solid #e4e4e4;
+}
+
+
+/* form starts here */
+
+#formMain{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#formMain h1{
+font-size: 3.5rem;
+margin-bottom: 2.5rem;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 44%;
+    background: #fff8f0;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    border-radius: 30px;
+}
+.field{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 1rem;
+    font-size: 1.5rem;
+}
+.field input{
+    font-size: 1.2rem;
+    height: 2rem;
+    margin:0rem 2rem;
+    width: 24rem;
+    border: 2px solid black;
+    background: aliceblue;
+}
+#nameDiv input{
+    position: relative;
+    left: 1.8%;
+}
+#emailDiv input{
+    position: relative;
+    left: 2.2%;
+}
+#queryDiv input{
+    position: relative;
+    left: 1%;
+}
+#numberDiv input{
+    position: relative;
+    right: 0.2%;
+}
+
+#nameDiv label{
+    position: relative;
+    left: 1%;
+}
+
+#emailDiv label{
+    position: relative;
+    left: 1%;
+}
+
+#numberDiv label{
+    position: relative;
+    right: 1.5%;
+}
+
+#queryDiv label{
+    position: relative;
+    right: 1.5%;
+}
+
+.field textarea{
+    font-size: 1rem;
+    width: 24rem;
+    margin:0rem 2rem;
+    height: 10vh;
+    border: 2px solid black;
+    background: aliceblue;
+}
+#btnDiv input{
+    width: 10vw;
+    height: 5vh;
+    background: rgb(255, 210, 210);
+    cursor: pointer;
+}
+#btnDiv input:hover{
+    background: aliceblue;
+}

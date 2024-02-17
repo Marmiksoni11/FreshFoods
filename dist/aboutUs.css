@@ -1,0 +1,456 @@
+/* Boiler Plate */
+
+*{
+    margin:0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+body{
+    font-family:Helvetica,Arial,sans-serif;
+}
+
+
+/* Navbar */
+
+#logo img{
+    height: 5em;
+}
+
+.photo img{
+    height: 10rem;
+    width:10rem;
+}
+
+#navbar{
+    /* position: sticky; */
+    /* position: relative; */
+    background: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    /* background: rgb(255, 196, 196); */
+    /* box-shadow: 0px -5px 26px 7px #888888; */
+    box-shadow: 0px -11px 32px 5px #888888;
+}
+#logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 8%;
+    font-family: 'Kaushan Script', cursive;
+}
+#logo p{
+    padding-left: 0.2rem;
+    font-size: 1.8rem;
+}
+#links{
+    list-style: none;
+    list-style: none;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40rem;
+}
+#links li {
+    padding: 0rem 2rem;
+    margin: 0rem 0.5rem;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#links li:hover{
+    /* background: #fff4e9; */
+    /* background: #ffdab5; */
+    /* background: #ffdab5; */
+    background: #e0f1ff;
+    border-radius: 37px;
+    cursor: pointer;
+} 
+
+#links li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    font-family:Helvetica,Arial,sans-serif;
+}
+#cart{
+    width: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: #f2bc87; */
+    background: #ffdab5;
+}
+#cart a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    height: 8vh;
+    position: relative;
+    /* top: 18%; */
+    align-items: center;
+    justify-content: center;
+}
+
+#cart a svg{
+    position: relative;
+    fill: #000;
+    height: 50%;
+    width: 85%;
+    stroke: #000;
+    /* right: 34%; */
+}
+#cart a svg path{
+    stroke-width: 0.45px;
+}
+#cart a span{
+    position: relative;
+    font-weight: 600;
+    bottom: 2%;
+    color: #000;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    transition: opacity 0.5s ease-in;
+}
+
+/* footer */
+
+
+#reachUs{
+    display: flex;
+    flex-direction: row; 
+    height: 26vh;
+    border-top: 1px solid #e7e7e7;
+}
+#lefthelp{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 7rem;
+}
+.helpbox{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 3rem;
+}
+.helpbox h2{
+    margin: 1rem 0rem;
+    color: #a5afb6;
+    font-size: 1rem;
+    font-weight:600;
+}
+.helpbox svg{
+
+    display: inline;
+}
+#righthelp a img{
+    height: 2.5rem;
+    display: inline;
+    vertical-align: 0%;
+}
+#reachUs a{
+    text-decoration: none;
+    margin: 0.5rem 0rem;
+    color: #5c6c79;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all .2s cubic-bezier(.15,.69,.83,.67);
+    
+}
+#reachUs a:hover{
+    /* color: rgb(255, 210, 210); */
+    color: rgb(255, 71, 71);
+    cursor: pointer;
+}
+#righthelp{
+    position: relative;
+    left: 20%;
+    top: 50%;
+    height: 16%;
+    width: 27%;
+}
+#righthelp a{
+    margin: 0rem 0.2rem;
+}
+#righthelp a svg{
+    margin: 0rem 0.2rem;
+    display: inline;
+    vertical-align: 0%;
+}
+#righthelp a:nth-child(3){
+    position: relative;
+    bottom:27%;
+}
+#righthelp a:nth-child(4){
+    position: relative;
+    bottom:27%;
+}
+#righthelp a:nth-child(5){
+    position: relative;
+    bottom:27%;
+}
+
+#righthelp a:nth-child(3) path{
+    transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+#righthelp a:nth-child(4) path{
+    transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+#righthelp a:nth-child(5) path{
+    transition: all .2s cubic-bezier(.15,.69,.83,.67);
+}
+
+#righthelp a:nth-child(3) path:hover{
+    fill:#648EDE;
+}
+#righthelp a:nth-child(4) path:hover{
+    fill:#0EB3FF;
+}
+#righthelp a:nth-child(5) path:hover{
+    fill:rgb(203, 0, 243);
+}
+
+.helpbox a path{
+    fill:black;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5c5c5c;
+    height: 7vh;
+    border-top: 1px solid #e4e4e4;
+}
+
+/* here starts About Us sections */
+
+
+#believe{
+    /* height: 58vh; */
+    height: 60vh;
+    /* background-color: #4a4a4a; */
+    /* background: url("/images/hand.jpg") center center/cover no-repeat; */
+    /* background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url("/images/hand.jpg") center center/cover no-repeat; */
+    color:black;
+}
+#believeBox{
+    border-bottom: 1px solid #e2bb0b;
+    height: 60vh;
+    padding-bottom: 4%;
+}
+#believeBox #believeP{
+    display: inline;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 6px;
+}
+#believeBox #heading{
+    margin: 0 0 -7px;
+    font-size: 60px;
+    margin-bottom: 2.5rem;
+}
+#believe-div-IN {
+    display: inline-block;
+    position: relative;
+    bottom: -6px;
+    background: #e2bb0b;
+    color: #2e2a19;
+    width: 27px;
+    height: 27px;
+    border-radius: 20px;
+    /* border-radius: 50%;
+    width: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    margin: 0 5px; */
+}
+#believeIN{
+    display: inline;
+    position: relative;
+    font-size: 16px;
+    font-weight: 100;
+    left: 29%;
+    top: -48%;
+}
+#believeBox #para{
+    height: 14vh;
+    width: 88vh;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+#believeBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#believeBox h3{
+    font-size: 30px;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+#believeBox h3::after{
+    content: "";
+    position: absolute;
+    margin-top: 30px;
+    width: 60px;
+    height: 5px;
+    left: 50%;
+    margin: 4rem -1rem;
+    background: #fcd306;
+}
+
+#list{
+    height: 227vh;
+    display: flex;
+    background: #f7f5f3;
+    flex-direction: column;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.text h2{
+    font-size: 1.09rem;
+    font-weight: 100;
+    margin-bottom: 1.5rem;
+}
+.text h3{
+font-size: 1.5rem;
+letter-spacing: 0.3rem;
+}
+
+#farmfresh h2::after{
+    content: "";
+    position: absolute;
+    margin-top: 30px;
+    width: 9vw;
+    height: 2.3px;
+    right: 32%;
+    margin: 2rem 0rem;
+    background: #fcd306;
+}
+
+#chefs h2::after{
+    content: "";
+    position: absolute;
+    margin-top: 30px;
+    width: 9vw;
+    height: 2.3px;
+    right: 58%;
+    margin: 2rem 0rem;
+    background: #fcd306;
+}
+
+#CUISINE h2::after{
+    content: "";
+    position: absolute;
+    margin-top: 30px;
+    width: 9vw;
+    height: 2.3px;
+    right: 31.5%;
+    margin: 2rem 0rem;
+    background: #fcd306;
+}
+
+#Fastmin h2::after{
+    content: "";
+    position: absolute;
+    margin-top: 30px;
+    width: 9vw;
+    height: 2.5px;
+    right: 59.5%;
+    margin: 2rem 0rem;
+    background: #fcd306;
+}
+
+.listitem{
+    display: flex;
+    flex-direction: row;
+    width: 63.5vw;
+    height: 45.1vh;
+    margin: 3rem auto;
+    background-color: white;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.1);
+}
+.row-reverse{
+    flex-direction: row-reverse;
+}
+.picture{
+    width: 213vw;
+    color: white;
+}
+#farmfresh{
+    background:linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.5)), url("/images/2.jpg") center center/cover no-repeat;
+}
+#chefs{
+        background:linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.5)), url("/images/9.jpg") center center/cover no-repeat;
+}
+#CUISINE{
+        background:linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.5)), url("/images/5_new.jpg") center center/cover no-repeat;
+}
+#Fastmin{
+        background:linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.5)), url("/images/10.jpg") center center/cover no-repeat;
+}
+
+.info{
+    padding: 65px 49px;
+}
+.info h2{
+    color: #424143;
+    font-size: 20px;
+    position: relative;
+    margin: 0 0 33px;
+}
+.info p{
+    color: #424143;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+}
+.info h2::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    /* margin: 2.5rem -9rem; */
+    /* left: 47%; */
+    background: #fcd306;
+    
+}
+#farmfresh-info h2::after{
+    margin: 2.5rem -9rem;
+    left: 47%;
+}
+#chefs-info h2::after{
+    margin: 2.5rem -9rem;
+    left: 52%;
+    height: 2.5px;
+}
+#CUISINE-info h2::after{
+    margin: 2.5rem -9rem;
+    left: 44.3%;
+}
+#Fastmin-info h2::after{
+    margin: 2.5rem -9rem;
+    left: 44.5%;
+    height: 2.5px;
+}
+#firstItem{
+    margin-top: 7rem;
+}
