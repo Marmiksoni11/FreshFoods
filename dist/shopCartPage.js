@@ -146,3 +146,6 @@ generateItems();
       document.getElementById('total-cost').textContent = '₹' + totalCost.toFixed(2);
     
     }
+
+
+    // new comment to check token
