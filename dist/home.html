@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-
-        <!--!  Favicon -->
-        <link rel="icon" type="image/x-icon" href="./images/logo2  CROPPED.png">
-        
-
-    <link rel="stylesheet" href="/contactUs.css">
+    <title>FreshFoods</title>
     <link rel="stylesheet" href="output.css">
 
+    <!--!  Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/logo2  CROPPED.png">
+
+    <!-- bootstrap icons  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
     <!-- logo font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,61 +20,286 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Kaushan+Script&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <!-- nav / header -->
     <nav id="navbar">
         <div id="logo">
             <img src="/images/logo2.png" alt="IMG NOT AVAILABLE">
             <p>FreshFoods</p>
         </div>
         <ul id="links">
-            <li><a href="/home.html">Home</a></li>
-            <li><a href="/#categories">Categories</a></li>
-            <li><a href="/contactUs.html">Contact-Us</a></li>
+            <!-- <li><a href="login.html">LOGIN</a></li> -->
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="contactUs.html">Contact-Us</a></li>
         </ul>
         <div id="cart">
             <a href="./shoppingCart.html" id="cart-icon"><span class="ng-binding" id="cart-total" >0</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 23">
                 <path class="path" fill-rule="evenodd" stroke-width=".3" d="M10.122 19.9c0-.578-.483-1.05-1.073-1.05s-1.073.472-1.073 1.05c0 .577.483 1.05 1.073 1.05s1.073-.473 1.073-1.05m1.073 0c0 1.155-.966 2.1-2.146 2.1s-2.147-.945-2.147-2.1c0-1.155.966-2.1 2.147-2.1 1.18 0 2.146.945 2.146 2.1m8.585 0c0-.578-.482-1.05-1.073-1.05-.59 0-1.073.472-1.073 1.05 0 .577.483 1.05 1.073 1.05s1.073-.473 1.073-1.05m1.074 0c0 1.155-.966 2.1-2.147 2.1-1.18 0-2.146-.945-2.146-2.1 0-1.155.966-2.1 2.146-2.1s2.147.945 2.147 2.1m-1.61-6.3H6.74v.105c.108 1.103-.053 1.995 1.127 1.995H21.39c.322 0 .537.21.537.525 0 .315-.215.525-.537.525H7.278c-1.46-.224-1.502-1.313-1.663-2.94L4.917 2.995c-.054-1.103-1.02-.945-2.146-.945H1.537C1.215 2.05 1 1.84 1 1.525 1 1.21 1.215 1 1.537 1H2.77c1.717 0 3.08 0 3.273 1.89l.59 9.66h12.61c.751 0 .805-.473 1.073-1.207l1.531-5.744c.25-1.17.67-.924.67-.924.16 0 .267.105.375.21.107.105.107.315.107.42l-1.61 6.3c-.429 1.207-.313 2-2.146 1.995"></path>
             </svg>
-        </a>
+            </a>
+            <div id="cart-content">
+                <!-- Cart content will be displayed here -->
+            </div>
         </div>
-    </nav>
+    </nav> 
 
-    <!-- Contact Us Form -->
-    <section id="formMain">
-        <h1>Queries / Complaints</h1>
-        <form action="" id="form">
-             <div class="field" id="nameDiv"> 
-                <label for="">Name : </label>
-                <input type="text">
-            </div>  
-
-            <div class="field" id="emailDiv">
-                <label for="">Email : </label>
-                <input type="email">
-            </div>
-
-            <div class="field" id="numberDiv">
-                <label for="">Number : </label>
-                <input type="tel">
-            </div>
-
-            <div class="field" id="queryDiv">
-                <label for="">Queries : </label>
-                <textarea type="text"></textarea>
-            </div>
-
-            <div class="field" id="btnDiv">
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
-            </div>
-        </form>
+    <section id="search">
+        <div id="searchBox">
+            <input type="search" name="" id="searchInput" placeholder="Search..">
+            <input type="submit" id="submitInput" value="Search">
+        </div>
     </section>
 
+    <section id="categories">
+        <h1>Categories</h1>
+        
+        <div id="categoryBox">
+       
+            <div class="category">
+                <h2>Pizzas</h2>
+                <div class="card">
+                  <a href="./pizzas.html"><img src="./images/pizza.jpg" alt="IMG NOT AVAILABLE"></a>
+                    <!-- <img src="/images/traditional-supreme-pizza-wooden-table.jpg" alt=""> -->
+                </div>
+            </div>
+            <div class="category">
+                <h2>Burgers</h2>
+                <div class="card">
+                    <a href="./Burgers.html"><img src="/images/grilled-cheeseburger-with-tomato-sesame-bun-generative-ai.jpg" alt="IMG NOT AVAILABLE"></a>
+                </div>
+            </div>
 
-    <!-- footer -->
+            <div class="category">
+                <h2>Thali</h2>
+                <div class="card">
+                    <a href="./Thali.html"><img src="https://curlytales.com/wp-content/uploads/2017/07/gujarati-thali.jpg" alt="IMG NOT AVAILABLE"></a>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2>Chinese</h2>
+                <div class="card">
+                    <a href="./chinese.html"><img src="https://b.zmtcdn.com/data/dish_photos/c85/845ff1ccd2760d3d461bdd7dbcbd1c85.jpg?output-format=webp" alt="IMG NOT AVAILABLE"></a>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2>Wraps & Rolls</h2>
+                <div class="card">
+                    <a href="./wrapsNrolls.html"><img src="https://b.zmtcdn.com/data/dish_photos/774/98640914782b2628ad7f2801464bb774.jpg" alt="IMG NOT AVAILABLE"></a>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2>Beverages</h2>
+                <div class="card">
+                    <a href="./Beverages.html"><img src="https://b.zmtcdn.com/data/dish_photos/460/4b79b362f682c7913736891a1c286460.jpg" alt="IMG NOT AVAILABLE"></a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="btns">
+            <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+            <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+        </div>
+
+    </section>
+    <!-- here we are starting reccomandation  -->
+       
+<!--        
+    <br>
+    <br> -->
+    
+<!--    
+<section>
+<div class="recommendation-container">
+    <h1>hey! What's you mood? </h1>
+    <div class="emoji-container">
+        <div class="emoji" onclick="getRecommendations('😊')">😊</div>
+        <div class="emoji" onclick="getRecommendations('😔')">😔</div>
+        <div class="emoji" onclick="getRecommendations('😋')">😋</div>
+        <div class="emoji" onclick="getRecommendations('😌')">😌</div>
+    </div>
+    <div class="slider">
+        <div class="slides-container" id="slidesContainer"></div>
+        <div class="controll">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+
+        </div>
+    </div>
+</div>
+</section>
+ -->
+
+<!-- closing here we are starting reccomandation  -->
+
+    
+<!-- ! Best Sellers -->
+<section id="bestSellers">
+
+    <div id="best-seller-box">
+
+        <h1>Best Sellers</h1>
+
+        <div class="twoItems">
+
+            <div class="item">
+
+                <div class="photo">
+                    <img src="/images/burger_3.JPG" alt="">
+                </div>
+
+                <div id="detailBox">
+                    <div class="details">
+                        <p>Double Aaloo Tikky Burger</p>
+                        <p> &#x20B9;150</p>
+                        <p>Burger King</p>
+                    </div>
+                    <div id="orderSec">
+                        <div class="buttons">
+                            <i onclick="decreament('bestseller1')" class="bi bi-dash-lg ml-"></i>
+                            <div id="bestseller1" class="quantity">0</div>
+                            <i onclick="increament('bestseller1')" class="bi bi-plus-lg"></i>
+                        </div>
+                        <a href="/shoppingCart.html"> <input type="button" class="orderNow" value="Order"></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="photo">
+                    <img src="./images/pexels-cats-coming-1907229.jpg" alt="">
+                </div>
+
+                <div id="detailBox">
+                    <div class="details">
+                        <p>Veg Ramen</p>
+                        <p> &#x20B9;200</p>
+                        <p>Space Dragon</p>
+                     </div>
+                     <div id="orderSec">
+                        <div class="buttons">
+                            <i onclick="decreament('bestseller2')" class="bi bi-dash-lg"></i>
+                            <div id="bestseller2" class="quantity">0</div>
+                            <i onclick="increament('bestseller2')" class="bi bi-plus-lg"></i>
+                        </div>
+                        <a href="/shoppingCart.html"> <input type="button" class="orderNow" value="Order"></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item">
+
+                <div class="photo">
+                    <img src="/images/burger_1.JPG" alt="">
+                </div>
+
+                <div id="detailBox">
+                <div class="details">
+                    <p>Chicken Tikky</p>
+                    <p> &#x20B9;70</p>
+                    <p>Boss Burger</p>
+                </div>
+                    <div id="orderSec">
+                        <div class="buttons">
+                            <i onclick="decreament('bestseller3')" class="bi bi-dash-lg"></i>
+                            <div id="bestseller3" class="quantity">0</div>
+                            <i onclick="increament('bestseller3')" class="bi bi-plus-lg"></i>
+                        </div>
+                        <a href="/shoppingCart.html"> <input type="button" class="orderNow" value="Order"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="twoItems">
+  
+
+            <div class="item">
+
+                <div class="photo">
+                    <img src="./images/pizzacheeseloaded.jpg" alt="">
+                </div>
+
+                <div id="detailBox">
+                <div class="details">
+                    <p>Cheese Veg Loaded</p>
+                    <p> &#x20B9;400</p>
+                    <p>Little French House</p>
+                </div>
+                    <div id="orderSec">
+                        <div class="buttons">
+                            <i onclick="decreament('bestseller4')" class="bi bi-dash-lg"></i>
+                            <div id="bestseller4" class="quantity">0</div>
+                            <i onclick="increament('bestseller4')" class="bi bi-plus-lg"></i>
+                        </div>
+                        <a href="/shoppingCart.html"> <input type="button" class="orderNow" value="Order"></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <div class="photo">
+                    <img src="/images/burger_2.JPG" alt="">
+                </div>
+
+                <div id="detailBox">
+                <div class="details">
+                    <p>Veggie Delite Burger</p>
+                    <p> &#x20B9;80</p>
+                    <p>Tera Gourmet</p>
+                </div>
+                    <div id="orderSec">
+                        <div class="buttons">
+                            <i onclick="decreament('bestseller5')" class="bi bi-dash-lg"></i>
+                            <div id="bestseller5" class="quantity">0</div>
+                            <i onclick="increament('bestseller5')" class="bi bi-plus-lg"></i>
+                        </div>
+                        <a href="/shoppingCart.html"> <input type="button" class="orderNow" value="Order"></a>
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class="item">
+
+                <div class="photo">
+                    <img src="/images/Saladthali.jpg" alt="">
+                </div>
+
+
+                <div id="detailBox">
+                <div class="details">
+                    <p>North Indian Lunch</p>
+                    <p> &#x20B9;100</p>
+                    <p>Thali & Co.</p>
+                </div>
+                    <div id="orderSec">
+                        <div class="buttons">
+                            <i onclick="decreament('bestseller6')" class="bi bi-dash-lg"></i>
+                            <div id="bestseller6" class="quantity">0</div>
+                            <i onclick="increament('bestseller6')" class="bi bi-plus-lg"></i>
+                        </div>
+                        <a href="/shoppingCart.html"> <input type="button" class="orderNow" value="Order"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</section>
+
+
+<!-- footer -->
     <section id="reachUs">
 
         <div id="lefthelp">
@@ -83,10 +307,10 @@
             <div class="helpbox">
                 <h2>COMPANY</h2>
                 <a href="/aboutUs.html">About Us</a>    
-                <a href="/contactUs.html">Contact Us</a> 
+                <a href="/contactUs.html">Contact Us</a>    
             </div>
 
-            <div class="helpbox">
+            <div class="helpbox"> 
                 <h2>HELP & CONTACT</h2>
 
                 <a href="mailto:marmiksoni1182002@gmail.com?subject=support"><svg width="16px" height="13px" viewBox="0 0 16 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>D84EBD3A-AB91-4957-9192-A6106CF9E5E9</title><desc>Created with sketchtool.</desc>    <defs></defs>    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="1.1-Homepage" transform="translate(-404.000000, -2589.000000)" stroke="#5C6C79" stroke-width="0.2" fill="#5C6C79"><g id="Group-23" transform="translate(0.000000, 2460.000000)"><g id="icn_Email" transform="translate(405.000000, 130.000000)"><path d="M0.651162791,10.195312 L13.3488372,10.195312 L13.3488372,0.784254767 L0.651162791,0.784254767 L0.651162791,10.195312 L0.651162791,10.195312 Z M0.651813953,0 C0.292372093,0 0,0.351542199 0,0.785235085 L0,10.1943317 C0,10.6266521 0.291883721,10.9795667 0.651813953,10.9795667 L13.348186,10.9795667 C13.7076279,10.9795667 14,10.6280245 14,10.1943317 L14,0.785235085 C14,0.352914645 13.7081163,0 13.348186,0 L0.651813953,0 Z" id="Shape"></path><path d="M1.14690933,3.15503085 L6.22132321,7.20727523 C6.43979389,7.38157586 6.71985282,7.46862814 6.99991176,7.46862814 C7.28014718,7.46862814 7.56038259,7.38157586 7.77867679,7.20727523 L12.8530907,3.15503085 C13.0112084,3.02856977 13.0473849,2.78349016 12.9337378,2.60762103 C12.8197377,2.43194796 12.5991494,2.3917549 12.4410317,2.51821598 L7.3666178,6.57046036 C7.17479419,6.72358611 6.82520581,6.72358611 6.6333822,6.57046036 L1.55896833,2.51821598 C1.40067415,2.39195096 1.18008582,2.43194796 1.06626224,2.60762103 C0.952615136,2.78349016 0.988791622,3.02856977 1.14690933,3.15503085" id="Shape"></path></g></g></g></g></svg>
@@ -194,10 +418,10 @@
 
     <footer>Copyright © 2023 - All Rights Reserved</footer>
 
-
-<script src="./index.js"></script>
+<!-- Sticky Navbar Scrolling effect -->
+<script src="/index.js"></script>
 
 <script type="module" src="/cart.js"></script>
-    
+<script type="module" src="./recommendation.js"></script>
 </body>
 </html>

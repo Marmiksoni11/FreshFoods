@@ -7,13 +7,13 @@ const { Pizza,
     WrapsAndRolls,
     BestSellers,
   } = require('../models/productModels')
-  
-const asyncWrapper = require('../middleware/async')
 
-const {creatCustomError} = require('../errors/custom-errors')
+const {creatCustomError} = require('../errors/custom-api')
+
+const { BadRequestError, NotFoundError } = require('../errors')
 
 
-const getAllProducts = asyncWrapper(async (req, res) => {
+const getAllProducts = async (req, res) => {
     try {
         // Assuming Pizza, Burger, Chinese, WrapsAndRolls, Beverages, Thalis, BestSellers are your models
         const pizzasPromise = Pizza.find({});
@@ -51,9 +51,9 @@ const getAllProducts = asyncWrapper(async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
-});
+};
 
-const getProduct = asyncWrapper(async (req, res,next) => {
+const getProduct = async (req, res,next) => {
     try {
         const { id:productId } = req.params;
 
@@ -79,7 +79,7 @@ const getProduct = asyncWrapper(async (req, res,next) => {
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
-});
+};
 
 
 
