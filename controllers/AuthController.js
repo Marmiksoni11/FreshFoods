@@ -1,8 +1,8 @@
 
-const UnauthenticatedError = require('../errors/unauthenticated')
+// const UnauthenticatedError = require('../errors/unauthenticated')
+// const BadRequestError =  require('../errors/index');
 
 const  User = require('../models/authModels')
-
 const {StatusCodes} = require('http-status-codes')
 const jwt = require('jsonwebtoken')
 
@@ -21,19 +21,23 @@ const login = async (req, res) => {
     console.log(email , password);
     
     if (!email || !password) {
-      throw new BadRequestError('Please provide email and password')
+      // throw new BadRequestError('Please provide email and password')
+      return res.status(401).send('Please provide email and password')
     }
     
     const user = await User.findOne({ email })
     
     if (!user) {
-      throw new UnauthenticatedError('Invalid Credentials')
+      // throw new UnauthenticatedError('Invalid Credentials')
+      return res.status(401).send('Invalid Credentials')
     }
     
     const isPasswordCorrect = await user.comparePassword(password)
     
     if (!isPasswordCorrect) {
-      throw new UnauthenticatedError('Invalid Credentials')
+      // throw new UnauthenticatedError('Invalid Credentials')
+      // throw new BadRequestError('Invalid Pasword')
+      return res.status(401).send('Invalid Password')
     }
 
     const token = user.createJWT()

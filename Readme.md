@@ -6,7 +6,7 @@ GITHUB COMMANDS :
 
     1) go to the folder i created in college and do the following  : 
        
-       git checkout authLogin
+       git checkout loginAuth
        git pull origin master
 
     2) THEN START WORKING ! ,  make all your changes in this branch and once you are done, 
@@ -14,10 +14,9 @@ GITHUB COMMANDS :
 
         git add .
         git commit -m ""
-        git push origin authLogin
+        git push origin loginAuth
         
 ```
-
 
 ------------------ FOR SMIT ------------------------
 

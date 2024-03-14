@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 //* json middleware
 app.use(express.json())
 
-app.use(notFound)
+// app.use()
 
 //! handling errors after wrapping the contorllers so that our previos errors can work
 
