@@ -26,7 +26,7 @@ const navigate = (url) => {
     const route = routes[path];
     if (route) {
         navigate(route);
-        window.history.pushState({}, '', '/index.html');
+        window.history.pushState({}, '', '/index');
         window.dispatchEvent(new Event('popstate'))
     } else {
       // Handle cases where URL doesn't match a route (e.g., 404)
@@ -57,7 +57,7 @@ submitButton.addEventListener('click', async (event) => {
     })
 
     console.log(data);
-    navigate('/index.html');
+    navigate('/index');
     // Handle successful registration (e.g., display success message, redirect to login page)
     // resultDOM.innerHTML = '<p>Registration successful! Please log in.</p>';
     // usernameInputDOM.value = '';

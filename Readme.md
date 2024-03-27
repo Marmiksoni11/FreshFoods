@@ -41,3 +41,21 @@ GITHUB COMMANDS :
 
    --- >  WHEN YOU DO Register MAKE SURE TO KEEP THE EMAIL UNIQUE FOR EVERY REGISTER OR ELSE IT WILL THROW THE 'DUPLICATE' ERROR , as the emails in the database have to be UNIQUE 
 
+# plase check issue:
+
+login signup !
+
+changes made by SMIT:
+
+app.js => i have set view engine for server ejs in dist!
+          path set! all done!
+dist/ public / css,js (working well)!
+
+
+controller / random.js check this
+routes / authRoutes.js check this
+
+
+
+
+

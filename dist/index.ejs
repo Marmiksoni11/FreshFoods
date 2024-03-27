@@ -5,25 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JWT Basics</title>
-    <link rel="stylesheet" href="./output.css" />
-    <link rel="icon" type="image/x-icon" href="./images/logo2  CROPPED.png">
+    <link rel="stylesheet" href="/css/output.css" />
+    <link rel="icon" type="image/x-icon" href="/images/logo2  CROPPED.png">
   </head>
   <body>
     <main id="container">
-      <form class="form contact-form" id="loginForm">
+      <form class="form contact-form" id="loginForm" action="/login" method="post">
         <h5 id="header">Login</h5>
         <div class="form-row">
           <!-- <label for="email" class="form-label">email</label> -->
-          <input type="email" class="form-input username-input loginInputs" placeholder="E-mail" />
+          <input type="email" class="form-input username-input loginInputs" placeholder="E-mail" name="email"/>
         </div>
         <div class="form-row">
           <!-- <label for="password" class="form-label">password</label> -->
-          <input type="password" class="form-input password-input loginInputs" placeholder="Password" />
+          <input type="password" class="form-input password-input loginInputs" placeholder="Password" name="password"/>
         </div>
         <!-- <div class="text-small form-alert">there was an error</div> -->
         <button type="submit" class="btn btn-block" id="submit">Login</button>
       </form>
-      <a href="./register.html" target="_blank" class="LinkForAcc"> Dont Have an Account ? </a>
+      <a href="/register" target="_blank" class="LinkForAcc"> Dont Have an Account ? </a>
       <div class="container" id="displayNone">
         <h4>Dashboard</h4>
         <p class="token">no token present</p>
@@ -40,6 +40,6 @@
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   
-    <script src="./auth.js"></script>
+    <script src="/js/auth.js"></script>
   </body>
 </html>

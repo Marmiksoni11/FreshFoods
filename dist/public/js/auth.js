@@ -9,8 +9,8 @@ const tokenDOM = document.querySelector('.token')
 const axios = window.axios;
 
 const routes = {
-  '/': '/login.html',
-  '/home.html': '/home.html' // Assuming you have separate HTML files
+  '/': '/login',
+  'dist/home': '/home' 
 }
 
 const navigate = (url) => {
@@ -58,7 +58,7 @@ formDOM.addEventListener('submit', async (e) => {
     resultDOM.innerHTML = ''
     tokenDOM.textContent = 'token present'
     tokenDOM.classList.add('text-success')
-    navigate('/home.html'); 
+    navigate('/home'); 
   } catch (error) {
     // formAlertDOM.style.display = 'block'
     // formAlertDOM.textContent = error.response.data.msg
@@ -91,7 +91,7 @@ const checkToken = () => {
     tokenDOM.classList.add('text-success');
     // window.location.href = '/home.html';  
     // Use History API for smoother navigation
-    window.history.pushState({}, '', '/home.html');
+    window.history.pushState({}, '', '/home');
     window.dispatchEvent(new Event('popstate'));
   } 
   else{
