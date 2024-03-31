@@ -7,7 +7,7 @@
 //*          app.get('/api/v1/tasks')        -- get all the tasks 
 //*          app.get('/api/v1/tasks/:id')    -- get single task
 
-
+// localhost:3000/api/v1/auth/register
 
 
 require('dotenv').config()
@@ -20,8 +20,11 @@ const connectDB = require("./db/connect")
 
 const notFound = require('./middleware/not-found');
 const productRoutes = require("./routes/productRoutes")
+const authRoutes = require("./routes/authRoutes")
+const authenticateUser = require('./middleware/authentication');
 
-const errorHandlerMiddleware = require('./middleware/error-handler')
+const notFoundMiddleware = require('./middleware/not-found');
+const errorHandlerMiddleware = require('./middleware/error-handler');
 
 //* static middleware  
 app.use(express.static(path.join(__dirname, 'dist')));
@@ -35,18 +38,18 @@ app.use(express.static(path.join(__dirname, 'dist')));
 //* json middleware
 app.use(express.json())
 
-
-//* routes middleware 
-app.use('/api/v1/productRoutes', productRoutes)
-
-
-
-
-app.use(notFound)
+// app.use()
 
 //! handling errors after wrapping the contorllers so that our previos errors can work
 
 app.use(errorHandlerMiddleware)
+
+
+//* routes middleware 
+app.use('/api/v1/auth', authRoutes)
+app.use('/api/v1/productRoutes', authenticateUser, productRoutes)
+// app.use('/api/v1/productRoutes', productRoutes)
+
 
 const port = process.env.PORT || 3000
 
