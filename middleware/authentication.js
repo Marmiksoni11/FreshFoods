@@ -26,16 +26,19 @@ const authenticateUser = async (req, res, next) => {
 
 const authenticateAdmin = (req, res, next) => {
   // Extract the JWT token from the request headers
+  console.log("fdgdfgdg");
   const authHeader = req.headers.authorization;
-  
+  console.log(authHeader);
+  console.log("............");
   // Check if the authorization header exists and starts with 'Bearer'
   if (!authHeader || !authHeader.startsWith('Bearer')) {
+    console.log("///////////");
     return res.status(401).json({ error: 'Authentication failed' });
   }
 
   // Split the authorization header to get the token
   const token = authHeader.split(' ')[1];
-
+  console.log(token);
   // Verify the JWT token
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) {
@@ -44,7 +47,7 @@ const authenticateAdmin = (req, res, next) => {
 
     try {
       const payload = jwt.verify(token, process.env.JWT_SECRET);
-      
+      console.log(payload);
       req.user = { 
         userId: payload.userId, 
         email: payload.email, 
