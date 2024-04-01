@@ -42,7 +42,13 @@ app.use(express.static(path.join(__dirname, 'dist')));
 //* json middleware
 app.use(express.json())
 
-// app.use()
+app.use(express.static(path.join(process.cwd(),'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets')));
+// app.use('/aprycot.min.css', express.static(path.join(process.cwd(), 'Freshfoodlogin', 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css')));
+// app.use('/aprycot.scss', express.static(path.join(process.cwd(), 'Freshfoodlogin', 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css', 'maps')));
+// Serve static files from the CSS directory
+// app.use('/css', express.static(path.join(process.cwd(),'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css')));
+// app.use('/js', express.static(path.join(process.cwd(), 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets',)));
+
 
 //! handling errors after wrapping the contorllers so that our previos errors can work
 
@@ -50,8 +56,8 @@ app.use(errorHandlerMiddleware)
 const sassMiddleware = require('node-sass-middleware');
 
 
-const srcPath = path.join(__dirname, 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css', 'maps');
-const destPath = path.join(__dirname, 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css');
+const srcPath = path.join(process.cwd(), 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css', 'maps');
+const destPath = path.join(process.cwd(), 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css','aprycot.min.css');
 
 
 app.use(sassMiddleware({
@@ -64,7 +70,7 @@ const fs = require('fs');
 const sass = require('node-sass');
 
 const scssDir = path.join(__dirname, 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css', 'maps');
-const cssDir = path.join(__dirname, 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css');
+const cssDir = path.join(__dirname, 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css','aprycot.min.css');
 
 // Function to compile SCSS files
 function compileSCSS() {
