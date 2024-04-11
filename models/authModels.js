@@ -3,13 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const UserSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, 'Please provide name'],
-    maxlength: 50,
-    minlength: 3,
-  },
-  email: {
+    email: {
     type: String,
     required: [true, 'Please provide email'],
     match: [
@@ -23,6 +17,30 @@ const UserSchema = new mongoose.Schema({
     required: [true, 'Please provide password'],
     minlength: 6,
   },
+  username: {
+    type: String,
+    required: [true, 'Username is required'],
+    unique: true,
+    lowercase: true,
+    trim: true,
+    index: true
+},
+fullname: {
+  type: String,
+  required: [true, 'Please provide name'],
+  maxlength: 50,
+  minlength: 3,
+},
+// we are using middleware multer to upload avatar image!
+avatar: {
+  type: String, //Cloudnary URL
+  required: [true, 'Avatar URL is required']
+},
+// we are using middleware multer to upload coverImage image!
+coverImage: {
+type: String
+},
+
   role: {
     type: String,
     enum: ['user', 'admin'], // Define allowed roles
@@ -30,12 +48,12 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
-// UserSchema.pre('save', async function () {
-//   if (this.isModified('password')) {
-//     const salt = await bcrypt.genSalt(10);
-//     this.password = await bcrypt.hash(this.password, salt);
-//   }
-// });
+UserSchema.pre('save', async function () {
+  if (this.isModified('password')) {
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
+  }
+});
 
 UserSchema.methods.createJWT = function () {
   return jwt.sign(
@@ -48,7 +66,7 @@ UserSchema.methods.createJWT = function () {
 
 };
 
-UserSchema.methods.comparePassword = async function (candidatePassword) {
+UserSchema.methods.isPasswordCorrect = async function (candidatePassword) {
   const isMatch = await bcrypt.compare(candidatePassword, this.password);
   return isMatch;
 };

@@ -10,7 +10,10 @@
 // localhost:3000/api/v1/auth/register
 
 
-require('dotenv').config()
+require("dotenv").config({
+    path:"./.env"
+});
+
 const jwt = require('jsonwebtoken');
 const express = require('express');
 const app = express();
@@ -66,12 +69,14 @@ app.use(sassMiddleware({
     debug: true, // Enable debugging output (optional)
     outputStyle: 'compressed' // Output style: compressed or expanded (optional)
 }));
+
 const fs = require('fs');
 const sass = require('node-sass');
 
+app.use(express.static(path.join(process.cwd(),"dist")));
+
 const scssDir = path.join(__dirname, 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css', 'maps');
 const cssDir = path.join(__dirname, 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css','aprycot.min.css');
-
 // Function to compile SCSS files
 function compileSCSS() {
     fs.readdir(scssDir, (err, files) => {
@@ -106,10 +111,16 @@ function compileSCSS() {
 // Compile SCSS files
 compileSCSS();
 
+const cookieParser = require('cookie-parser');
+// cookie-parser middleware
+app.use(cookieParser());
+
 //* routes middleware 
 app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/productRoutes', authenticateUser, productRoutes)
 app.use("/",authRoutes);
+
+  
 // app.use('/api/v1/productRoutes', productRoutes)
 
 // here we have  called AdminUser!
