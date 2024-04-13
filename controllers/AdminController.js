@@ -4,18 +4,29 @@ class AdminClass {
   static AdminUser = async () => {
     try {
       const adminUser = new User({
-        name: 'marmik',
-        email: 'marmik11@gmail.com',
-        password: 'marmik11',
+        
+        email: 'marmik123@gmail.com',
+        password: 'marmik123',
+        username:"marmik123",
+        fullname:"marmik soni",
+        avatar:"/public/temp/1712744908157-IMG20210711080311.jpg",
+        coverImage:"/public/temp/1712744908157-IMG20210711080311.jpg",
+        adminToken:"W1bCZJsK/wBU19ffpcwkODB9ivwWTDjA4n432n2+QInqXdg4FhTB+//QOY3Luau3",
         role: 'admin', // Set the role to 'admin'
       });
-  
-      // Save the user to the database 
+      
+      const adminToken = await adminUser.createJWT_ADMIN(); // Generate the admin token
+      console.log('Admin user token:', adminToken);
+
+      adminUser.adminToken = adminToken;
       await adminUser.save();
-  
+
       console.log('Admin user created successfully.');
+      
+      return { admin: adminUser.name, token: adminToken };
     } catch (error) {
       console.error('Error creating admin user:', error);
+      throw error;
     }
   }
 

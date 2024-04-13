@@ -11,7 +11,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Kaushan+Script&display=swap" rel="stylesheet">
@@ -124,57 +124,59 @@
         </div>
 
       </section> -->
-     
-      <section class="vh-100" style="background-color: #f4f5f7;">
-        <div class="container py-5 h-100 flex justify-center items-center">
-            <div class="w-full lg:w-1/2">
-                <div class="bg-white rounded-lg shadow-md">
-                    <!-- Cover Image -->
-                    <div class="relative">
-                        <img src="" alt="Cover Image" class="w-full h-40 object-cover rounded-t-lg cover-image">
-                        <!-- Profile Image -->
-                        <img src="" alt="Avatar" class="w-20 h-20 rounded-full absolute bottom-0 left-4 -mb-10 border-4 border-white avatar-image">
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center justify-center">
-                            <div class="ml-4">
-                                <h3 class="username text-xl font-semibold">Marmik</h3>
-                                <p class="text-sm text-gray-600">FreshFoods User!</p>
-                            </div>
-                        </div>
-                        <hr class="my-6">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <h6 class="font-semibold">Email</h6>
-                                <p class="useremail text-sm text-gray-600">komal123@gmail.com</p>
-                            </div>
-                            <div>
-                                <h6 class="font-semibold">Phone</h6>
-                                <p class="text-sm text-gray-600">123 456 789</p>
-                            </div>
-                        </div>
-                        <hr class="my-6">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <h6 class="font-semibold">Recent Projects</h6>
-                                <p class="text-sm text-gray-600">Lorem ipsum</p>
-                            </div>
-                            <div>
-                                <h6 class="font-semibold">Most Viewed Projects</h6>
-                                <p class="text-sm text-gray-600">Dolor sit amet</p>
-                            </div>
-                        </div>
-                        <hr class="my-6">
-                        <div class="flex justify-start space-x-3">
-                            <a href="#!" class="text-gray-600 hover:text-blue-500"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#!" class="text-gray-600 hover:text-blue-500"><i class="fab fa-twitter"></i></a>
-                            <a href="#!" class="text-gray-600 hover:text-blue-500"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+     <!-- updated section! -->
+
+     <section class="vh-100" style="background-color: #f4f5f7;">
+      <div class="container py-3 h-full flex justify-center items-center">
+          <div class="w-full lg:w-3/4">
+              <div class="bg-white rounded-lg shadow-md">
+                  <!-- Cover Image -->
+                  <div class="relative">
+                      <img src="" alt="Cover Image" class="w-full h-32 object-cover rounded-t-lg cover-image">
+                      <!-- Profile Image -->
+                      <img src="" alt="Avatar" class="w-16 h-16 rounded-full absolute bottom-0 left-4 -mb-8 border-2 border-white avatar-image">
+                  </div>
+                  <div class="p-6">
+                      <div class="flex items-center justify-center">
+                          <div class="ml-4">
+                              <h3 class="username text-lg font-semibold">Marmik</h3>
+                              <p class="text-sm text-gray-600">FreshFoods User!</p>
+                          </div>
+                      </div>
+                      <hr class="my-4">
+                      <div class="grid grid-cols-2 gap-2">
+                          <div>
+                              <h6 class="font-semibold">Email</h6>
+                              <p class="useremail text-xs text-gray-600">komal123@gmail.com</p>
+                          </div>
+                          <div>
+                              <h6 class="font-semibold">Phone</h6>
+                              <p class="text-xs text-gray-600">123 456 789</p>
+                          </div>
+                      </div>
+                      <hr class="my-4">
+                      <div class="grid grid-cols-2 gap-2">
+                          <div>
+                              <h6 class="font-semibold">Full Name</h6>
+                              <p class="userfullname text-xs text-gray-600">Marmik Jain</p>
+                          </div>
+                          <div>
+                              <h6 class="font-semibold">Payment Icons</h6>
+                              <div class="flex justify-start space-x-2">
+                                  <!-- Add payment icons here -->
+                                  <i class="fab fa-paypal text-gray-600 hover:text-blue-500"></i>
+                                  <i class="fab fa-cc-visa text-gray-600 hover:text-blue-500"></i>
+                                  <i class="fab fa-cc-mastercard text-gray-600 hover:text-blue-500"></i>
+                                  <!-- Add more payment icons as needed -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
     
     
 <!-- footer -->
@@ -328,8 +330,9 @@
 
               // Update avatar image
               document.querySelector(".avatar-image").src = data.avatar;
-              document.querySelector(".avatar-image").src = data.avatar;
               
+              // Update full name
+              document.querySelector(".userfullname").textContent = data.fullname;
           })
           .catch(error => {
               console.error('Error fetching user details:', error);
@@ -338,6 +341,7 @@
       console.error('Authentication token not found in local storage');
   }
 </script>
+
 
 
 <!-- Sticky Navbar Scrolling effect -->

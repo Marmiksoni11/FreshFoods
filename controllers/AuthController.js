@@ -51,9 +51,10 @@ const register = async (req, res) => {
 
         // Create JWT token
         const token = await user.createJWT();
+        const AdminToken = await user.createJWT_ADMIN();         
 
         // Send response
-        res.status(StatusCodes.CREATED).json({ user: { name: user.name }, token });
+        res.status(StatusCodes.CREATED).json({ user: { name: user.name }, token,AdminToken });
     } catch (error) {
         console.log(error, "register user failed!");
         res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ message: "Failed to register user" });
@@ -88,8 +89,9 @@ const login = async (req, res) => {
         }
     
         const AccessToken = await user.createJWT();
-        
-        return res.status(StatusCodes.OK).json({ user: { name: user.name }, AccessToken });
+        const AdminToken = await user.createJWT_ADMIN();         
+
+        return res.status(StatusCodes.OK).json({ user: { name: user.name }, AccessToken,AdminToken });
     
     } catch (error) {
         console.error('Login failed:', error);

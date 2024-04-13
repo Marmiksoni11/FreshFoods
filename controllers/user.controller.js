@@ -3,7 +3,7 @@ const User = require('../models/authModels');
 const getUserDetails = async (req, res) => {
     try {
         
-        const userId = req.user.email;
+        const userId = req.user.email ;
         console.log(userId);
         // Query the database to fetch user details
         const user = await User.findOne({ email: userId });

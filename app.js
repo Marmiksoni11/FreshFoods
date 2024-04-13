@@ -28,8 +28,6 @@ const {authenticateUser,authenticateAdmin} = require('./middleware/authenticatio
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
-//AdminUser Imported!
-// const{ AdminUser} = require('./controllers/AdminController');
 
 //* static middleware  
 
@@ -43,14 +41,16 @@ app.use(express.static(path.join(__dirname, 'dist')));
 // })
 
 //* json middleware
-app.use(express.json())
+app.use(express.json());
 
-app.use(express.static(path.join(process.cwd(),'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets')));
+// app.use(express.static(path.join(process.cwd(),"dist")));
+
+app.use(express.static(path.join(process.cwd(),'dist', 'dist', 'assets')));
 // app.use('/aprycot.min.css', express.static(path.join(process.cwd(), 'Freshfoodlogin', 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css')));
 // app.use('/aprycot.scss', express.static(path.join(process.cwd(), 'Freshfoodlogin', 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css', 'maps')));
 // Serve static files from the CSS directory
 // app.use('/css', express.static(path.join(process.cwd(),'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css')));
-// app.use('/js', express.static(path.join(process.cwd(), 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets',)));
+// app.use('/js', express.static(path.join(process.cwd(), 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets','js')));
 
 
 //! handling errors after wrapping the contorllers so that our previos errors can work
@@ -73,7 +73,6 @@ app.use(sassMiddleware({
 const fs = require('fs');
 const sass = require('node-sass');
 
-app.use(express.static(path.join(process.cwd(),"dist")));
 
 const scssDir = path.join(__dirname, 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css', 'maps');
 const cssDir = path.join(__dirname, 'dist', 'aprycot', 'html', 'dashboard', 'dist', 'assets', 'css','aprycot.min.css');
@@ -100,7 +99,7 @@ function compileSCSS() {
                         console.error('Error compiling SCSS:', err);
                     } else {
                         fs.writeFileSync(outputPath, result.css);
-                        console.log(`SCSS file '${file}' compiled successfully to '${outputName}'.`);
+                        // console.log(`SCSS file '${file}' compiled successfully to '${outputName}'.`);
                     }
                 });
             }
@@ -120,11 +119,13 @@ app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/productRoutes', authenticateUser, productRoutes)
 app.use("/",authRoutes);
 
-  
+
 // app.use('/api/v1/productRoutes', productRoutes)
 
-// here we have  called AdminUser!
-//   AdminUser();
+//AdminUser Imported!
+// const{ AdminClass } = require('./controllers/AdminController');
+// // here we have  called AdminUser!
+// AdminClass.AdminUser()
 
 
 

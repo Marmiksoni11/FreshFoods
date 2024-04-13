@@ -66,6 +66,17 @@ UserSchema.methods.createJWT = function () {
 
 };
 
+UserSchema.methods.createJWT_ADMIN = function () {
+  return jwt.sign(
+    { userId: this._id, name: this.name, email:this.email ,password:this.password, role: this.role },
+    process.env.JWT_SECRET_ADMIN,
+    {
+      expiresIn: process.env.JWT_LIFETIME_ADMIN,
+    }
+  );
+
+};
+
 UserSchema.methods.isPasswordCorrect = async function (candidatePassword) {
   const isMatch = await bcrypt.compare(candidatePassword, this.password);
   return isMatch;
