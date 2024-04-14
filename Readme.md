@@ -41,3 +41,34 @@ GITHUB COMMANDS :
 
    --- >  WHEN YOU DO Register MAKE SURE TO KEEP THE EMAIL UNIQUE FOR EVERY REGISTER OR ELSE IT WILL THROW THE 'DUPLICATE' ERROR , as the emails in the database have to be UNIQUE 
 
+
+------------------------------------- 
+
+For Marmik : 
+
+1) Products Routes are not Authenticated !
+2) Products Data is not served from the DB served it from the DB !
+
+
+---------------------------------
+
+
+For       SMIT          :  
+
+MAKE AN ADMIN :- 
+
+1) DIRECTLY add this in your user in db  --- > role: "admin"
+
+                           OR 
+
+1) Go to postman/thunder-client ( BROWSER REQUEST FROM REGISTER PAGE WONT WORK ) 
+2) create a new user using register user api and add the following fields in in req.body :
+         {
+            "name":"",
+            "email":"",
+            "password":"",
+            "make_admin":false
+         }
+   And then just add this make_admin flag and it should be true
+
+
