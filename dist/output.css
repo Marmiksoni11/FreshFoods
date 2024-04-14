@@ -1682,7 +1682,7 @@ footer{
 
 /* REGISTER PAGE */
 
-.container {
+.registercontainer {
   height: 97vh;
   width: 406px;
   display: flex;
@@ -1693,7 +1693,7 @@ footer{
   flex-direction: column;
 }
 
-.container .LinkForAcc{
+.registercontainer .LinkForAcc{
   color: #5252ff;
   text-decoration: underline;
   margin-top: 9%; 
@@ -1813,10 +1813,6 @@ input:-moz-placeholder {
       top,
       #b9c5dd 0%,
       #a4b0cb);
-  /* background: -webkit-gradient(
-      linear, left top, left bottom, 
-      from(#b9c5dd),
-      to(#a4b0cb)); */
       transition: backgroung-image 1s cubic-bezier(.15,.69,.83,.67);
       background-image: linear-gradient(to right,#f5914e,#e85826);
   -moz-border-radius: 5px;
@@ -1839,22 +1835,13 @@ input:-moz-placeholder {
   position: static;
   clear: both;
 }
-
 #signup .inputs #submit:hover {
-  /* background: -moz-linear-gradient(
-      top,
-      #ffb87e 0%,
-      #b9c5dd);
-  background: -webkit-gradient(
-      linear, left top, left bottom, 
-      from(#a4b0cb),
-      to(#b9c5dd)); */
       background-image: linear-gradient(to left,#f5914e,#e85826);
 }
 
 /* login Page */
 
-#loginForm {
+ #loginForm {
   height: 60vh;
   width: 50%;
   display: flex;
@@ -1968,20 +1955,13 @@ input:-moz-placeholder {
   margin-top: 9%; 
 }
 
-
 .gradient-custom {
-  /* fallback for old browsers */
   background: #f6d365;
-  
-  /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
-  
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1))
   }
 
   #Profile a svg{
-    /* height: 50%; */
     margin: 10% 10%;
     margin-left: 60%;
     margin-top:29%;
