@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreshFoods</title>
     <link rel="stylesheet" href="output.css">
-
+   
     <!--!  Favicon -->
     <link rel="icon" type="image/x-icon" href="./images/logo2  CROPPED.png">
 
     <!-- bootstrap icons  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<!-- tailwind css cdn -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- logo font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,60 +81,141 @@
         </div>
     </section>
 
-    <section id="categories">
-        <h1>Categories</h1>
+    <!-- <section id="categories" class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Categories</h1>
         
-        <div id="categoryBox">
+        <div id="categoryBox" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
        
             <div class="category">
-                <h2>Pizzas</h2>
+                <h2 class="text-xl font-semibold mb-2">Pizzas</h2>
                 <div class="card">
-                  <a href="./pizzas.html"><img src="./images/pizza.jpg" alt="IMG NOT AVAILABLE"></a>
-                    <!-- <img src="/images/traditional-supreme-pizza-wooden-table.jpg" alt=""> -->
+                    <a href="./pizzas.html">
+                        <img src="./images/pizza.jpg" alt="Pizzas" class="w-full">
+                    </a>
                 </div>
             </div>
             <div class="category">
-                <h2>Burgers</h2>
+                <h2 class="text-xl font-semibold mb-2">Burgers</h2>
                 <div class="card">
-                    <a href="./Burgers.html"><img src="/images/grilled-cheeseburger-with-tomato-sesame-bun-generative-ai.jpg" alt="IMG NOT AVAILABLE"></a>
+                    <a href="./Burgers.html">
+                        <img src="/images/grilled-cheeseburger-with-tomato-sesame-bun-generative-ai.jpg" alt="Burgers" class="w-full">
+                    </a>
                 </div>
             </div>
-
+    
             <div class="category">
-                <h2>Thali</h2>
+                <h2 class="text-xl font-semibold mb-2">Thali</h2>
                 <div class="card">
-                    <a href="./Thali.html"><img src="https://curlytales.com/wp-content/uploads/2017/07/gujarati-thali.jpg" alt="IMG NOT AVAILABLE"></a>
+                    <a href="./Thali.html">
+                        <img src="https://curlytales.com/wp-content/uploads/2017/07/gujarati-thali.jpg" alt="Thali" class="w-full">
+                    </a>
                 </div>
             </div>
-
+    
             <div class="category">
-                <h2>Chinese</h2>
+                <h2 class="text-xl font-semibold mb-2">Chinese</h2>
                 <div class="card">
-                    <a href="./chinese.html"><img src="https://b.zmtcdn.com/data/dish_photos/c85/845ff1ccd2760d3d461bdd7dbcbd1c85.jpg?output-format=webp" alt="IMG NOT AVAILABLE"></a>
+                    <a href="./chinese.html">
+                        <img src="https://b.zmtcdn.com/data/dish_photos/c85/845ff1ccd2760d3d461bdd7dbcbd1c85.jpg?output-format=webp" alt="Chinese" class="w-full">
+                    </a>
                 </div>
             </div>
-
+    
             <div class="category">
-                <h2>Wraps & Rolls</h2>
+                <h2 class="text-xl font-semibold mb-2">Wraps & Rolls</h2>
                 <div class="card">
-                    <a href="./wrapsNrolls.html"><img src="https://b.zmtcdn.com/data/dish_photos/774/98640914782b2628ad7f2801464bb774.jpg" alt="IMG NOT AVAILABLE"></a>
+                    <a href="./wrapsNrolls.html">
+                        <img src="https://b.zmtcdn.com/data/dish_photos/774/98640914782b2628ad7f2801464bb774.jpg" alt="Wraps & Rolls" class="w-full">
+                    </a>
                 </div>
             </div>
-
+    
             <div class="category">
-                <h2>Beverages</h2>
+                <h2 class="text-xl font-semibold mb-2">Beverages</h2>
                 <div class="card">
-                    <a href="./Beverages.html"><img src="https://b.zmtcdn.com/data/dish_photos/460/4b79b362f682c7913736891a1c286460.jpg" alt="IMG NOT AVAILABLE"></a>
+                    <a href="./Beverages.html">
+                        <img src="https://b.zmtcdn.com/data/dish_photos/460/4b79b362f682c7913736891a1c286460.jpg" alt="Beverages" class="w-full">
+                    </a>
                 </div>
             </div>
-
-
         </div>
-        <div class="btns">
-            <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
-            <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+        <div class="btns mt-6">
+            <button class="pre-btn"><img src="images/arrow.png" alt="Previous"></button>
+            <button class="nxt-btn"><img src="images/arrow.png" alt="Next"></button>
         </div>
+    </section> -->
+    
+    <section id="categories" class="container mx-auto relative">
+        <h1 class="text-3xl font-bold mb-6">Categories</h1>
+  <video id="bgVideo" autoplay loop muted class="absolute inset-0 object-cover w-full h-full">
+    <source src="./video/33256-396487978_medium.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
+        
+        <div id="categoryBox" class="slideshow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+       
+            <div class="category">
+                <h2 class="text-xl font-semibold mb-2">Pizzas</h2>
+                <div class="card">
+                    <a href="./pizzas.html">
+                        <img src="./images/pizza.jpg" alt="Pizzas" class="w-full">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Add other categories similarly -->
+            
+            <div class="category">
+                <h2 class="text-xl font-semibold mb-2">Burgers</h2>
+                <div class="card">
+                    <a href="./Burgers.html">
+                        <img src="/images/grilled-cheeseburger-with-tomato-sesame-bun-generative-ai.jpg" alt="Burgers" class="w-full">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h2 class="text-xl font-semibold mb-2">Thali</h2>
+                <div class="card">
+                    <a href="./Thali.html">
+                        <img src="https://curlytales.com/wp-content/uploads/2017/07/gujarati-thali.jpg" alt="Thali" class="w-full">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h2 class="text-xl font-semibold mb-2">Chinese</h2>
+                <div class="card">
+                    <a href="./chinese.html">
+                        <img src="https://b.zmtcdn.com/data/dish_photos/c85/845ff1ccd2760d3d461bdd7dbcbd1c85.jpg?output-format=webp" alt="Chinese" class="w-full">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h2 class="text-xl font-semibold mb-2">Wraps & Rolls</h2>
+                <div class="card">
+                    <a href="./wrapsNrolls.html">
+                        <img src="https://b.zmtcdn.com/data/dish_photos/774/98640914782b2628ad7f2801464bb774.jpg" alt="Wraps & Rolls" class="w-full">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h2 class="text-xl font-semibold mb-2">Beverages</h2>
+                <div class="card">
+                    <a href="./Beverages.html">
+                        <img src="https://b.zmtcdn.com/data/dish_photos/460/4b79b362f682c7913736891a1c286460.jpg" alt="Beverages" class="w-full">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SlideShow Section -->
+    <section class="slideShow">
+        <div class="elfsight-app-25eefd3b-863d-49b9-bbb1-16a6b53d2a6f" data-elfsight-app-lazy></div>
     </section>
     <!-- here we are starting reccomandation  -->
        
@@ -141,8 +224,8 @@
     <br> -->
     
 <!--    
-<section>
-<div class="recommendation-container">
+    <section>
+        <div class="recommendation-container">
     <h1>hey! What's you mood? </h1>
     <div class="emoji-container">
         <div class="emoji" onclick="getRecommendations('😊')">😊</div>
@@ -170,7 +253,7 @@
 
     <div id="best-seller-box">
 
-        <h1>Best Sellers</h1>
+        <!-- <h1 class="">Best Sellers</h1> -->
 
         <div class="twoItems">
 
@@ -446,8 +529,10 @@
 
 <!-- Sticky Navbar Scrolling effect -->
 <script src="/index.js"></script>
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<script src="./categories.js"></script>
 
-<script type="module" src="/cart.js"></script>
+<script type="module" src="./Cart.js"></script>
 <script type="module" src="./recommendation.js"></script>
 </body>
 </html>
