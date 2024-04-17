@@ -1010,9 +1010,14 @@ body{
   position: relative;
   justify-content: center;
   align-items: center;
-  margin-left: 40rem;
+  margin-left: 31rem;
 }
-
+#Profile{
+  position: absolute;
+  top: 10px;
+  right:0;
+  
+}
 #links li {
   padding: 0rem 2rem;
   margin: 0rem 0.5rem;
@@ -1207,6 +1212,7 @@ body{
   }
 
   #categories h1 {
+  
     cursor: pointer;
     position: absolute; /* Position label relative to the section */
     top: 8%; /* Align label to the top */
@@ -1326,6 +1332,14 @@ body{
   display: flex;
   justify-content: center;  
   margin-bottom:20px;
+}
+#bestSellers h1 {
+  display: flex;
+  justify-content: center;
+  font-size:90px;
+  font-weight: 900;
+  font-family: 'Arial', sans-serif; /* Change font family */
+
 }
 .twoItems{
   margin-top: 20px;
