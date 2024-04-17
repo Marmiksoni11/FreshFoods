@@ -21,9 +21,9 @@ const authenticateUser = async (req, res, next) => {
   try {
     console.log('------- user');
     // Verify if it's a user token
-    // userPayload = jwt.verify(token, process.env.JWT_SECRET);
+    userPayload = jwt.verify(token, process.env.JWT_SECRET);
 
-    // console.log('userPayload -----> ', userPayload);
+    console.log('userPayload -----> ', userPayload);
   } catch (userError) {
     console.log(userError, "user error");
   }
