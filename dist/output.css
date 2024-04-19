@@ -1898,3 +1898,4 @@ footer{
     grid-template-columns: minmax(100px, 1fr);
   }
 }
+/* Media query for screen widths up to 600px */
