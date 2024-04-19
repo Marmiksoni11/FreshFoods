@@ -11,7 +11,7 @@
 
 
 require('dotenv').config()
-
+const cors = require('cors');
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -38,8 +38,9 @@ app.use(express.static(path.join(__dirname, 'dist')));
 //* json middleware
 app.use(express.json())
 
-// app.use()
 
+//* Enable CORS
+app.use(cors());
 //! handling errors after wrapping the contorllers so that our previos errors can work
 
 app.use(errorHandlerMiddleware)
