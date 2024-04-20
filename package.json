@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "dev": "npx tailwindcss -i ./src/input.css ./src/aboutInput.css -o ./dist/output.css --watch"
+    "start": "nodemon app.js"
+    
   },
   "author": "",
   "license": "ISC",
