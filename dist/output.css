@@ -1431,19 +1431,23 @@ body{
 }
 
 #righthelp a img{
-  height: 2.4rem;
+  /* height: 2.4rem; */
+  height: 38px;
 }
 
 .leftSideIcon{
   display: grid;
   width: 100%;
   height: auto;
-  grid-template-columns: 30% 30% 15% 15% 15%;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
-.leftSideIcon #apple{
+/* .leftSideIcon #apple{
   position: relative;
   right: 20%;
-}
+} */
 
 #reachUs a{
   text-decoration: none;
@@ -1460,7 +1464,7 @@ body{
   cursor: pointer;
 }
 
-#righthelp{
+/* #righthelp{
   display: grid;
   position: relative;
   top: 10%;
@@ -1468,18 +1472,31 @@ body{
   grid-template-rows: 50% 50%;
   height: auto;
   width: auto;
+} */
+
+#righthelp{
+  display: grid;
+  grid-gap: 0px;
+  top: 10%;
+  left: 50%;
+  grid-template-rows: 50% 50%;
+  height: auto;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 2rem;
+  padding-right: 3rem;
 }
 
 .rightSideIcon{
-  position: relative;
-  left: 10%;
-  bottom: 10%;
-  /* border: 1px solid black; */
   width: 30%;
   height: auto;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 0.3fr 0.3fr 0.3fr;
+  grid-gap: 19px;
+  padding-left: 5rem;
 }
+
+
 
 /* #righthelp a{
   margin: 0rem 0.2rem;
