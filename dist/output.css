@@ -1315,11 +1315,18 @@ body{
 
 /* best sellers Section Start */
 
+#best-seller-box{
+  width: 100%;
+  height: auto;
+  grid-template-rows: 20% 40% 40%;
+}
 #bestSellers {
+
   display: flex;
   justify-content: center;  
   margin-bottom:20px;
 }
+
 #bestSellers h1 {
   display: flex;
   justify-content: center;
@@ -1328,38 +1335,49 @@ body{
   font-family: 'Arial', sans-serif; /* Change font family */
 
 }
+
 .twoItems{
-  margin-top: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 
-  display: grid;
-  grid-template-columns: 350px 350px 350px;
-  grid-gap: 20px;
-}
+
 .item {
-
+  padding: 10px;
+  margin-left: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 20px;
   text-align: center;
 }
 
 .photo img {
   width: 100%;
-  max-width: 305px;
+  max-width: 20vw;
   height: auto;
   border-radius: 8px;
 }
 
 .details p {
-  margin: 5px 0;
+  margin: 4px 0;
 }
 
 .buttons {
+
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+
 }
+.orderNow:hover{
+  background-color: rgb(255, 94, 0);
+  transition: 0.5s;
+
+}
+
+
 
 .orderNow {
   padding: 8px 16px;
