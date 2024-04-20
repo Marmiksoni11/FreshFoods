@@ -28,7 +28,7 @@ const saveProducts = async (Product, productsData) => {
   try {
     // Clear existing data
     await Product.deleteMany();
-q
+
     // Create instances and save data
     await Product.create(productsData);
     console.log('Success!!!!');
@@ -39,10 +39,8 @@ q
 
 const start = async () => {
   try {
-    await connectDB(process.env.MONGO_URI);
-
-    // Use the common function for different product types
     
+    await connectDB(process.env.MONGO_URI);
     await saveProducts(Pizza, pizzaData)
     await saveProducts(Burger, burgerData)
     await saveProducts(Chinese, ChineseData) 
@@ -50,8 +48,6 @@ const start = async () => {
     await saveProducts(Beverages, beveragesData)
     await saveProducts(BestSellers, bestsellerArray)
     await saveProducts(WrapsAndRolls, wrapsAndRollsData)
-
-    // Call the function with more arrays as needed
 
     process.exit(0);
   } catch (error) {

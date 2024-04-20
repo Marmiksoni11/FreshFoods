@@ -36,7 +36,7 @@ const getAllProducts = async (req, res) => {
         ]);
 
         // Combine the results from different collections into a single array
-        const allProducts = [
+        let allProducts = [
             ...pizzas,
             ...burgers,
             ...chinese,
@@ -45,12 +45,17 @@ const getAllProducts = async (req, res) => {
             ...thalis,
             ...bestSellers,
         ];
-        console.log(allProducts);
-        // res.status(200).json({ allProducts });
+
+        // Filter products based on category if category parameter is provided in the request query
+        if (req.query.category) {
+            const category = req.query.category.toLowerCase();
+            allProducts = allProducts.filter(product => product.category.toLowerCase() === category);
+        }
+
         res.status(200).json({ allProducts, nbHits: allProducts.length });
     } catch (error) {
         res.status(500).json({ error: error.message });
-    }
+    } 
 };
 
 const getProduct = async (req, res,next) => {

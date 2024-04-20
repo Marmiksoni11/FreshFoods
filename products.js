@@ -4,7 +4,8 @@ const pizzaData = [
     name: "Lithosphere",
     company: "Upper Crust",
     price: "₹600",
-    image: "../images/pizza.jpg",
+    image: "../images/bestsellers/pizza.jpg",
+    category:"pizza"
   },
   {
     id:"yutyu",
@@ -12,6 +13,7 @@ const pizzaData = [
     company: "Dominos Pizza",
     price: "₹350",
     image: "https://b.zmtcdn.com/data/dish_photos/0db/39e8f7a1cb3398d997ce415cc86210db.jpg",
+    category:"pizza"
   },
   {
     id:"nbbnnvnn",
@@ -19,6 +21,7 @@ const pizzaData = [
     company: "RP's PIzzeria",
     price: "₹300",
     image: "https://b.zmtcdn.com/data/dish_photos/87a/dc31550a35c3682e0f01b36dc0a7887a.jpg",
+    category:"pizza"
   },
   {
     id:"werwrre",
@@ -26,6 +29,7 @@ const pizzaData = [
     company: "Oven Story Pizza",
     price: "₹450",
     image: "https://b.zmtcdn.com/data/dish_photos/65d/a819c99767aad4df7325195779aa165d.jpg?output-format=webp",
+    category:"pizza"
   },
   {
     id:"qwewqwe",
@@ -33,6 +37,7 @@ const pizzaData = [
     company: "Little French House",
     price: "₹400",
     image: "https://b.zmtcdn.com/data/dish_photos/547/c066f447f79e716251a830eea39d4547.jpg",
+    category:"pizza"
   },
   {
     id:"nghngnhn",
@@ -40,6 +45,7 @@ const pizzaData = [
     company: "Sam's Pizza",
     price: "₹200",
     image: "https://b.zmtcdn.com/data/dish_photos/fe9/ec6f85a5aea551d55b28f3748b3b9fe9.jpg",
+    category:"pizza"
   },
   {
     id:"mlmlni",
@@ -47,6 +53,7 @@ const pizzaData = [
     company: "La Pino'z Pizza",
     price: "₹400",
     image: "https://b.zmtcdn.com/data/dish_photos/b83/fa9c88e1a09d703c7f9f4804790c8b83.jpg",
+    category:"pizza"
   },
   {
     id:"zxcbccvcxz",
@@ -54,6 +61,7 @@ const pizzaData = [
     company: "Pizza Hut",
     price: "₹450",
     image: "https://b.zmtcdn.com/data/dish_photos/2f5/95b936ff3b26a8f92e8ab256fee762f5.jpg",
+    category:"pizza"
   }
 ];
 
@@ -64,6 +72,7 @@ const burgerData = [
     company: "Burger King",
     price: "₹150",
     image: "https://b.zmtcdn.com/data/dish_photos/fc0/28e42033758ab46493649e57035aafc0.jpg",
+    category:"burger"
   },
   {
     id: "burger2",
@@ -71,6 +80,7 @@ const burgerData = [
     company: "Boss Burger",
     price: "₹70",
     image: "https://b.zmtcdn.com/data/dish_photos/72b/d5bc5b32dd177f5f207cad66556a572b.jpg",
+    category:"burger"
   },
   {
     id: "burger3",
@@ -78,6 +88,7 @@ const burgerData = [
     company: "Tera Gourmet",
     price: "₹80",
     image: "https://b.zmtcdn.com/data/dish_photos/a5b/fe2d1e1c252df0ea62e89c752fa96a5b.jpg",
+    category:"burger"
   },
   {
     id: "burger4",
@@ -85,6 +96,7 @@ const burgerData = [
     company: "Harmony Restro Cafe",
     price: "₹80",
     image: "https://b.zmtcdn.com/data/dish_photos/120/5950f0c3bd2195f800c30f1a81043120.jpg",
+    category:"burger"
   },
   {
     id: "burger5",
@@ -92,6 +104,7 @@ const burgerData = [
     company: "Burgometery",
     price: "₹100",
     image: "https://b.zmtcdn.com/data/dish_photos/35c/bae6f388c9053b6cc2217b984c2b035c.jpg",
+    category:"burger"
   },
   {
     id: "burger6",
@@ -99,6 +112,7 @@ const burgerData = [
     company: "The HOCCO Kitchen",
     price: "₹50",
     image: "https://b.zmtcdn.com/data/dish_photos/7bd/38f3a8f6ef59e195c0482962f43057bd.jpg",
+    category:"burger"
   },
   {
     id: "burger7",
@@ -106,6 +120,7 @@ const burgerData = [
     company: "Tummy Fillers",
     price: "₹130",
     image: "https://b.zmtcdn.com/data/dish_photos/3d5/3bb1151068686363c50d993b7869b3d5.jpg",
+    category:"burger"
   },
   {
     id: "burger8",
@@ -113,6 +128,7 @@ const burgerData = [
     company: "Mc Donald's",
     price: "₹100",
     image: "https://b.zmtcdn.com/data/dish_photos/de9/2395f3d24ed7ca6fc763e40806cc4de9.jpg",
+    category:"burger"
   },
 ];
 
@@ -123,6 +139,7 @@ const thaliData = [
     company: "Thali & Co.",
     price: "₹100",
     image: "https://b.zmtcdn.com/data/dish_photos/9a3/0348b6f075f6b7fd2da7c440b2af29a3.jpg",
+    category:"thali"
   },
   {
     id: "thali2",
@@ -130,6 +147,7 @@ const thaliData = [
     company: "Gwalia Sweets and FastFood",
     price: "₹150",
     image: "https://b.zmtcdn.com/data/pictures/5/18808035/60a335e166fe3bef5adfcf464532ddea_o2_featured_v2.jpg",
+    category:"thali"
   },
   {
     id: "thali3",
@@ -137,6 +155,7 @@ const thaliData = [
     company: "Gwalbhog",
     price: "₹600",
     image: "https://b.zmtcdn.com/data/pictures/3/19489313/9a2965589a2604c72e55ce19e2d6bedf_o2_featured_v2.jpg",
+    category:"thali"
   },
   {
     id: "thali4",
@@ -144,6 +163,7 @@ const thaliData = [
     company: "Hari Om Food",
     price: "₹280",
     image: "https://b.zmtcdn.com/data/pictures/7/18541207/f12d075a5019f1282592b9c446777482_o2_featured_v2.jpg",
+    category:"thali"
   },
   {
     id: "thali5",
@@ -151,6 +171,7 @@ const thaliData = [
     company: "Kabir Restaurant",
     price: "₹200",
     image: "https://b.zmtcdn.com/data/pictures/9/111899/eb1de7b4b650179ee951a6e8c7051d53_featured_v2.jpg",
+    category:"thali"
   },
   {
     id: "thali6",
@@ -158,6 +179,7 @@ const thaliData = [
     company: "Topaz Restaurant",
     price: "₹200",
     image: "https://b.zmtcdn.com/data/pictures/4/110144/61c3e30f08aaa1c85d51fd1132324061_o2_featured_v2.jpg",
+    category:"thali"
   },
   {
     id: "thali7",
@@ -165,6 +187,7 @@ const thaliData = [
     company: "Gopi Dining Hall",
     price: "₹300",
     image: "https://b.zmtcdn.com/data/dish_photos/086/ef07c366413e4dad8e49005a20537086.jpg",
+    category:"thali"
   },
   {
     id: "thali8",
@@ -172,6 +195,7 @@ const thaliData = [
     company: "Dilli ki Rasoi",
     price: "₹400",
     image: "https://b.zmtcdn.com/data/dish_photos/086/ef07c366413e4dad8e49005a20537086.jpg",
+    category:"thali"
   },
 ];
 
@@ -182,6 +206,7 @@ const ChineseData = [
     company: "Space Dragon",
     price: "₹100",
     image: "https://b.zmtcdn.com/data/dish_photos/29b/128fce1a3e72ab0d53978dce0883f29b.jpg?output-format=webp",
+    category:"chinese"
   },
   {
     id: "appetizer2",
@@ -189,6 +214,7 @@ const ChineseData = [
     company: "Meritorious",
     price: "₹100",
     image: "https://b.zmtcdn.com/data/dish_photos/5f9/3daa867752242c1edf2d4ea4076f75f9.jpg?output-format=webp",
+    category:"chinese"
   },
   {
     id: "appetizer3",
@@ -196,6 +222,7 @@ const ChineseData = [
     company: "Topaz",
     price: "₹300",
     image: "https://b.zmtcdn.com/data/dish_photos/3cf/525d5fa30e721a860831499bdbeb53cf.jpg?output-format=webp",
+    category:"chinese"
   },
   {
     id: "appetizer4",
@@ -203,6 +230,7 @@ const ChineseData = [
     company: "Hari Om Food",
     price: "₹280",
     image: "https://b.zmtcdn.com/data/dish_photos/c85/845ff1ccd2760d3d461bdd7dbcbd1c85.jpg?output-format=webp",
+    category:"chinese"
   },
   {
     id: "appetizer5",
@@ -210,6 +238,7 @@ const ChineseData = [
     company: "Kabir Restaurant",
     price: "₹150",
     image: "https://b.zmtcdn.com/data/dish_photos/03f/69ca892d52b62222ba85206a9f21d03f.jpg",
+    category:"chinese"
   },
   {
     id: "appetizer6",
@@ -217,6 +246,7 @@ const ChineseData = [
     company: "Topaz Restaurant",
     price: "₹200",
     image: "https://b.zmtcdn.com/data/dish_photos/50b/f56d1ac22f7ff42dce57f9ccc125b50b.jpg",
+    category:"chinese"
   },
   {
     id: "appetizer7",
@@ -224,6 +254,7 @@ const ChineseData = [
     company: "Chinese Wok",
     price: "₹200",
     image: "https://b.zmtcdn.com/data/dish_photos/cc0/3029b75a5c6d3e134a75398c75602cc0.jpg",
+    category:"chinese"
   },
   {
     id: "appetizer8",
@@ -231,6 +262,7 @@ const ChineseData = [
     company: "Chinese Wok",
     price: "₹300",
     image: "https://b.zmtcdn.com/data/dish_photos/fbe/3b36dc5ae7d5a53f6a8b2c0f06275fbe.jpg",
+    category:"chinese"
   },
 ];
 
@@ -241,6 +273,7 @@ const wrapsAndRollsData = [
     company: "HL Frankie",
     price: "₹150",
     image: "https://b.zmtcdn.com/data/dish_photos/066/2f3f482a1935235f4ac89d8e1223e066.jpg",
+    category:"wrapsAndRolls"
   },
   {
     id: "wrap2",
@@ -248,6 +281,7 @@ const wrapsAndRollsData = [
     company: "Fasos Wraps & Rolls",
     price: "₹200",
     image: "https://b.zmtcdn.com/data/dish_photos/eb5/173ab54c0e1ea124413be80e09545eb5.jpg",
+    category:"wrapsAndRolls"
   },
   {
     id: "wrap3",
@@ -255,6 +289,7 @@ const wrapsAndRollsData = [
     company: "Fasos Wraps & Rolls",
     price: "₹250",
     image: "https://b.zmtcdn.com/data/dish_photos/35f/e33b232690d715d740431f779291335f.jpg",
+    category:"wrapsAndRolls"
   },
   {
     id: "wrap4",
@@ -262,6 +297,7 @@ const wrapsAndRollsData = [
     company: "Frankie On Fire",
     price: "₹280",
     image: "https://b.zmtcdn.com/data/dish_photos/5ce/e6c796fc32807004bb0273dfb43175ce.jpg",
+    category:"wrapsAndRolls"
   },
   {
     id: "wrap5",
@@ -269,6 +305,7 @@ const wrapsAndRollsData = [
     company: "Burger Farm",
     price: "₹150",
     image: "https://b.zmtcdn.com/data/dish_photos/bb5/911ffe4dc354c9ce4c6fa8676124bbb5.png",
+    category:"wrapsAndRolls"
   },
   {
     id: "wrap6",
@@ -276,6 +313,7 @@ const wrapsAndRollsData = [
     company: "Terra Food Company",
     price: "₹250",
     image: "https://b.zmtcdn.com/data/dish_photos/091/c4495c0821c9b7e5adef75d12833e091.jpg",
+    category:"wrapsAndRolls"
   },
   {
     id: "wrap7",
@@ -283,6 +321,7 @@ const wrapsAndRollsData = [
     company: "Marky Momos",
     price: "₹200",
     image: "https://b.zmtcdn.com/data/dish_photos/166/66945866863ac81ce098e0b9e6b35166.jpg",
+    category:"wrapsAndRolls"
   },
   {
     id: "wrap8",
@@ -290,6 +329,7 @@ const wrapsAndRollsData = [
     company: "Chinese Wok",
     price: "₹200",
     image: "https://b.zmtcdn.com/data/pictures/9/20789629/0248bfb1c77335bf8e8cbca7dfc71d4d_o2_featured_v2.jpg",
+    category:"wrapsAndRolls"
   },
 ];
 
@@ -300,6 +340,7 @@ const beveragesData = [
     company: "The Food Truck",
     price: "₹100",
     image: "https://b.zmtcdn.com/data/dish_photos/aed/92f0b337c727412afbf6eb8c8beedaed.jpg?output-format=webp",
+    category:"beverages"
   },
   {
     id: "beverage2",
@@ -307,6 +348,7 @@ const beveragesData = [
     company: "Oven Story Pizza",
     price: "₹60",
     image: "https://b.zmtcdn.com/data/dish_photos/78a/25b016a4f3021dad1923cf8d39f2378a.jpg?output-format=webp",
+    category:"beverages"
   },
   {
     id: "beverage3",
@@ -314,6 +356,7 @@ const beveragesData = [
     company: "Dairy Den",
     price: "₹30",
     image: "https://b.zmtcdn.com/data/dish_photos/c04/e0fbcf13848846318ec91497860fbc04.jpg",
+    category:"beverages"
   },
   {
     id: "beverage4",
@@ -321,6 +364,7 @@ const beveragesData = [
     company: "Shri Marutinandan Kathiyawadi Restaurant",
     price: "₹25",
     image: "https://b.zmtcdn.com/data/dish_photos/090/590aed7dd3169ad6aeb213a4e76b2090.jpg?output-format=webp",
+    category:"beverages"
   },
   {
     id: "beverage5",
@@ -328,6 +372,7 @@ const beveragesData = [
     company: "Chhaswala",
     price: "₹30",
     image: "https://b.zmtcdn.com/data/dish_photos/221/ffba29abc2f62367d11d7cb1249be221.jpg",
+    category:"beverages"
   },
   {
     id: "beverage6",
@@ -335,6 +380,7 @@ const beveragesData = [
     company: "Starbucks",
     price: "₹300",
     image: "https://b.zmtcdn.com/data/dish_photos/057/32632f33976aede26beb407156b51057.jpg",
+    category:"beverages"
   },
   {
     id: "beverage7",
@@ -342,13 +388,15 @@ const beveragesData = [
     company: "Rajwadi",
     price: "₹20",
     image: "https://b.zmtcdn.com/data/dish_photos/378/71067087022f75691d602f8961b3e378.jpg",
+    category:"beverages"
   },
   {
     id: "beverage8",
     name: "Bournvita",
     company: "Rajwadi",
     price: "₹30",
-    image: "https://b.zmtcdn.com/data/dish_photos/378/71067087022f75691d602f8961b3e378.jpg",  // Duplicate image for "Bournvita"
+    image: "https://b.zmtcdn.com/data/dish_photos/378/71067087022f75691d602f8961b3e378.jpg",
+    category:"beverages"
   },
 ];
 
@@ -359,42 +407,48 @@ const bestsellerArray = [
     name: "Double Aaloo Tikky Burger",
     company: "Burger King",
     price: "₹150",
-    image: "/images/burger_3.JPG",
+    image: "./images/bestsellers/burger_3.JPG",
+    category:"bestSellers"
   },
   {
     id: "bestseller2",
     name: "Veg Ramen",
     company: "Space Dragon",
     price: "₹200",
-    image: "/images/gourmet-ramen-noodles-steaming-bowl-generated-by-ai.jpg",
+    image: "./images/bestsellers/gourmet-ramen-noodles-steaming-bowl-generated-by-ai.jpg",
+    category:"bestSellers"
   },
   {
     id: "bestseller3",
     name: "Chicken Tikky",
     company: "Boss Burger",
     price: "₹70",
-    image: "/images/burger_1.JPG",
+    image: "./images/bestsellers/burger_1.JPG",
+    category:"bestSellers"
   },
   {
     id: "bestseller4",
     name: "Cheese Veg Loaded",
     company: "Little French House",
     price: "₹400",
-    image: "/images/traditional-supreme-pizza-wooden-table.jpg",
+    image: "./images/bestsellers/traditional-supreme-pizza-wooden-table.jpg",
+    category:"bestSellers"
   },
   {
     id: "bestseller5",
     name: "Veggie Delite Burger",
     company: "Tera Gourmet",
     price: "₹80",
-    image: "/images/burger_2.JPG",
+    image: "./images/bestsellers/burger_2.JPG",
+    category:"bestSellers"
   },
   {
     id: "bestseller6",
     name: "North Indian Lunch",
     company: "Thali & Co.",
     price: "₹100",
-    image: "/images/Saladthali.jpg",
+    image: "./images/bestsellers/Saladthali.jpg",
+    category:"bestSellers"
   },
 ];
 

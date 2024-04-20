@@ -10,6 +10,7 @@ const pizzaSchema = new Schema({
   company: String,
   price: String,
   image: String,
+  category: String,
 });
 
 // Define schema for burgers
@@ -19,6 +20,7 @@ const burgerSchema = new Schema({
   company: String,
   price: String,
   image: String,
+  category: String,
 });
 
 const ChineseSchema = new Schema({
@@ -27,6 +29,7 @@ const ChineseSchema = new Schema({
   company: String,
   price: String,
   image: String,
+  category: String,
 });
 
 const thaliSchema = new Schema({
@@ -35,6 +38,7 @@ const thaliSchema = new Schema({
   company: String,
   price: String,
   image: String,
+  category: String,
 });
 
 const beveragesSchema = new Schema({
@@ -43,6 +47,7 @@ const beveragesSchema = new Schema({
   company: String,
   price: String,
   image: String,
+  category: String,
 });
 
 const wrapsAndRollsSchema = new Schema({
@@ -51,6 +56,7 @@ const wrapsAndRollsSchema = new Schema({
   company: String,
   price: String,
   image: String,
+  category: String,
 });
 
 const bestsellerSchema = new Schema({
@@ -59,6 +65,7 @@ const bestsellerSchema = new Schema({
   company: String,
   price: String,
   image: String,
+  category: String,
 });
 
 
