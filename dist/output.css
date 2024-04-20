@@ -1397,13 +1397,17 @@ body{
 /* * ReachUs Section */
 
 #reachUs{
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
   height: 26vh;
   border-top: 1px solid #e7e7e7;
 }
 
 #lefthelp{
+  position: relative;
+  bottom: 15%;
   display: flex;
   flex-direction: row;
   margin: 1rem 7rem;
@@ -1427,14 +1431,23 @@ body{
 }
 
 #righthelp a img{
-  height: 2rem;
-  display: inline;
-  vertical-align: 0%;
+  height: 2.4rem;
+}
+
+.leftSideIcon{
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 30% 30% 15% 15% 15%;
+}
+.leftSideIcon #apple{
+  position: relative;
+  right: 20%;
 }
 
 #reachUs a{
   text-decoration: none;
-  margin: 0.5rem 0rem;
+  margin: 1rem 0rem;
   color: #5c6c79;
   font-weight: 600;
   font-size: 0.9rem;
@@ -1448,23 +1461,36 @@ body{
 }
 
 #righthelp{
+  display: grid;
   position: relative;
-  left: 20%;
-  top: 50%;
-  height: 16%;
-  width: 27%;
+  top: 10%;
+  left: 50%;
+  grid-template-rows: 50% 50%;
+  height: auto;
+  width: auto;
 }
 
-#righthelp a{
+.rightSideIcon{
+  position: relative;
+  left: 10%;
+  bottom: 10%;
+  /* border: 1px solid black; */
+  width: 30%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+/* #righthelp a{
   margin: 0rem 0.2rem;
-}
+} */
 
-#righthelp a svg{
+/* #righthelp a svg{
   margin: 0rem 0.2rem;
   display: inline;
   vertical-align: 0%;
-}
-
+} */
+/* 
 #righthelp a:nth-child(3){
   position: relative;
   bottom:27%;
@@ -1477,31 +1503,26 @@ body{
 
 #righthelp a:nth-child(5){
   position: relative;
-  bottom:27%;
-}
+  top:0;
+ 
+} */
 
-#righthelp a:nth-child(3) path{
+ /* Adding transitions for all the icons */
+.rightSideIcon a path {
   transition: all .2s cubic-bezier(.15,.69,.83,.67);
 }
 
-#righthelp a:nth-child(4) path{
-  transition: all .2s cubic-bezier(.15,.69,.83,.67);
+/* Hover effects for social media icons */
+.rightSideIcon a.facebook:hover path {
+  fill: #648EDE;
 }
 
-#righthelp a:nth-child(5) path{
-  transition: all .2s cubic-bezier(.15,.69,.83,.67);
+.rightSideIcon a.twiter:hover path {
+  fill: #0EB3FF;
 }
 
-#righthelp a:nth-child(3) path:hover{
-  fill:#648EDE;
-}
-
-#righthelp a:nth-child(4) path:hover{
-  fill:#0EB3FF;
-}
-
-#righthelp a:nth-child(5) path:hover{
-  fill:rgb(203, 0, 243);
+.rightSideIcon a.insta:hover path {
+  fill: rgb(203, 0, 243);
 }
 
 .helpbox a path{
@@ -1536,8 +1557,9 @@ footer{
   }
 
   #righthelp {
-    position: static;
-    left: auto;
+    border: 1px solid honeydew;    
+    position: relative;
+    right:10% ;
     top: auto;
     height: auto;
     width: auto;
