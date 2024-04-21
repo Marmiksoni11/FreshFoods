@@ -52,7 +52,7 @@ app.use(errorHandlerMiddleware)
 app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/productRoutes', authenticateUser, productRoutes)
 app.use('/api/v1/admin', adminRoutes)
-app.use('/api/v1/user', userRoutes)
+app.use('/api/v1/user', authenticateUser, userRoutes)
 
 
 const port = process.env.PORT || 3000
