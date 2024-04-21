@@ -22,6 +22,7 @@ const notFound = require('./middleware/not-found');
 const productRoutes = require("./routes/productRoutes")
 const authRoutes = require("./routes/authRoutes")
 const adminRoutes = require("./routes/adminRoutes")
+const userRoutes = require("./routes/userRoutes")
 const authenticateUser = require('./middleware/authentication');
 
 const notFoundMiddleware = require('./middleware/not-found');
@@ -51,6 +52,7 @@ app.use(errorHandlerMiddleware)
 app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/productRoutes', authenticateUser, productRoutes)
 app.use('/api/v1/admin', adminRoutes)
+app.use('/api/v1/user', userRoutes)
 
 
 const port = process.env.PORT || 3000
