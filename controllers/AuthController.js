@@ -9,6 +9,15 @@ const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
 const register = async (req, res) => {
+
+  //*   FIELDS : 
+  //    {
+  //      "name":"userTry",
+  //      "email":"userTry@yopmail.com",
+  //      "password":"userTry12234",
+  //      "make_admin":false
+  //    }
+
   const { make_admin } = req.body
      const temp = {...req.body}
      if(make_admin){
