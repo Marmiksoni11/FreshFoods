@@ -6,12 +6,13 @@
     <title>Profile</title>
     <link rel="stylesheet" href="./output.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <script src="https://cdn.tailwindcss.com"></script>
       <!-- logo font -->
+      
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Kaushan+Script&display=swap" rel="stylesheet">
@@ -67,7 +68,7 @@
     </a>
     </div>
 </nav> 
-    <section class="vh-100" style="background-color: #f4f5f7;">
+    <!-- <section class="vh-100" style="background-color: #f4f5f7;">
         <div class="container py-5 h-100" style="display:flex; flex-direction: column; justify-content: center; align-items: center;">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col col-lg-6 mb-4 mb-lg-0" style="width:100%;">
@@ -80,7 +81,7 @@
                     align-items: center;">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
                       alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
-                    <h5>Marie Horwitz</h5>
+                    <h5 id="username" >Marie Horwitz</h5>
                     <p>Web Designer</p>
                     <i class="far fa-edit mb-5"></i>
                   </div>
@@ -123,9 +124,64 @@
           </div>
         </div>
 
-      </section>
+      </section> -->
+     <!-- updated section! -->
 
+     <section class="vh-100" style="background-color: #f4f5f7;">
+      <div class="container py-3 h-full flex justify-center items-center">
+          <div class="w-full lg:w-3/4">
+              <div class="bg-white rounded-lg shadow-md">
+                  <!-- Cover Image -->
+                  <div class="relative">
+                      <img src="" alt="Cover Image" class="w-full h-32 object-cover rounded-t-lg cover-image">
+                      <!-- Profile Image -->
+                      <img src="" alt="Avatar" class="w-16 h-16 rounded-full absolute bottom-0 left-4 -mb-8 border-2 border-white avatar-image">
+                  </div>
+                  <div class="p-6">
+                      <div class="flex items-center justify-center">
+                          <div class="ml-4">
+                              <h3 class="username text-lg font-semibold">Marmik</h3>
+                              <p class="text-sm text-gray-600">FreshFoods User!</p>
+                          </div>
+                      </div>
+                      <hr class="my-4">
+                      <div class="grid grid-cols-2 gap-2">
+                          <div>
+                              <h6 class="font-semibold">Email</h6>
+                              <p class="useremail text-xs text-gray-600">komal123@gmail.com</p>
+                          </div>
+                          <div>
+                              <h6 class="font-semibold">Phone</h6>
+                              <p class="text-xs text-gray-600">123 456 789</p>
+                          </div>
+                      </div>
+                      <hr class="my-4">
+                      <div class="grid grid-cols-2 gap-2">
+                          <div>
+                              <h6 class="font-semibold">Full Name</h6>
+                              <p class="userfullname text-xs text-gray-600">Marmik Jain</p>
+                          </div>
+                          <div>
+                              <h6 class="font-semibold">Payment Icons</h6>
+                              <div class="flex justify-start space-x-2">
+                                  <!-- Add payment icons here -->
+                                  <i class="fab fa-paypal text-gray-600 hover:text-blue-500"></i>
+                                  <i class="fab fa-cc-visa text-gray-600 hover:text-blue-500"></i>
+                                  <i class="fab fa-cc-mastercard text-gray-600 hover:text-blue-500"></i>
+                                  <!-- Add more payment icons as needed -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+    
+    
 <!-- footer -->
+
 <section id="reachUs">
 
   <div id="lefthelp">
@@ -243,6 +299,52 @@
 
 
 <footer>Copyright © 2023 - All Rights Reserved</footer>
+
+<script>
+  // Retrieve the authentication token from local storage
+  const authToken = localStorage.getItem('token');
+
+  // Check if the token exists
+  if (authToken) {
+      // Fetch user details using the authentication token
+      fetch('http://localhost:4008/user', {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${authToken}` // Include the authentication token in the headers
+          }
+      })
+          .then(response => {
+              if (response.ok) {
+                  return response.json();
+              }
+              throw new Error('Failed to fetch user details');
+          })
+          .then(data => {
+              console.log('User details:', data);
+              
+              // Update profile information
+              document.querySelector(".font-semibold").textContent = data.username;
+              document.querySelector(".useremail").textContent = data.email;
+
+              // Update cover image
+              document.querySelector(".cover-image").src = data.coverImage;
+
+              // Update avatar image
+              document.querySelector(".avatar-image").src = data.avatar;
+              
+              // Update full name
+              document.querySelector(".userfullname").textContent = data.fullname;
+          })
+          .catch(error => {
+              console.error('Error fetching user details:', error);
+          });
+  } else {
+      console.error('Authentication token not found in local storage');
+  }
+</script>
+
+
 
 <!-- Sticky Navbar Scrolling effect -->
 <script src="/index.js"></script>

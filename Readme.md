@@ -41,7 +41,24 @@ GITHUB COMMANDS :
 
    --- >  WHEN YOU DO Register MAKE SURE TO KEEP THE EMAIL UNIQUE FOR EVERY REGISTER OR ELSE IT WILL THROW THE 'DUPLICATE' ERROR , as the emails in the database have to be UNIQUE 
 
+### All About admin-panel 🐛
 
+<!-- check controller we have 2 files of controller  -->
+<!-- controllers ==> AdminController.js and adminpanel.js -->
+
+<!-- check middleware we have ==> authenticationAdmin -->
+    // here we have error with user unAuthenticated issue with          middleware which is ==> authenticationAdmin
+   // bcz of jwt related issue check middleware ==> authenticateAdmin !
+
+<!-- if we solve above issue we can handle this route for front-end -->
+router.get('/admin/userCount', authenticateAdmin, getUserCount);
+
+<!-- now for css issue ! -->
+// here we servering Html File =>  admin-panen.html !
+// just need to adjust css issue!
+
+<!-- we are serving admin-panel.html on this route check router -->
+router.get('/admin/get/panel',AdminPanel.getAllUser);
 ------------------------------------- 
 
 For Marmik : 
