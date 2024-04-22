@@ -980,6 +980,7 @@ body{
 #navbar{
   /* position: sticky; */
   /* position: relative; */
+  width: 100%;
   background: white;
   z-index: 2;
   display: flex;
@@ -1014,6 +1015,166 @@ body{
   position: absolute;
   right: 0;  
   
+  
+}
+
+
+/* start Hamburger */
+.hamburgerManu{
+  display: none;
+}
+
+@media screen and (max-width:769px){
+
+  #links{
+  display: none;  
+}
+
+.hamburgerManu{
+  display: none;
+}
+
+.hamburgerManu {
+  position: absolute;
+  right: 50%;
+  width: 120px;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  transition: height 0.5s, width 0.5s;
+  transition-delay: 0s, 0.75s;
+  overflow: hidden;
+}
+
+.hamburgerManu.active {
+  width: 300px;
+  height: 400px;
+  transition: width 0.5s, height 0.5s;
+  transition-delay: 0s, 0.75s;
+}
+
+.hamburgerManu .userBx {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  margin-left: 37rem;
+  height: 64px;
+}
+
+#links li {
+  padding: 0rem 2rem;
+  margin: 0rem 0.5rem;
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 1em;
+  text-decoration: none;
+  color: #555;
+}
+
+.menu li a:hover {
+  color: #4e65ff;
+}
+
+.menu li a ion-icon {
+  font-size: 1.5em;
+}
+
+.hamburgerManu .menuToggle {
+  position: relative;
+  width: 60px;
+  height: 60px; /* Ensure it has a defined size */
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for the hamburger lines */
+.hamburgerManu .menuToggle::before,
+.hamburgerManu .menuToggle::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: #555;
+  transition: 0.5s;
+}
+
+/* Positioning for the hamburger lines */
+.hamburgerManu .menuToggle::before {
+  transform: translateY(-10px);
+  box-shadow: 0 10px #555;
+}
+
+.hamburgerManu .menuToggle::after {
+  transform: translateY(10px);
+}
+
+/* Animation for the active state */
+.hamburgerManu.active .menuToggle::before {
+  transform: translateY(0px) rotate(45deg);
+  box-shadow: 0 0 #555;
+}
+
+.hamburgerManu.active .menuToggle::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+/* End Hamburger */
+
+@media (max-width:770px){
+  
+  .hamburgerManu{
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin-top: 2.5%;
+    }
+}
+.hamburgerManu .menuToggle::before,
+  .hamburgerManu .menuToggle::after {
+    display: block; /* Ensure the lines are visible */
+  }
+.hamlinks {
+  display: none;
+}
+
+.hamburgerMenu {
+  position: relative;
+  z-index: 999; /* Ensure the hamburger menu appears above the content but below the navbar */
+}
+
+
+
+}
+
+/* Hamburger Animation */
+@keyframes slide-in-right {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out-left {
+  from {
+      transform: translateX(0%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
 }
 
 #links li {
@@ -1124,10 +1285,11 @@ body{
 
 #search::after{
   content: "";
-  background: url(/images/top-view-circular-food-frame.jpg)center center/cover no-repeat;
+  background: url("./images/top-view-circular-food-frame.jpg")center center/cover no-repeat;
   height: 85vh;
-  position: absolute;
-  width: 98.957vw;
+  
+  
+ 
 }
 
 /* .sticky {
@@ -1184,19 +1346,38 @@ body{
     position: relative; /* Ensure proper positioning context for child elements */
     overflow: hidden; /* Prevent overflow of child elements */
   }
-  
 
-  #categoryBox {
-    position: relative; /* Ensure proper stacking context for child elements */
+  @keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+#categoryBox {
+    position: relative;
     display: flex;
-    flex-wrap: nowrap; /* Adjusted to prevent wrapping */
-    gap: 2rem; /* Added gap between categories */
-    padding: 100px 2rem 0 2rem; /* Adjusted padding to add space between animation section and categories */
+    flex-wrap: nowrap;
+    gap: 2rem;
+    padding: 100px 2rem 0 2rem;
     max-width: 100%;
-    width: 100%; /* Ensure category box fills the entire width */
-    height: calc(100% - 100px); /* Adjusted height to fit within the remaining space */
-    animation: slide 10s infinite alternate; /* Added animation for automatic sliding */
-  }
+    width: 100%;
+    height: calc(100% - 100px);
+    overflow: hidden; /* Ensure overflow is hidden to hide the items outside the container */
+}
+
+.category {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+    animation: slide 10s ease-in-out infinite; /* Apply the slide animation to all items */
+}
 
   #categories h1 {
   
@@ -1280,14 +1461,7 @@ body{
 }
 
 
-  @keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%); /* Slide to the left */
-    }
-  }
+  
   
    /* Categories section End */
 
@@ -1320,6 +1494,9 @@ body{
   height: auto;
   grid-template-rows: 20% 40% 40%;
 }
+
+
+
 #bestSellers {
 
   display: flex;
@@ -1343,6 +1520,28 @@ body{
     justify-content: center;
   }
 
+  @media screen and (max-width:596px) {
+    #best-seller-box h1{
+      font-size:3.5rem;
+      font-weight: 900;
+    }
+    .twoItems{
+      display: flex;
+      
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width:765px) {
+    #best-seller-box h1{
+      font-size:2.9rem;
+      font-weight: 900;
+    }
+    .twoItems{
+      display: flex;
+      
+      flex-direction: column;
+    }
+  }
 
 .item {
   padding: 10px;
@@ -1397,12 +1596,52 @@ body{
 /* * ReachUs Section */
 
 #reachUs{
-  width: 100%;
+  border: 1px solid black;
+  width:100%;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   height: 26vh;
   border-top: 1px solid #e7e7e7;
+}
+
+@media screen and (max-width:768px) {
+
+  #reachUs{
+   
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 70%;
+    height:100%;
+    grid-template-columns:50% 50% ;
+    grid-template-rows:100%;
+    
+   
+   
+  }
+  .rightSideIcon{
+    position: relative;
+    bottom: 20%;
+    right: 7%;
+  }
+ 
+}
+
+@media screen and (min-width:590px) and (max-width:768px) {
+  .rightSideIcon{
+    position: relative;
+  bottom: 25%;
+    right: 20%;
+  }
+
+}
+@media screen and (min-width:560px) and (max-width:589px) {
+  .rightSideIcon{
+    position: relative;
+  bottom: 25%;
+    right: 20%;
+  }
+
 }
 
 #lefthelp{
@@ -1729,20 +1968,33 @@ footer{
     width: 25%;
   }
 }
+@media only screen and (max-width: 768px) {
+  .twoItems {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+}
 
+@media only screen and (max-width: 576px) {
+  .twoItems {
+    grid-template-columns: minmax(100px, 1fr);
+  }
+}
+/* for shopping cart */
 
+#summary {
+  background-color: #f6f6f6;
+}
 
+/* slider */
 
+/* PRODUCTS */
 
+.categoryBox::-webkit-scrollbar {
+  display: none;
+}
 
-
-
-/* CSS code here */
-.recommendation-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+.category:hover{
+  opacity: 1;
 }
 
 .pre-btn,
@@ -1768,54 +2020,36 @@ footer{
   right: 0;
 }
 
-/* .pre-btn img,
-.nxt-btn img {
-  opacity: 0.2;
-} */
-
-.pre-btn:hover img,
-.nxt-btn:hover img {
-  opacity: 1;
-}
-
-.btns{
-  display: flex;
-  /* background: red; */
-  height: 5vh;
-  margin-top: 36px;
-}
-
-.details {
+.slider {
   position: relative;
-  width: 60%;
-  /* background-color: #f9f9f9; */
-  padding: 10px;
+  width: 100%;
+  overflow: hidden;
 }
 
-.details h3 {
-  margin: 0;
-}
-
-.details p {
-  margin: 5px 0;
-  font-weight: bold;
-}
-.slider .controll{
-  position: relative;
-  left: 50%;
-}
-
-/* REGISTER PAGE */
-
-.container {
-  height: 97vh;
-  width: 406px;
+.slides-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 406px;
-  margin: auto;
-  flex-direction: column;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.slide img {
+  position: relative;
+  left: 40%;
+  max-width: 100%;
+  height: 30vh;
+  margin-bottom: 10px;
+}
+
+.hover\:scale-125:hover {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:bg-gray-100:hover {
@@ -1908,6 +2142,19 @@ footer{
   /* background: red; */
   height: 5vh;
   margin-top: 36px;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%); */
+  cursor: pointer;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
 }
 
 .hover\:scale-125:hover {

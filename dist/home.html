@@ -78,7 +78,40 @@
             </li>
         </ul>
       
-       
+       <div class="hamburgerManu">
+  <div class="userBx">
+    <div class="imgBx">
+      <img id="avatarImage" src="./images/burger_1.JPG" alt="user avatar" />
+    </div>
+    <p id="uname" class="username">FreshFoods</p>
+  </div>
+  <div class="menuToggle"></div>
+  <ul class="menu">
+    <a href="./profile.html">
+        <ion-icon name="person-circle-outline"></ion-icon> <!-- Example of ion-icon -->
+        Profile
+      </a>
+    <li>
+      <a href="">Home</a>
+    </li>
+    <li>
+      <a href="#categories">Categories</a
+      >
+    </li>
+    <li>
+      <a href="./contactUs.html">Contact Us</a>
+    </li>
+    <li>
+      <a href="">Settings</a
+      >
+    </li>
+    <a href="#">Logout</a>
+    <li>
+    </li>
+  </ul>
+</div>
+
+ 
     </nav> 
 
     <section id="search">
@@ -90,7 +123,10 @@
 
     <!-- <section id="categories" class="container mx-auto">
         <h1 class="text-3xl font-bold mb-6">Categories</h1>
+    <!-- <section id="categories" class="container mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Categories</h1>
         
+        <div id="categoryBox" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div id="categoryBox" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
        
             <div class="category">
@@ -153,11 +189,11 @@
     </section> -->
     
     <section id="categories" class="container mx-auto relative">
-        <h1 class="text-3xl font-bold mb-6" style="color: rgb(255, 120, 47);">Categories</h1>
-  <video id="bgVideo" autoplay loop muted class="absolute inset-0 object-cover w-full h-full">
-    <source src="./video/33256-396487978_medium.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+        <div class="centerCategoriesH1">
+            <h1 class="text-3xl font-bold mb-6" style="color: rgb(255, 120, 47);">Categories</h1>
+            
+            <div>
+  
 
         
         <div id="categoryBox" class="slideshow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -258,7 +294,9 @@
 <!-- ! Best Sellers -->
 <section id="bestSellers">
     
+    
     <div id="best-seller-box">
+        <h1 style="color: rgb(255, 120, 47);">Best Sellers</h1>
         <h1 style="color: rgb(255, 120, 47);">Best Sellers</h1>
 
 
@@ -414,6 +452,7 @@
 
             </div>
         </div>
+
      </div>   
 
 </section>
@@ -551,7 +590,10 @@
 <script src="/index.js"></script>
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <script src="./categories.js"></script>
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<script src="./categories.js"></script>
 
+<script src="./hamburger.js"></script>
 <script type="module" src="./Cart.js"></script>
 <script type="module" src="./recommendation.js"></script>
 </body>
