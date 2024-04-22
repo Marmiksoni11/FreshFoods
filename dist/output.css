@@ -980,6 +980,7 @@ body{
 #navbar{
   /* position: sticky; */
   /* position: relative; */
+  width: 100%;
   background: white;
   z-index: 2;
   display: flex;
@@ -1014,6 +1015,58 @@ body{
   position: absolute;
   right: 0;  
   
+  
+}
+
+@media (max-width:769px){
+
+  #links{
+  display: none;
+  
+}
+}
+
+.hamburgerManu{
+  display: none;
+}
+
+@media (max-width:770px){
+  
+  .hamburgerManu{
+    display: block;
+    position: absolute;
+    right: 0;
+    margin-top: 2.5%;
+    }
+}
+.hamlinks {
+  display: none;
+}
+
+.hamburgerMenu {
+  position: relative;
+  z-index: 999; /* Ensure the hamburger menu appears above the content but below the navbar */
+}
+
+
+
+/* Hamburger Animation */
+@keyframes slide-in-right {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out-left {
+  from {
+      transform: translateX(0%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
 }
 
 #links li {
@@ -1126,8 +1179,8 @@ body{
   content: "";
   background: url(/images/top-view-circular-food-frame.jpg)center center/cover no-repeat;
   height: 85vh;
-  position: absolute;
-  width: 98.957vw;
+  
+ 
 }
 
 /* .sticky {
@@ -1397,12 +1450,52 @@ body{
 /* * ReachUs Section */
 
 #reachUs{
-  width: 100%;
+  border: 1px solid black;
+  width:100%;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   height: 26vh;
   border-top: 1px solid #e7e7e7;
+}
+
+@media screen and (max-width:768px) {
+
+  #reachUs{
+   
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 70%;
+    height:100%;
+    grid-template-columns:50% 50% ;
+    grid-template-rows:100%;
+    
+   
+   
+  }
+  .rightSideIcon{
+    position: relative;
+    bottom: 20%;
+    right: 7%;
+  }
+ 
+}
+
+@media screen and (min-width:590px) and (max-width:768px) {
+  .rightSideIcon{
+    position: relative;
+  bottom: 25%;
+    right: 20%;
+  }
+
+}
+@media screen and (min-width:560px) and (max-width:589px) {
+  .rightSideIcon{
+    position: relative;
+  bottom: 25%;
+    right: 20%;
+  }
+
 }
 
 #lefthelp{
