@@ -5,7 +5,7 @@ const authTokens = localStorage.getItem('token');
 // Check if the token exists
 if (authToken) {
     // Fetch user details using the authentication token
-    fetch('http://localhost:4008/user', {
+    fetch('http://localhost:4008/api/v1/user', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
