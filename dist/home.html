@@ -78,23 +78,38 @@
             </li>
         </ul>
       
-        <div class="hamburgerManu" onclick="toggleMenu()">
-
-            <div class="hamburger" >
-                <div class="hamIcon">
-                    <img id="hamIconSrc" src="./images/ham_manu.jpg" alt="" height="50vh" width="55vw">
-                </div>
-            </div>
-
-            <div class="hamlinks">
-               <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="#categories">Categories</a></li>
-                    <li><a href="contactUs.html">Contact-Us</a></li>
-               </ul>
-            </div>
-      
-      </div>
+       <div class="hamburgerManu">
+  <div class="userBx">
+    <div class="imgBx">
+      <img id="avatarImage" src="./images/burger_1.JPG" alt="user avatar" />
+    </div>
+    <p id="uname" class="username">FreshFoods</p>
+  </div>
+  <div class="menuToggle"></div>
+  <ul class="menu">
+    <a href="./profile.html">
+        <ion-icon name="person-circle-outline"></ion-icon> <!-- Example of ion-icon -->
+        Profile
+      </a>
+    <li>
+      <a href="./contactUs.html">Message</a>
+    </li>
+    <li>
+      <a href="#">Notification</a
+      >
+    </li>
+    <li>
+      <a href="#">Settings</a>
+    </li>
+    <li>
+      <a href="./contactUs.css">Help</a
+      >
+    </li>
+    <li>
+      <a href="#">Logout</a>
+    </li>
+  </ul>
+</div>
 
  
     </nav> 
@@ -570,6 +585,7 @@
 <script src="/index.js"></script>
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 <script src="./categories.js"></script>
+
 <script src="./hamburger.js"></script>
 <script type="module" src="./Cart.js"></script>
 <script type="module" src="./recommendation.js"></script>
