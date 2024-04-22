@@ -4,6 +4,7 @@ const formDOM = document.querySelector('#loginForm');
   const resultDOM = document.querySelector('.result');
   const tokenDOM = document.querySelector('.token');
 
+  
   const axios = window.axios;
 
   async function checkToken() {
