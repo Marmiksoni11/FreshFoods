@@ -1177,8 +1177,9 @@ body{
 
 #search::after{
   content: "";
-  background: url(/images/top-view-circular-food-frame.jpg)center center/cover no-repeat;
+  background: url("./images/top-view-circular-food-frame.jpg")center center/cover no-repeat;
   height: 85vh;
+  
   
  
 }
@@ -1237,19 +1238,38 @@ body{
     position: relative; /* Ensure proper positioning context for child elements */
     overflow: hidden; /* Prevent overflow of child elements */
   }
-  
 
-  #categoryBox {
-    position: relative; /* Ensure proper stacking context for child elements */
+  @keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+#categoryBox {
+    position: relative;
     display: flex;
-    flex-wrap: nowrap; /* Adjusted to prevent wrapping */
-    gap: 2rem; /* Added gap between categories */
-    padding: 100px 2rem 0 2rem; /* Adjusted padding to add space between animation section and categories */
+    flex-wrap: nowrap;
+    gap: 2rem;
+    padding: 100px 2rem 0 2rem;
     max-width: 100%;
-    width: 100%; /* Ensure category box fills the entire width */
-    height: calc(100% - 100px); /* Adjusted height to fit within the remaining space */
-    animation: slide 10s infinite alternate; /* Added animation for automatic sliding */
-  }
+    width: 100%;
+    height: calc(100% - 100px);
+    overflow: hidden; /* Ensure overflow is hidden to hide the items outside the container */
+}
+
+.category {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+    animation: slide 10s ease-in-out infinite; /* Apply the slide animation to all items */
+}
 
   #categories h1 {
   
@@ -1333,14 +1353,7 @@ body{
 }
 
 
-  @keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%); /* Slide to the left */
-    }
-  }
+  
   
    /* Categories section End */
 
@@ -1373,6 +1386,9 @@ body{
   height: auto;
   grid-template-rows: 20% 40% 40%;
 }
+
+
+
 #bestSellers {
 
   display: flex;
@@ -1396,6 +1412,17 @@ body{
     justify-content: center;
   }
 
+  @media screen and (max-width:596px) {
+    #best-seller-box h1{
+      font-size:3.5rem;
+      font-weight: 900;
+    }
+    .twoItems{
+      display: flex;
+      
+      flex-direction: column;
+    }
+  }
 
 .item {
   padding: 10px;
