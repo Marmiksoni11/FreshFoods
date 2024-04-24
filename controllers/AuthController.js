@@ -19,6 +19,7 @@ const register = async (req, res) => {
   //    }
 
   const { make_admin } = req.body
+  console.log(req.body);
      const temp = {...req.body}
      if(make_admin){
         temp.role = "admin";

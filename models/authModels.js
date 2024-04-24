@@ -26,23 +26,23 @@ const UserSchema = new mongoose.Schema({
   role: {
     type: String,
   },
-  username: {
-    type: String,
-    required: [true, "Username is required"],
-    unique: true,
-    lowercase: true,
-    trim: true,
-    index: true,
-  },
-  // we are using middleware multer to upload avatar image!
-  avatar: {
-    type: String, //Cloudnary URL
-    required: [true, "Avatar URL is required"],
-  },
-  // we are using middleware multer to upload coverImage image!
-  coverImage: {
-    type: String,
-  },
+  // username: {
+  //   type: String,
+  //   required: [true, "Username is required"],
+  //   unique: true,
+  //   lowercase: true,
+  //   trim: true,
+  //   index: true,
+  // },
+  // // we are using middleware multer to upload avatar image!
+  // avatar: {
+  //   type: String, //Cloudnary URL
+  //   required: [true, "Avatar URL is required"],
+  // },
+  // // we are using middleware multer to upload coverImage image!
+  // coverImage: {
+  //   type: String,
+  // },
 });
 
 UserSchema.pre("save", async function () {

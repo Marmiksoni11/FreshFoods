@@ -26,7 +26,7 @@ const navigate = (url) => {
     const route = routes[path];
     if (route) {
         navigate(route);
-        window.history.pushState({}, '', '/index.html');
+        window.history.pushState({}, '', './index.html');
         window.dispatchEvent(new Event('popstate'))
     } else {
       // Handle cases where URL doesn't match a route (e.g., 404)
@@ -45,9 +45,9 @@ submitButton.addEventListener('click', async (event) => {
   }
 
 
-  const name = document.querySelector('#signup input[type="name"]').value;
-  const email = document.querySelector('#signup input[type="email"]').value;
-  const password = document.querySelector('#signup input[type="password"]').value;
+  const name = document.querySelector('.inputs input[type="name"]').value;
+  const email = document.querySelector('.inputs input[type="email"]').value;
+  const password = document.querySelector('.inputs input[type="password"]').value;
 
   try {
     const { data } = await axios.post('/api/v1/auth/register', {
