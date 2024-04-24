@@ -1,5 +1,5 @@
 const formDOM = document.querySelector('.form');
-const usernameInputDOM = document.querySelector('.username-input')
+const usernameInputDOM = document.querySelector('.email-input')
 const passwordInputDOM = document.querySelector('.password-input')
 // const formAlertDOM = document.querySelector('.form-alert')
 const resultDOM = document.querySelector('.result')
@@ -9,8 +9,8 @@ const tokenDOM = document.querySelector('.token')
 const axios = window.axios;
 
 const routes = {
-  '/': '/login.html',
-  '/home.html': '/home.html' // Assuming you have separate HTML files
+  '/': './login.html',
+  '/home.html': './home.html' // Assuming you have separate HTML files
 }
 
 const navigate = (url) => {
@@ -91,7 +91,7 @@ const checkToken = () => {
     tokenDOM.classList.add('text-success');
     // window.location.href = '/home.html';  
     // Use History API for smoother navigation
-    window.history.pushState({}, '', '/home.html');
+    window.history.pushState({}, '', './home.html');
     window.dispatchEvent(new Event('popstate'));
   } 
   else{
