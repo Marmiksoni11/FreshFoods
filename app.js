@@ -40,9 +40,16 @@ app.use(express.static(path.join(__dirname, 'dist')));
 //* json middleware
 app.use(express.json())
 
+const corsOptions = {
+    origin: 'https://fresh-food-flame.vercel.app/', // Replace with your Vercel deployment URL
+    // Other CORS options if needed
+  };
+  
+  //* Enable CORS
+  app.use(cors(corsOptions));
+  
 
-//* Enable CORS
-app.use(cors());
+
 //! handling errors after wrapping the contorllers so that our previos errors can work
 
 app.use(errorHandlerMiddleware)
