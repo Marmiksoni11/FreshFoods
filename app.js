@@ -47,6 +47,9 @@ app.use(cors());
 
 app.use(errorHandlerMiddleware)
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  });
 
 //* routes middleware 
 app.use('/api/v1/auth', authRoutes)
