@@ -9,7 +9,7 @@ const tokenDOM = document.querySelector('.token')
 const axios = window.axios;
 
 const routes = {
-  '/': './login.html',
+  '/': './index.html',
   '/home.html': './home.html' // Assuming you have separate HTML files
 }
 

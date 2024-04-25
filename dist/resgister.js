@@ -57,7 +57,7 @@ submitButton.addEventListener('click', async (event) => {
     })
 
     console.log(data);
-    navigate('/index.html');
+    navigate('./index.html');
     // Handle successful registration (e.g., display success message, redirect to login page)
     // resultDOM.innerHTML = '<p>Registration successful! Please log in.</p>';
     // usernameInputDOM.value = '';
