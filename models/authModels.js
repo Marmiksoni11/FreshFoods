@@ -34,15 +34,15 @@ const UserSchema = new mongoose.Schema({
   //   trim: true,
   //   index: true,
   // },
-  // // we are using middleware multer to upload avatar image!
-  // avatar: {
-  //   type: String, //Cloudnary URL
-  //   required: [true, "Avatar URL is required"],
-  // },
-  // // we are using middleware multer to upload coverImage image!
-  // coverImage: {
-  //   type: String,
-  // },
+
+  // we are using middleware multer to upload avatar image!
+  avatar: {
+    type: String, //Cloudnary URL
+  },
+  // we are using middleware multer to upload coverImage image!
+  coverImage: {
+    type: String,
+  },
 });
 
 UserSchema.pre("save", async function () {

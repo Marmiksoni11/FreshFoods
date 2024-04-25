@@ -29,7 +29,7 @@
 
     <ul id="links">
         <!-- <li><a href="login.html">LOGIN</a></li> -->
-        <li><a href="home.html">Home</a></li>
+        <li><a href="./home.html">Home</a></li>
         <li><a href="#categories">Categories</a></li>
         <li><a href="contactUs.html">Contact-Us</a></li>
         <li>
@@ -112,6 +112,7 @@
 
 </nav> 
 
+
     <!-- <section class="vh-100" style="background-color: #f4f5f7;">
         <div class="container py-5 h-100" style="display:flex; flex-direction: column; justify-content: center; align-items: center;">
           <div class="row d-flex justify-content-center align-items-center h-100">
@@ -171,16 +172,34 @@
       </section> -->
      <!-- updated section! -->
 
+
      <section class="vh-100" style="background-color: #f4f5f7;">
       <div class="container py-3 h-full flex justify-center items-center">
           <div class="w-full lg:w-3/4">
               <div class="bg-white rounded-lg shadow-md">
                   <!-- Cover Image -->
+
                   <div class="relative">
-                      <img src="" alt="Cover Image" class="w-full h-32 object-cover rounded-t-lg cover-image">
-                      <!-- Profile Image -->
-                      <img src="" alt="Avatar" class="w-16 h-16 rounded-full absolute bottom-0 left-4 -mb-8 border-2 border-white avatar-image">
-                  </div>
+
+                    <form id="cover-image-form" action="/api/v1/profile/update-cover-image" method="post" enctype="multipart/form-data">
+                      <input type="file" name="coverImage" accept="image/*" class="hidden" id="cover-image-input">
+                        <label for="cover-image-input">
+                          <img src="../dist/images/9.jpg" alt="Cover Image" class="w-full h-32 object-cover rounded-t-lg cover-image">
+                        </label>
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload Cover Image</button>
+                  </form>
+                    
+                    <!-- Profile Image -->
+                  <form id="avatar-form" action="/api/v1/profile/update-avatar" method="post" enctype="multipart/form-data">
+                      <input type="file" name="avatar" class="hidden" id="avatar-input">
+                      <label for="avatar-input">
+                          <img src="../dist/images/BOWL.jpg" alt="Avatar" class="w-16 h-16 rounded-full absolute bottom-0 left-4 -mb-8 border-2 border-white avatar-image">
+                        </label>
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload Avatar</button>
+                  </form>
+
+                    </div>
+                  
                   <div class="p-6">
                       <div class="flex items-center justify-center">
                           <div class="ml-4">
@@ -358,8 +377,10 @@
 
 
 <!-- Sticky Navbar Scrolling effect -->
+
 <script src="/index.js"></script>
 <script src="./hamburger.js"></script>
+<script src="./profileUpdate.js"></script>
 <script type="module" src="/cart.js"></script>
 <script type="module" src="./recommendation.js"></script>
 <script src="./profile.js"></script>

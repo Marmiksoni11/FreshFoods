@@ -4,11 +4,15 @@ const { UnauthenticatedError } = require('../errors')
 
 const authenticateUser = async (req, res, next) => {
   // check header
-  const authHeader = req.headers.authorization
+  const authHeader = req.headers.authorization;
+  console.log(authHeader,"hjdskjfhsdkj");
+
   if (!authHeader || !authHeader.startsWith('Bearer')) {
     // throw new UnauthenticatedError('Authentication invalid')
+    console.log("error from here!")
     return res.status(401).send('Authentication invalid')
   }
+  
   const token = authHeader.split(' ')[1]
 
   try {

@@ -59,6 +59,7 @@ formDOM.addEventListener('submit', async (e) => {
     tokenDOM.textContent = 'token present'
     tokenDOM.classList.add('text-success')
     navigate('/home.html'); 
+    
   } catch (error) {
     // formAlertDOM.style.display = 'block'
     // formAlertDOM.textContent = error.response.data.msg

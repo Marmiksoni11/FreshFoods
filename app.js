@@ -24,6 +24,7 @@ const authRoutes = require("./routes/authRoutes")
 const adminRoutes = require("./routes/adminRoutes")
 const userRoutes = require("./routes/userRoutes")
 const authenticateUser = require('./middleware/authentication');
+const useProfileRoutes = require("./routes/profileRoutes");
 
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
@@ -53,6 +54,8 @@ app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/productRoutes', authenticateUser, productRoutes)
 app.use('/api/v1/admin', adminRoutes)
 app.use('/api/v1/user', authenticateUser, userRoutes)
+app.use('/api/v1/profile',useProfileRoutes);
+
 
 
 const port = process.env.PORT || 3000

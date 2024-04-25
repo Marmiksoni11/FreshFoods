@@ -9,7 +9,7 @@ const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
 const register = async (req, res) => {
-
+  
   //*   FIELDS : 
   //    {
   //      "name":"userTry",
@@ -20,13 +20,15 @@ const register = async (req, res) => {
 
   const { make_admin } = req.body
   console.log(req.body);
-     const temp = {...req.body}
+     const temp = {...req.body,avatar: defaultAvatarUrl,CoverImage: defaultCoverImageUrl }
+      console.log(temp);
+
      if(make_admin){
         temp.role = "admin";
       } else { 
         temp.role = "user";
       }
-     const user = await User.create(temp)
+     const user = await User.create(temp);
      const token = user.createJWT()
      res.status(StatusCodes.CREATED).json({user:{name : user.name} ,token})
 }
