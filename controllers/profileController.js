@@ -2,21 +2,21 @@ const User = require("../models/authModels");
 
 const CoverImageUpdate = async (req, res) => {
     try {
-        console.log("//////CoverImage");
-      console.log(req.body)
+      
+      console.log(' ---- > ', req.body );
+      console.log(' ---- > ', req.file );
+      // console.log("req.user",req.user)
+      
+      // console.log()
       // Get the file path of the uploaded cover image
       const coverImagePath = req.file.path;
-      console.log(coverImagePath);
+
+      console.log('coverImagePath', coverImagePath);
       
-      // Update the user's cover image in the database
-      // Example:
       const userId = req.user.id;
 
-
-
-      console.log(userId)
-      const user = await User.findById(userId);
-      console.log(user);
+      const user = await User.findOne(userId);
+      // console.log(user);
       user.coverImage = coverImagePath;
       await user.save();
   

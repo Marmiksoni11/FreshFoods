@@ -5,7 +5,7 @@ const authTokens = localStorage.getItem('token');
 // Check if the token exists
 if (authToken) {
     // Fetch user details using the authentication token
-    fetch('http://localhost:4008/api/v1/user', {
+    fetch('http://localhost:3020/api/v1/user', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -20,8 +20,8 @@ if (authToken) {
     })
     .then(data => {
         
-        console.log('User details:', data.coverImage);
-        console.log('User details:', data.avatar);
+        // console.log('User details:', data.coverImage);
+        // console.log('User details:', data.avatar);
 
         
         // Update profile information
@@ -46,7 +46,7 @@ if (authToken) {
 
 if (authToken) {
     // Fetch user details using the authentication token
-    fetch('http://localhost:4008/api/v1/profile/update-avatar', {
+    fetch('http://localhost:3020/api/v1/profile/update-avatar', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -60,11 +60,11 @@ if (authToken) {
         throw new Error('Failed to fetch user details');
     })
     .then(data => {
-        console.log('User details:', data.avatar);
+        // console.log('User details:', data.avatar);
 
         // Construct the URL for the avatar image
-        const avatarUrl = `http://localhost:4008/${data.avatar}`;
-        console.log(avatarUrl,"kjsfkjhsdkjfhsdkhsdkj");
+        const avatarUrl = `http://localhost:3020/${data.avatar}`;
+        // console.log(avatarUrl,"kjsfkjhsdkjfhsdkhsdkj");
         // Update avatar image
         document.querySelector(".avatar-image").src = avatarUrl;
     })

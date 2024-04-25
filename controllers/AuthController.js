@@ -18,11 +18,8 @@ const register = async (req, res) => {
   //      "make_admin":false
   //    }
 
-  const { make_admin } = req.body
-  console.log(req.body);
-     const temp = {...req.body,avatar: defaultAvatarUrl,CoverImage: defaultCoverImageUrl }
-      console.log(temp);
-
+  const { make_admin } = req.body   
+  const temp = {...req.body } 
      if(make_admin){
         temp.role = "admin";
       } else { 

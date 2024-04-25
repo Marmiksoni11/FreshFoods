@@ -6,9 +6,11 @@ const router = express.Router();
 
 // Update Cover Image Endpoint
 
-router.route('/update-cover-image').post(authenticateUser,upload.single('coverImage'),CoverImageUpdate)
+// There is no need to authenticate user when upaloding image we dont have users Anyways 😂
+
+router.route('/update-cover-image').post(upload.single('coverImage'),CoverImageUpdate)
   
-// Update Avatar Endpoint
+
 router.route('/update-avatar').post(authenticateUser,upload.single('avatar'),AvatarImageUpdate)
 
 module.exports = router;
