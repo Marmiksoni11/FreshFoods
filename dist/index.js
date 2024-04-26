@@ -47,7 +47,7 @@ function increament(elementId) {
             item: currentQuantity
         });
     }
-    console.log(basket)
+    // console.log(basket)
 
 
     // Update the cart total
@@ -83,7 +83,7 @@ function decreament(elementId) {
                 basket = basket.filter((item) => item.id !== elementId);
             }
         }
-        console.log(basket)
+        // console.log(basket)
 
         // Update the cart total
         cartTotal--;

@@ -19,7 +19,7 @@ const navigate = (url) => {
   fetch(url) // Fetch content for the new page (optional)
   .then(response => response.text())
   .then(html => {
-    console.log(html);
+    // console.log(html);
     document.documentElement.innerHTML = html; // Update page content
     })
     .catch(error => console.error(error));
@@ -59,6 +59,7 @@ formDOM.addEventListener('submit', async (e) => {
     tokenDOM.textContent = 'token present'
     tokenDOM.classList.add('text-success')
     navigate('/home.html'); 
+    
   } catch (error) {
     // formAlertDOM.style.display = 'block'
     // formAlertDOM.textContent = error.response.data.msg
@@ -95,7 +96,7 @@ const checkToken = () => {
     window.dispatchEvent(new Event('popstate'));
   } 
   else{
-    console.log('------------- check login -------');
+    // console.log('------------- check login -------');
     
     if (window.location.pathname !== '/') {
       return window.location.href = '/';
