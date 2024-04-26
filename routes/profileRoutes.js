@@ -8,7 +8,7 @@ const router = express.Router();
 
 // There is no need to authenticate user when upaloding image we dont have users Anyways 😂
 
-router.route('/update-cover-image').post(upload.single('coverImage'),CoverImageUpdate)
+router.route('/update-cover-image').post(authenticateUser,upload.single('coverImage'),CoverImageUpdate)
   
 
 router.route('/update-avatar').post(authenticateUser,upload.single('avatar'),AvatarImageUpdate)

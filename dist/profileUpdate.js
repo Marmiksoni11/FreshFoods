@@ -3,17 +3,22 @@
 const updateCoverImage = async (formData) => {
   try {
     const authToken = localStorage.getItem('token');
+    console.log(authToken)
     
-    const response = await fetch('http://localhost:3020/api/v1/profile/update-cover-image', {
+    const response = await fetch('http://localhost:4008/api/v1/profile/update-cover-image', {
         method: 'POST',
         headers: {
-          'authorization': `Bearer ${authToken}` // Include authentication token if needed
+          'authorization': `Bearer ${authToken}`, // Include authentication token if needed
+          
+
         },
         body: formData
       });
 
       const data = await response.json();
+        console.log(data);
 
+       
     } catch (error) {
       console.error('Error updating cover image:', error);
     }
@@ -23,16 +28,20 @@ const updateCoverImage = async (formData) => {
   const updateAvatar = async (formData) => {
     try {
       const authToken = localStorage.getItem('token');
-      console.log('authToken from avatr',authToken);
-      const response = await fetch('http://localhost:3020/api/v1/profile/update-avatar', {
+      console.log('authToken from avatar',authToken);
+
+      const response = await fetch('http://localhost:4008/api/v1/profile/update-avatar', {
         method: 'POST',
         headers: {
-          'authorization': `Bearer ${authToken}` // Include authentication token if needed
+          'authorization': `Bearer ${authToken}`, // Include authentication token if needed
+          
         },
         body: formData
       });
       const data = await response.json();
-      // console.log('Updated avatar:', data);
+      console.log('Updated avatar:', data);
+     
+
       // Handle success or error responses from the backend
     } catch (error) {
       console.error('Error updating avatar:', error);

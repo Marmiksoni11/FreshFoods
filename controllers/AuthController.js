@@ -40,7 +40,7 @@ const login = async (req, res) => {
     }
     
     const user = await User.findOne({ email })
-
+    
     if (!user) {
       // throw new UnauthenticatedError('Invalid Credentials')
       return res.status(401).send('Invalid Credentials')

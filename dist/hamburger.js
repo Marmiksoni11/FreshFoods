@@ -1,5 +1,6 @@
 let menuToggle = document.querySelector(".menuToggle");
 let navigation = document.querySelector(".hamburgerManu");
+
 menuToggle.onclick = function () {
   navigation.classList.toggle("active");
 };
@@ -11,12 +12,13 @@ menuToggle.onclick = function () {
   // Check if the token exists
   if (authToken) {
       // Fetch user details using the authentication token
-      fetch('http://localhost:3020/api/v1/user', {
+      fetch('http://localhost:4008/api/v1/user', {
           method: 'GET',
           headers: {
+              'Authorization': `Bearer ${authToken}`, // Include the authentication token in the headers
               'Content-Type': 'application/json',
-              'Authorization': `Bearer ${authToken}` // Include the authentication token in the headers
-          }
+            
+               }
       })
           .then(response => {
               if (response.ok) {
@@ -25,13 +27,15 @@ menuToggle.onclick = function () {
               throw new Error('Failed to fetch user details');
           })
           .then(data => {
+
               console.log('User details:', data);
+              console.log('Avatar Image',data.avatar);
               
               // Update profile information
               document.querySelector("#uname").textContent = data.username;
              
              // Update avatar image
-              document.querySelector("#avatarImage").src = data.avatar;
+              document.querySelector(".avatarlogo").src = data.avatar;
               
              
           })
@@ -42,4 +46,3 @@ menuToggle.onclick = function () {
   } else {
       console.error('Authentication token not found in local storage');
   }
-// new 

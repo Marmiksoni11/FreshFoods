@@ -79,7 +79,7 @@
 <div class="hamburgerManu">
     <div class="userBx">
       <div class="imgBx">
-        <img id="avatarImage" src="./images/burger_1.JPG" alt="user avatar" />
+        <img id="avatarImage" class="avatarlogo" src="./images/burger_1.JPG" alt="user avatar" />
       </div>
       <p id="uname" class="username">FreshFoods</p>
     </div>
@@ -191,7 +191,7 @@
                         <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload Cover Image</button>
                   </form> -->
                     
-                  <form id="cover-image-form" enctype="multipart/form-data" action="http://localhost:3020/api/v1/profile/update-cover-image" method="POST">
+                  <form id="cover-image-form" enctype="multipart/form-data" action="/api/v1/profile/update-cover-image" method="POST">
                     <input type="file" name="coverImage" accept="image/*" id="cover-image-input" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     <label for="cover-image-input" >
                       <img src="../dist/images/9.jpg" alt="Cover Image" class="w-full h-32 object-cover rounded-t-lg cover-image">
@@ -200,12 +200,12 @@
                   </form>
 
                     <!-- Profile Image -->
-                  <form id="avatar-form" action="/api/v1/profile/update-avatar" method="post" enctype="multipart/form-data">
+                  <form id="avatar-form" enctype="multipart/form-data" action="/api/v1/profile/update-avatar">
                       <input type="file" name="avatar" class="hidden" id="avatar-input">
                       <label for="avatar-input">
                           <img src="../dist/images/BOWL.jpg" alt="Avatar" class="w-16 h-16 rounded-full absolute bottom-0 left-4 -mb-8 border-2 border-white avatar-image">
                         </label>
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload Avatar</button>
+                        <!-- <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload Avatar</button> -->
                   </form>
 
                     </div>
@@ -391,9 +391,9 @@
 <script src="/index.js"></script>
 <script src="./hamburger.js"></script>
 <script src="./profileUpdate.js"></script>
+<script src="./profile.js"></script>
 <script type="module" src="/cart.js"></script>
 <script type="module" src="./recommendation.js"></script>
-<script src="./profile.js"></script>
     </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
