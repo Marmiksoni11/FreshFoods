@@ -198,6 +198,12 @@
                     </label>
                     <button type="submit" id="upload-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload Cover Image</button>
                   </form> -->
+                  
+                  <!-- Cover Image -->
+                  
+                
+                
+                
                   <form id="cover-image-form" enctype="multipart/form-data" action="/api/v1/profile/update-cover-image" method="POST" class="flex flex-col items-center justify-center">
                     <!-- Hidden input for file selection -->
                     <input type="file" name="coverImage" accept="image/*" id="cover-image-input" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden" />
@@ -212,14 +218,11 @@
                         </div>
                     </label>
                     
-                    <!-- Transparent button for uploading -->
-                    <button type="submit" id="upload-button" class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-red-500 hover:via-pink-500 hover:to-purple-500 text-white font-bold py-1 px-2 rounded-sm mt-4 transition duration-300 ease-in-out transform hover:scale-105">
-                        <i class="fas fa-upload mr-2"></i> Upload Cover Image
+                    <!-- Transparent button for uploading with Font Awesome icon -->
+                    <button type="submit" id="upload-button" class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-red-500 hover:via-pink-500 hover:to-purple-500 text-white font-bold py-1 px-2 rounded-sm mt-4 transition duration-300 ease-in-out transform hover:scale-105 absolute bottom-0 right-0 mr-4 mb-4">
+                        <i class="fas fa-upload"></i>
                     </button>
                 </form>
-                
-                
-                
                 
                 
                   
