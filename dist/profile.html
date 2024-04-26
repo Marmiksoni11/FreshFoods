@@ -194,7 +194,7 @@
                   <form id="cover-image-form" enctype="multipart/form-data" action="/api/v1/profile/update-cover-image" method="POST">
                     <input type="file" name="coverImage" accept="image/*" id="cover-image-input" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     <label for="cover-image-input" >
-                      <img src="../dist/images/9.jpg" alt="Cover Image" class="w-full h-32 object-cover rounded-t-lg cover-image">
+                      <img src="" alt="Cover Image" class="w-full h-32 object-cover rounded-t-lg cover-image">
                     </label>
                     <button type="submit" id="upload-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload Cover Image</button>
                   </form>
@@ -203,7 +203,7 @@
                   <form id="avatar-form" enctype="multipart/form-data" action="/api/v1/profile/update-avatar">
                       <input type="file" name="avatar" class="hidden" id="avatar-input">
                       <label for="avatar-input">
-                          <img src="../dist/images/BOWL.jpg" alt="Avatar" class="w-16 h-16 rounded-full absolute bottom-0 left-4 -mb-8 border-2 border-white avatar-image">
+                          <img src="" alt="Avatar" class="w-16 h-16 rounded-full absolute bottom-0 left-4 -mb-8 border-2 border-white avatar-image">
                         </label>
                         <!-- <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload Avatar</button> -->
                   </form>
@@ -392,6 +392,7 @@
 <script src="./hamburger.js"></script>
 <script src="./profileUpdate.js"></script>
 <script src="./profile.js"></script>
+<script src="./fetchProfileDetails.js"></script>
 <script type="module" src="/cart.js"></script>
 <script type="module" src="./recommendation.js"></script>
     </body>
