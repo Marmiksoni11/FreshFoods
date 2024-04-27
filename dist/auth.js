@@ -1,5 +1,5 @@
 const formDOM = document.querySelector('.form');
-const usernameInputDOM = document.querySelector('.username-input')
+const usernameInputDOM = document.querySelector('.email-input')
 const passwordInputDOM = document.querySelector('.password-input')
 // const formAlertDOM = document.querySelector('.form-alert')
 const resultDOM = document.querySelector('.result')
@@ -9,8 +9,8 @@ const tokenDOM = document.querySelector('.token')
 const axios = window.axios;
 
 const routes = {
-  '/': '/login.html',
-  '/home.html': '/home.html' // Assuming you have separate HTML files
+  '/': './login.html',
+  '/home.html': './home.html' // Assuming you have separate HTML files
 }
 
 const navigate = (url) => {
@@ -19,7 +19,6 @@ const navigate = (url) => {
   fetch(url) // Fetch content for the new page (optional)
   .then(response => response.text())
   .then(html => {
-    console.log(html);
     document.documentElement.innerHTML = html; // Update page content
     })
     .catch(error => console.error(error));
@@ -38,7 +37,7 @@ window.addEventListener('popstate', () => {
 
 formDOM.addEventListener('submit', async (e) => {
     
-  // console.log('-------check --------------');
+
   
   // formAlertDOM.classList.remove('text-success')
   // tokenDOM.classList.remove('text-success')
@@ -59,6 +58,7 @@ formDOM.addEventListener('submit', async (e) => {
     tokenDOM.textContent = 'token present'
     tokenDOM.classList.add('text-success')
     navigate('/home.html'); 
+    
   } catch (error) {
     // formAlertDOM.style.display = 'block'
     // formAlertDOM.textContent = error.response.data.msg
@@ -91,18 +91,18 @@ const checkToken = () => {
     tokenDOM.classList.add('text-success');
     // window.location.href = '/home.html';  
     // Use History API for smoother navigation
-    window.history.pushState({}, '', '/home.html');
+    window.history.pushState({}, '', './home.html');
     window.dispatchEvent(new Event('popstate'));
   } 
   else{
-    console.log('------------- check login -------');
+
     
     if (window.location.pathname !== '/') {
       return window.location.href = '/';
     }
   }
   // else if (window.location.pathname !== '/login.html') {
-  //   console.log('---- check ----- token');
+
   //   window.location.href = '/';
   // }
   

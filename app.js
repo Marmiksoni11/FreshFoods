@@ -22,7 +22,9 @@ const notFound = require('./middleware/not-found');
 const productRoutes = require("./routes/productRoutes")
 const authRoutes = require("./routes/authRoutes")
 const adminRoutes = require("./routes/adminRoutes")
+const userRoutes = require("./routes/userRoutes")
 const authenticateUser = require('./middleware/authentication');
+const useProfileRoutes = require("./routes/profileRoutes");
 
 const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
@@ -30,7 +32,6 @@ const errorHandlerMiddleware = require('./middleware/error-handler');
 //* static middleware  
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// console.log(path.join(__dirname, 'dist'));
 
 // app.get('/home',(req,res)=>{
 //     res.status().sendFile(path.resolve(__dirname,('./index.html')));
@@ -51,6 +52,9 @@ app.use(errorHandlerMiddleware)
 app.use('/api/v1/auth', authRoutes)
 app.use('/api/v1/productRoutes', authenticateUser, productRoutes)
 app.use('/api/v1/admin', adminRoutes)
+app.use('/api/v1/user', authenticateUser, userRoutes)
+app.use('/api/v1/profile',useProfileRoutes);
+
 
 
 const port = process.env.PORT || 3000
