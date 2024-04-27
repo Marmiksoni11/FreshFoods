@@ -7,6 +7,7 @@
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
 
 *,
 ::before,
@@ -1054,6 +1055,7 @@ body{
   height: 400px;
   transition: width 0.5s, height 0.5s;
   transition-delay: 0s, 0.75s;
+  z-index: 5;
 }
 
 .hamburgerManu .userBx {
@@ -1296,6 +1298,7 @@ body{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position:relative;
 }
 
 #searchBox{
@@ -1324,15 +1327,26 @@ body{
   background: aliceblue;
   margin-left: 1rem;
   cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+.relative svg{
+  position: absolute;
+  z-index: 3;
+}
+.pos{
+  position: relative;
+  z-index: 3;
+  width: 33.6rem;
 }
 
 #search::after{
   content: "";
   background: url("./images/top-view-circular-food-frame.jpg")center center/cover no-repeat;
   height: 85vh;
-  
-  
- 
+  width: 100%;
+  position:absolute;
 }
 
 /* .sticky {
@@ -1422,21 +1436,22 @@ body{
     animation: slide 10s ease-in-out infinite; /* Apply the slide animation to all items */
 }
 
-  #categories h1 {
-  
+
+  /* #categories h1 {
     cursor: pointer;
-    position: absolute; /* Position label relative to the section */
-    top: 8%; /* Align label to the top */
-    left: 60%; /* Align label to the horizontal center */
-    transform: translateX(-50%); /* Adjust for horizontal centering */
+    position: absolute; 
+    top: 8%; 
+    left: 60%;
+    transform: translateX(-50%);
     font-size: 5rem;
-    margin-top: 50px; /* Add margin to create space between label and section */
-    color: #fff; /* Set label text color to white */
-    font-family: 'Arial', sans-serif; /* Change font family */
-    background: none; /* Remove background */
-    padding: 10px 20px; /* Add padding to the label */
-    border-radius: 0 0 19px 19px; /* Add border-radius to the label */
-  }
+    margin-top: 50px; 
+    color: #fff;
+    font-family: 'Arial', sans-serif; 
+    background: none; 
+    padding: 10px 20px;
+    border-radius: 0 0 19px 19px;
+  } */
+  
 /* Change text color of category titles on hover over h1 */
 
 
@@ -1480,19 +1495,14 @@ body{
   font-family: 'Verdana', sans-serif; /* Change font family */
   font-style: italic; /* Add italic style */
 }
-  /* Adjusted CSS for category section label */
+
 #categories h1 {
-  position: absolute; /* Position label relative to the section */
-  top: 0; /* Align label to the top */
-  right: 0; /* Align label to the right */
   font-size: 3rem;
-  margin-top: 0rem;
-  margin-bottom: 3.5rem;
-  color: #fff; /* Set label text color to white */
-  font-family: 'Arial', sans-serif; /* Change font family */
-  background: none; /* Remove background */
-  padding: 10px 20px; /* Add padding to the label */
-  border-radius: 0 0 0 19px; /* Add border-radius to the label */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  background: none;
+  margin-top: 4rem;
+  border-radius: 0 0 0 19px;
 }
 
 /* Change text of categories label on hover */
@@ -1550,10 +1560,10 @@ body{
 #bestSellers h1 {
   display: flex;
   justify-content: center;
-  font-size:90px;
+  font-size: 70px;
+  margin: 4rem 0rem;
   font-weight: 900;
-  font-family: 'Arial', sans-serif; /* Change font family */
-
+  font-family: 'Arial', sans-serif;
 }
 
 .twoItems{
@@ -1588,7 +1598,7 @@ body{
 
 .item {
   padding: 10px;
-  margin-left: 20px;
+  margin: 1rem 4rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   text-align: center;
@@ -1597,8 +1607,23 @@ body{
 .photo img {
   width: 100%;
   max-width: 20vw;
-  height: auto;
+  height: 225px;
   border-radius: 8px;
+}
+
+#detailBox { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem 0rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 1rem;
 }
 
 .details p {
@@ -1894,7 +1919,7 @@ footer{
   flex-direction: row;
   gap: 8px;
   font-size: 16px;
-  margin-top: 0.5rem;
+  margin-top: -0.5rem;
   justify-content: center;
 }
 
@@ -1917,7 +1942,9 @@ footer{
 #orderSec{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-right: 1rem;
+  margin-top: 1rem;
 }
 
 #orderSec a{
@@ -2219,6 +2246,7 @@ footer{
 
 
 @media (min-width: 768px) {
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2230,6 +2258,9 @@ footer{
   }
 }
 @media only screen and (max-width: 768px) {
+  #searchBox{
+    display: none;
+  }
   .twoItems {
     grid-template-columns: repeat(2, minmax(150px, 1fr));
   }
@@ -2530,3 +2561,15 @@ input:-moz-placeholder {
 
 
 
+#newSearch{
+  /* font-family: "Inter", sans-serif;
+  font-weight: 300; */
+
+}
+
+#searchInput {
+  padding: 0.5rem 3rem;
+  padding-right: 15rem;
+  z-index: 3;
+  position: relative;
+}

@@ -24,15 +24,21 @@ if(authToken) {
     .then(data => {
         
         // Update profile information
-        document.querySelector(".font-semibold").textContent = data.username;
-        document.querySelector(".useremail").textContent = data.email;
-        
+        const username = document.querySelector(".font-semibold");
+        if (username) {
+            username.textContent = data.username;
+        }
+  
+        const userEmail = document.querySelector(".useremail");
+        if (userEmail) {
+            userEmail.textContent = data.email;
+        }
+  
+        const coverImage = document.querySelector(".cover-image");
+        if (coverImage) {
+            coverImage.src = data.coverImage;
+        }
 
-        // Update cover image
-        document.querySelector(".cover-image").src = data.coverImage;
-        
-        // // Update full name
-        // document.querySelector(".userfullname").textContent = data.fullname;
     })
     .catch(error => {
         console.error('Error fetching user details:', error);

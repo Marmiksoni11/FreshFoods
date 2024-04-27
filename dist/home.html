@@ -67,7 +67,7 @@
     <div class="hamburgerManu">
         <div class="userBx">
           <div class="imgBx">
-            <img id="avatarImage" src="./images/burger_1.JPG" alt="user avatar" />
+            <img id="avatarImage" src="" alt="user avatar" />
           </div>
           <p id="uname" class="username">FreshFoods</p>
         </div>
@@ -101,10 +101,27 @@
     </nav> 
 
     <section id="search">
-        <div id="searchBox">
+        <!-- <div id="searchBox">
             <input type="search" name="" id="searchInput" placeholder="Search..">
             <input type="submit" id="submitInput" value="Search">
-        </div>
+        </div> -->
+
+          <div class="flex items-center justify-center p-32 flex-wrap"  id="newSearch">
+          
+            <div class="inline-flex flex-col justify-center relative text-gray-500">
+              <div class="relative">
+                <input type="text" class="input-field" id="searchInput" placeholder="Burgers" value="" />
+                <!-- <input type="submit" id="submitInput" value="Search"> -->
+                <svg class="w-4 h-4 absolute left-2.5 top-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <ul class=" pos input-suggest hidden bg-white pt-4 pb-4 border border-gray-100 rounded max-w-6xl mt-2 " style="color: chocolate;
+            ">
+              </ul>
+            </div>
+          </div>
+
     </section>
 
     <!-- <section id="categories" class="container mx-auto">
@@ -175,17 +192,11 @@
     </section> -->
     
     <section id="categories" class="container mx-auto relative">
-        <div class="centerCategoriesH1">
-            <h1 class="text-3xl font-bold mb-6" style="color: rgb(255, 120, 47);">Categories</h1>
-            
-            <div>
-  
-
-        
+        <h1 class="text-3xl font-bold mb-6" style="color: rgb(255, 120, 47);">Categories</h1>
         <div id="categoryBox" class="slideshow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
        
             <div class="category">
-                <h2 class="text-xl font-semibold mb-2">Pizzas</h2>
+                <h2 class="text-xl  mb-2">Pizzas</h2>
                 <div class="card">
                     <a href="./pizzas.html">
                         <img src="./images/pizza.jpg" alt="Pizzas" class="w-full">
@@ -196,7 +207,7 @@
             <!-- Add other categories similarly -->
             
             <div class="category">
-                <h2 class="text-xl font-semibold mb-2">Burgers</h2>
+                <h2 class="text-xl  mb-2">Burgers</h2>
                 <div class="card">
                     <a href="./Burgers.html">
                         <img src="/images/grilled-cheeseburger-with-tomato-sesame-bun-generative-ai.jpg" alt="Burgers" class="w-full">
@@ -205,7 +216,7 @@
             </div>
             
             <div class="category">
-                <h2 class="text-xl font-semibold mb-2">Thali</h2>
+                <h2 class="text-xl  mb-2">Thali</h2>
                 <div class="card">
                     <a href="./Thali.html">
                         <img src="https://curlytales.com/wp-content/uploads/2017/07/gujarati-thali.jpg" alt="Thali" class="w-full">
@@ -214,7 +225,7 @@
             </div>
             
             <div class="category">
-                <h2 class="text-xl font-semibold mb-2">Chinese</h2>
+                <h2 class="text-xl  mb-2">Chinese</h2>
                 <div class="card">
                     <a href="./chinese.html">
                         <img src="https://b.zmtcdn.com/data/dish_photos/c85/845ff1ccd2760d3d461bdd7dbcbd1c85.jpg?output-format=webp" alt="Chinese" class="w-full">
@@ -223,7 +234,7 @@
             </div>
             
             <div class="category">
-                <h2 class="text-xl font-semibold mb-2">Wraps & Rolls</h2>
+                <h2 class="text-xl  mb-2">Wraps & Rolls</h2>
                 <div class="card">
                     <a href="./wrapsNrolls.html">
                         <img src="https://b.zmtcdn.com/data/dish_photos/774/98640914782b2628ad7f2801464bb774.jpg" alt="Wraps & Rolls" class="w-full">
@@ -232,7 +243,7 @@
             </div>
             
             <div class="category">
-                <h2 class="text-xl font-semibold mb-2">Beverages</h2>
+                <h2 class="text-xl  mb-2">Beverages</h2>
                 <div class="card">
                     <a href="./Beverages.html">
                         <img src="https://b.zmtcdn.com/data/dish_photos/460/4b79b362f682c7913736891a1c286460.jpg" alt="Beverages" class="w-full">
@@ -294,9 +305,9 @@
 
                 <div id="detailBox">
                     <div class="details">
-                        <p>Double Aaloo Tikky Burger</p>
+                        <p>Double Aaloo Tikky </p>
                         <p> &#x20B9;150</p>
-                        <p>Burger King</p>
+                        <p style=" font-weight: 500 ; ">Burger King</p>
                     </div>
                     <div id="orderSec">
                         <div class="buttons">
@@ -320,7 +331,7 @@
                     <div class="details">
                         <p>Veg Ramen</p>
                         <p> &#x20B9;200</p>
-                        <p>Space Dragon</p>
+                        <p style=" font-weight: 500 ; ">Space Dragon</p>
                      </div>
                      <div id="orderSec">
                         <div class="buttons">
@@ -344,7 +355,7 @@
                 <div class="details">
                     <p>Chicken Tikky</p>
                     <p> &#x20B9;70</p>
-                    <p>Boss Burger</p>
+                    <p style=" font-weight: 500 ; ">Boss Burger</p>
                 </div>
                     <div id="orderSec">
                         <div class="buttons">
@@ -373,7 +384,7 @@
                 <div class="details">
                     <p>Cheese Veg Loaded</p>
                     <p> &#x20B9;400</p>
-                    <p>Little French House</p>
+                    <p style=" font-weight: 500 ; ">Little French House</p>
                 </div>
                     <div id="orderSec">
                         <div class="buttons">
@@ -397,7 +408,7 @@
                 <div class="details">
                     <p>Veggie Delite Burger</p>
                     <p> &#x20B9;80</p>
-                    <p>Tera Gourmet</p>
+                    <p style=" font-weight: 500 ; ">Tera Gourmet</p>
                 </div>
                     <div id="orderSec">
                         <div class="buttons">
@@ -422,7 +433,7 @@
                 <div class="details">
                     <p>North Indian Lunch</p>
                     <p> &#x20B9;100</p>
-                    <p>Thali & Co.</p>
+                    <p style=" font-weight: 500 ; ">Thali & Co.</p>
                 </div>
                     <div id="orderSec">
                         <div class="buttons">
@@ -571,13 +582,13 @@
     <footer>Copyright © 2023 - All Rights Reserved</footer>
 
 <!-- Sticky Navbar Scrolling effect -->
-<script src="/index.js"></script>
 <script src="./getUser.js"></script>
+<script src="./search.js"></script>
+<script src="./index.js"></script>
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<script src="./categories.js"></script>
+<!-- <script src="./categories.js"></script> -->
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<script src="./categories.js"></script>
-
+<!-- <script src="./categories.js"></script> -->
 <script src="./hamburger.js"></script>
 <!-- <script src="./fetchProfileDetails.js"></script> -->
 <script type="module" src="./Cart.js"></script>
