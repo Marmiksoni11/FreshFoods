@@ -12,7 +12,7 @@ menuToggle.onclick = function () {
   // Check if the token exists
   if (authToken) {
       // Fetch user details using the authentication token
-      fetch('http://localhost:4008/api/v1/user', {
+      fetch('http://localhost:3020/api/v1/user', {
           method: 'GET',
           headers: {
               'Authorization': `Bearer ${authToken}`, // Include the authentication token in the headers
@@ -28,8 +28,8 @@ menuToggle.onclick = function () {
           })
           .then(data => {
 
-              console.log('User details:', data);
-              console.log('Avatar Image',data.avatar);
+            //   console.log('User details:', data);
+            //   console.log('Avatar Image',data.avatar);
               
               // Update profile information
               document.querySelector("#uname").textContent = data.username;
@@ -57,7 +57,7 @@ menuToggle.onclick = function () {
 
 if(authToken) {
     // Fetch user details using the authentication token
-    fetch('http://localhost:4008/api/v1/user', {
+    fetch('http://localhost:3020/api/v1/user', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${authToken}`, // Include the authentication token in the headers
@@ -72,9 +72,9 @@ if(authToken) {
         throw new Error('Failed to fetch user details');
     })
     .then(data => {
-        console.log("User Details profile.js:",data,"FRom Profile.js ");
+        // console.log("User Details profile.js:",data,"FRom Profile.js ");
 
-            console.log(data.coverImage,"https:");
+        //     console.log(data.coverImage,"https:");
         // console.log('User details:', data.coverImage);
         // console.log('User details:', data.avatar);
 

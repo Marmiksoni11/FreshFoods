@@ -3,9 +3,9 @@
 const updateCoverImage = async (formData) => {
   try {
     const authToken = localStorage.getItem('token');
-    console.log(authToken)
+    // console.log(authToken)
     
-    const response = await fetch('http://localhost:4008/api/v1/profile/update-cover-image', {
+    const response = await fetch('http://localhost:3020/api/v1/profile/update-cover-image', {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
@@ -16,7 +16,7 @@ const updateCoverImage = async (formData) => {
       });
 
       const data = await response.json();
-        console.log(data);
+        // console.log(data);
 
        
     } catch (error) {
@@ -28,9 +28,9 @@ const updateCoverImage = async (formData) => {
   const updateAvatar = async (formData) => {
     try {
       const authToken = localStorage.getItem('token');
-      console.log('authToken from avatar',authToken);
+      // console.log('authToken from avatar',authToken);
 
-      const response = await fetch('http://localhost:4008/api/v1/profile/update-avatar', {
+      const response = await fetch('http://localhost:3020/api/v1/profile/update-avatar', {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
@@ -39,7 +39,7 @@ const updateCoverImage = async (formData) => {
         body: formData
       });
       const data = await response.json();
-      console.log('Updated avatar:', data);
+      // console.log('Updated avatar:', data);
      
 
       // Handle success or error responses from the backend
@@ -55,20 +55,20 @@ const updateCoverImage = async (formData) => {
     
 
     const formData = new FormData();
-    console.log(' --- --  > > Reached formData',formData);
+    // console.log(' --- --  > > Reached formData',formData);
 
     const file = event.target.elements['coverImage'].files[0];
 
     formData.append('coverImage', file);
 
-    if (file) {
-      console.log('File:', file);
+    // if (file) {
+    //   // console.log('File:', file);
       
-      // Now you can proceed to upload the file using fetch or any other method
-      // Call your function to upload the file here, passing formData if needed
-    } else {
-      console.log('No file selected.');
-    }
+    //   // Now you can proceed to upload the file using fetch or any other method
+    //   // Call your function to upload the file here, passing formData if needed
+    // } else {
+    //   // console.log('No file selected.');
+    // }
 
     // const file = event.target
 

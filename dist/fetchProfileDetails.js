@@ -1,7 +1,7 @@
 
 if (authToken) {
     // Fetch user details using the authentication token
-    fetch('http://localhost:4008/api/v1/profile/update-avatar', {
+    fetch('http://localhost:3020/api/v1/profile/update-avatar', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${authToken}`, // Include the authentication token in the headers
@@ -16,13 +16,19 @@ if (authToken) {
     })
     .then(data => {
         // console.log('User details:', data.avatar);
-        console.log(data,"got Avatar");
-
-        // Construct the URL for the avatar image
-        
-        // console.log(avatarUrl,"kjsfkjhsdkjfhsdkhsdkj");
-        // Update avatar image
+        // console.log(data,"got Avatar");
         document.querySelector(".avatar-image").src = data.avatar;
+        if (data.avatar) {
+
+
+            // console.log('founD Avtar');
+            
+            // document.querySelector("#getAvtar").innerHTML = `<p>cvxvcvvcv</p>`
+         
+
+        } else { 
+
+        }
     })
     .catch(error => {
         console.error('Error fetching user details:', error);
@@ -34,7 +40,7 @@ if (authToken) {
 // COVER IMAGE
 if (authToken) {
     // Fetch user details using the authentication token
-    fetch('http://localhost:4008/api/v1/profile/update-cover-image', {
+    fetch('http://localhost:3020/api/v1/profile/update-cover-image', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${authToken}`,
@@ -50,7 +56,7 @@ if (authToken) {
     })
     .then(data => {
         // console.log('User details:', data.avatar);
-        console.log(data,"got CoverImage from profile.js");
+        // console.log(data,"got CoverImage from profile.js");
         // Construct the URL for the avatar image
        
         // console.log(avatarUrl,"kjsfkjhsdkjfhsdkhsdkj");

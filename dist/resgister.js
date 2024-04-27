@@ -14,7 +14,7 @@ const navigate = (url) => {
     fetch(url) // Fetch content for the new page (optional)
     .then(response => response.text())
     .then(html => {
-      console.log(html);
+      // console.log(html);
       document.documentElement.innerHTML = html; // Update page content
       })
       .catch(error => console.error(error));
@@ -35,7 +35,7 @@ const navigate = (url) => {
   });
 
 submitButton.addEventListener('click', async (event) => {
-    console.log('-------check----');
+    // console.log('-------check----');
     
   event.preventDefault(); 
 
@@ -56,7 +56,7 @@ submitButton.addEventListener('click', async (event) => {
       password,
     })
 
-    console.log(data);
+    // console.log(data);
     navigate('/index.html');
     // Handle successful registration (e.g., display success message, redirect to login page)
     // resultDOM.innerHTML = '<p>Registration successful! Please log in.</p>';

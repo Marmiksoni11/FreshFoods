@@ -1226,7 +1226,7 @@ body{
  
 }
 
-#links li:hover{
+#links li:nth-child(-n+3):hover {
   background: #e0f1ff;
   border-radius: 37px;
   cursor: pointer;
