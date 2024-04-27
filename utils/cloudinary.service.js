@@ -22,8 +22,7 @@ try {
         // if we can assign auto it will get all info of file!
         resource_type:"auto"
     });
-    
-    console.log("file is uploaded in cloudnary!",file,file.url);
+
     // file.url gonna be store in database
     //after upload image it will remove from the public/temp/
     // this is method to unlinkSync!
@@ -33,7 +32,6 @@ try {
     
 } catch (error) {
     fs.unlinkSync(uploadfile) //remove the locally saved temprory file as upload operation failed!
-    console.log("error from file upload",error);
     return null;
 }  
 }

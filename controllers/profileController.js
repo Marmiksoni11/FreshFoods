@@ -4,10 +4,6 @@ const UploadOnCloudnary = require("../utils/cloudinary.service");
 const CoverImageUpdate = async (req, res) => {
   try {
 
-    console.log(req.body);
-    console.log(req.file);
-    console.log(req.user.email);
-
     if (!req.user) {
       return res.status(401).json({ message: 'User not authenticated' });
     }
@@ -22,7 +18,6 @@ const CoverImageUpdate = async (req, res) => {
     const cloudinaryResponse = await UploadOnCloudnary(req.file.path);
     const CoverImageUrl = cloudinaryResponse.secure_url; // Extracting the secure URL
     const updatedUserCoverImage = await User.findOneAndUpdate({ email : userEmail}, { coverImage: CoverImageUrl }, { new: true });
-    console.log(updatedUserCoverImage)
     if (!updatedUserCoverImage) {
       return res.status(404).json({ message: 'User not found' });
     }
@@ -54,7 +49,6 @@ const CoverImageUpdate = async (req, res) => {
       
       
       const updatedUserAvatar = await User.findOneAndUpdate({email:userEmail}, { avatar: avatarUrl }, { new: true });
-       console.log(updatedUserAvatar);
       if (!updatedUserAvatar) {
         return res.status(404).json({ message: 'User not found' });
       }

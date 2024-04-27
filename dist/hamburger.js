@@ -12,7 +12,7 @@ menuToggle.onclick = function () {
   // Check if the token exists
   if (authToken) {
       // Fetch user details using the authentication token
-      fetch('https://fresh-food-flame.vercel.app/api/v1/user', {
+      fetch('http://localhost:3020/api/v1/user', {
           method: 'GET',
           headers: {
               'Authorization': `Bearer ${authToken}`, // Include the authentication token in the headers
@@ -27,9 +27,6 @@ menuToggle.onclick = function () {
               throw new Error('Failed to fetch user details');
           })
           .then(data => {
-
-              console.log('User details:', data);
-              console.log('Avatar Image',data.avatar);
               
               // Update profile information
               document.querySelector("#uname").textContent = data.username;
@@ -57,7 +54,7 @@ menuToggle.onclick = function () {
 
 if(authToken) {
     // Fetch user details using the authentication token
-    fetch('https://fresh-food-flame.vercel.app/api/v1/user', {
+    fetch('http://localhost:3020/api/v1/user', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${authToken}`, // Include the authentication token in the headers
@@ -72,13 +69,6 @@ if(authToken) {
         throw new Error('Failed to fetch user details');
     })
     .then(data => {
-        console.log("User Details profile.js:",data,"FRom Profile.js ");
-
-            console.log(data.coverImage,"https:");
-        // console.log('User details:', data.coverImage);
-        // console.log('User details:', data.avatar);
-
-        
         // Update profile information
         document.querySelector(".font-semibold").textContent = data.username;
         document.querySelector(".useremail").textContent = data.email;

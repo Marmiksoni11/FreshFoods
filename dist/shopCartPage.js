@@ -12,8 +12,6 @@ import {
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
-console.log(basket)
-
 function removeItem(itemId) {
     // Find the index of the item to remove in the basket array
     const itemIndex = basket.findIndex(item => item.id === itemId);
@@ -66,8 +64,6 @@ let generateItems = () => {
 
             // Now you can calculate the total price    
             const totalPrice = priceNumeric * basketItem.item;
-            
-            // console.log(totalPrice)
             
             // Generate HTML for the item and append it to the itemWrapper
             itemWrapper.innerHTML += `

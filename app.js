@@ -32,7 +32,6 @@ const errorHandlerMiddleware = require('./middleware/error-handler');
 //* static middleware  
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// console.log(path.join(__dirname, 'dist'));
 
 // app.get('/home',(req,res)=>{
 //     res.status().sendFile(path.resolve(__dirname,('./index.html')));

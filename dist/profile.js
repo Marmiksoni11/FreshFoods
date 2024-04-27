@@ -1,4 +1,5 @@
 
+const profile  = () => {
 // Retrieve the authentication token from local storage
 const authToken = localStorage.getItem('token');
 
@@ -21,12 +22,6 @@ if(authToken) {
         throw new Error('Failed to fetch user details');
     })
     .then(data => {
-        console.log("User Details profile.js:",data,"FRom Profile.js ");
-
-            console.log(data.coverImage,"https:");
-        // console.log('User details:', data.coverImage);
-        // console.log('User details:', data.avatar);
-
         
         // Update profile information
         document.querySelector(".font-semibold").textContent = data.username;
@@ -46,4 +41,6 @@ if(authToken) {
     console.error('Authentication token not found in local storage');
 }
 
+}
 
+profile()

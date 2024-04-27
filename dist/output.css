@@ -1226,7 +1226,7 @@ body{
  
 }
 
-#links li:hover{
+#links li:nth-child(-n+3):hover {
   background: #e0f1ff;
   border-radius: 37px;
   cursor: pointer;
@@ -1639,7 +1639,7 @@ body{
 /* * ReachUs Section */
 
 #reachUs{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width:100%;
   display: grid;
   grid-template-columns: 50% 50%;

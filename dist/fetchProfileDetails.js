@@ -15,13 +15,6 @@ if (authToken) {
         throw new Error('Failed to fetch user details');
     })
     .then(data => {
-        // console.log('User details:', data.avatar);
-        console.log(data,"got Avatar");
-
-        // Construct the URL for the avatar image
-        
-        // console.log(avatarUrl,"kjsfkjhsdkjfhsdkhsdkj");
-        // Update avatar image
         document.querySelector(".avatar-image").src = data.avatar;
     })
     .catch(error => {
@@ -49,11 +42,6 @@ if (authToken) {
         throw new Error('Failed to fetch user details');
     })
     .then(data => {
-        // console.log('User details:', data.avatar);
-        console.log(data,"got CoverImage from profile.js");
-        // Construct the URL for the avatar image
-       
-        // console.log(avatarUrl,"kjsfkjhsdkjfhsdkhsdkj");
         // Update avatar image
         document.querySelector(".avatar-image").src = data.avatar ;
     })
