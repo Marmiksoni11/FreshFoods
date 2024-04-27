@@ -2,23 +2,8 @@
   "version": 2,
   "builds": [
     { "src": "dist/**", "use": "@vercel/static" },
-    { "src": "app.js", "use": "@vercel/node" },
-    { "src": "controllers/**", "use": "@vercel/node" },
-    { "src": "db/**", "use": "@vercel/node" },
-    { "src": "routes/**", "use": "@vercel/node" },
-    { "src": "models/**", "use": "@vercel/node" },
-    { "src": "src/**", "use": "@vercel/node" },
-    { "src": "middleware/**", "use": "@vercel/node" },
-    { "src": "utils/**", "use": "@vercel/node" },
-    {"src": "temp/**", "use": "@vercel/node"},
-    { "src": "app.js", "use": "@vercel/node" },
-    { "src": "package.json", "use": "@vercel/node" },
-    { "src": "populate.js", "use": "@vercel/node" },
-    { "src": "tailwind.config.js", "use": "@vercel/node" },
-    { "src": "package-lock.json", "use": "@vercel/node" },
-    { "src": "populate.js", "use": "@vercel/node" }
+    { "src": "app.js", "use": "@vercel/node" }
     
-
 
   ],
   "routes": [
