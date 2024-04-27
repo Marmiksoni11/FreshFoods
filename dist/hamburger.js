@@ -27,9 +27,6 @@ menuToggle.onclick = function () {
               throw new Error('Failed to fetch user details');
           })
           .then(data => {
-
-            //   console.log('User details:', data);
-            //   console.log('Avatar Image',data.avatar);
               
               // Update profile information
               document.querySelector("#uname").textContent = data.username;
@@ -72,13 +69,6 @@ if(authToken) {
         throw new Error('Failed to fetch user details');
     })
     .then(data => {
-        // console.log("User Details profile.js:",data,"FRom Profile.js ");
-
-        //     console.log(data.coverImage,"https:");
-        // console.log('User details:', data.coverImage);
-        // console.log('User details:', data.avatar);
-
-        
         // Update profile information
         document.querySelector(".font-semibold").textContent = data.username;
         document.querySelector(".useremail").textContent = data.email;

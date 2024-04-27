@@ -47,8 +47,6 @@ function increament(elementId) {
             item: currentQuantity
         });
     }
-    // console.log(basket)
-
 
     // Update the cart total
     cartTotal++;
@@ -83,7 +81,7 @@ function decreament(elementId) {
                 basket = basket.filter((item) => item.id !== elementId);
             }
         }
-        // console.log(basket)
+
 
         // Update the cart total
         cartTotal--;
@@ -132,7 +130,6 @@ var sticky = navbar.offsetTop;
 
 function myFunction() {
     if (window.scrollY >= sticky && window.scrollY <= 1300) {
-        // console.log(window.scrollY);
         navbar.classList.add("sticky");
         navbar.style.opacity = 1;
     } else {

@@ -19,7 +19,6 @@ const navigate = (url) => {
   fetch(url) // Fetch content for the new page (optional)
   .then(response => response.text())
   .then(html => {
-    // console.log(html);
     document.documentElement.innerHTML = html; // Update page content
     })
     .catch(error => console.error(error));
@@ -38,7 +37,7 @@ window.addEventListener('popstate', () => {
 
 formDOM.addEventListener('submit', async (e) => {
     
-  // console.log('-------check --------------');
+
   
   // formAlertDOM.classList.remove('text-success')
   // tokenDOM.classList.remove('text-success')
@@ -96,14 +95,14 @@ const checkToken = () => {
     window.dispatchEvent(new Event('popstate'));
   } 
   else{
-    // console.log('------------- check login -------');
+
     
     if (window.location.pathname !== '/') {
       return window.location.href = '/';
     }
   }
   // else if (window.location.pathname !== '/login.html') {
-  //   console.log('---- check ----- token');
+
   //   window.location.href = '/';
   // }
   
