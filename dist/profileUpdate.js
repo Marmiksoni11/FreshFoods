@@ -5,7 +5,7 @@ const updateCoverImage = async (formData) => {
     const authToken = localStorage.getItem('token');
     console.log(authToken)
     
-    const response = await fetch('https://https://fresh-food-flame.vercel.app/api/v1/profile/update-cover-image', {
+    const response = await fetch('https://fresh-food-flame.vercel.app/api/v1/profile/update-cover-image', {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
