@@ -1,7 +1,7 @@
 // Retrieve the authentication token from local storage
 const authToken = localStorage.getItem("token");
 if (authToken) {
-  fetch("https://fresh-food-r6dlb3vu7-smit-trivedis-projects.vercel.app/api/v1/user", {
+  fetch("https://fresh-food-flame.vercel.app/api/v1/user", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

@@ -12,7 +12,7 @@ menuToggle.onclick = function () {
   // Check if the token exists
   if (authToken) {
       // Fetch user details using the authentication token
-      fetch('https://fresh-food-r6dlb3vu7-smit-trivedis-projects.vercel.app/api/v1/user', {
+      fetch('https://https://fresh-food-flame.vercel.app/api/v1/user', {
           method: 'GET',
           headers: {
               'Authorization': `Bearer ${authToken}`, // Include the authentication token in the headers
@@ -57,7 +57,7 @@ menuToggle.onclick = function () {
 
 if(authToken) {
     // Fetch user details using the authentication token
-    fetch('https://fresh-food-r6dlb3vu7-smit-trivedis-projects.vercel.app/api/v1/user', {
+    fetch('https://https://fresh-food-flame.vercel.app/api/v1/user', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${authToken}`, // Include the authentication token in the headers

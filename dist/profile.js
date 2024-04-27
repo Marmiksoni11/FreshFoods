@@ -6,7 +6,7 @@ const authToken = localStorage.getItem('token');
 
 if(authToken) {
     // Fetch user details using the authentication token
-    fetch('https://fresh-food-r6dlb3vu7-smit-trivedis-projects.vercel.app/api/v1/user', {
+    fetch('https://fresh-food-flame.vercel.app/api/v1/user', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${authToken}`, // Include the authentication token in the headers
