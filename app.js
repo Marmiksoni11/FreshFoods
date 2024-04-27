@@ -42,9 +42,9 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.json())
 
 const corsOptions = {
-    origin: 'https://fresh-food-5cw69ouyx-smit-trivedis-projects.vercel.app/', // Replace with your Vercel deployment URL
-    // Other CORS options if needed
-  };
+  origin: ['http://localhost:4008', 'https://fresh-food-5cw69ouyx-smit-trivedis-projects.vercel.app'],
+  // Other CORS options if needed
+};
   
   //* Enable CORS
   app.use(cors(corsOptions));
