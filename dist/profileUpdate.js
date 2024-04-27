@@ -9,7 +9,7 @@ const updateCoverImage = async (formData) => {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
-          
+          'Content-Type': 'application/json'
 
         },
         body: formData
@@ -34,7 +34,7 @@ const updateCoverImage = async (formData) => {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
-          
+          'Content-Type': 'application/json'
         },
         body: formData
       });
