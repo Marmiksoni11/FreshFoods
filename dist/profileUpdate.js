@@ -5,7 +5,7 @@ const updateCoverImage = async (formData) => {
     const authToken = localStorage.getItem('token');
     console.log(authToken)
     
-    const response = await fetch('http://localhost:4008/api/v1/profile/update-cover-image', {
+    const response = await fetch('https://fresh-food-r6dlb3vu7-smit-trivedis-projects.vercel.app/api/v1/profile/update-cover-image', {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
@@ -30,7 +30,7 @@ const updateCoverImage = async (formData) => {
       const authToken = localStorage.getItem('token');
       console.log('authToken from avatar',authToken);
 
-      const response = await fetch('http://localhost:4008/api/v1/profile/update-avatar', {
+      const response = await fetch('https://fresh-food-r6dlb3vu7-smit-trivedis-projects.vercel.app/api/v1/profile/update-avatar', {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
