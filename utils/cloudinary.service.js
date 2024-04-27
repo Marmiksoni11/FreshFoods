@@ -8,9 +8,9 @@ const fs = require('fs');
 // this is our private credential details for the security purpose!
 // just need to create account and use service!
 cloudinary.config({
-    cloud_name:'dth7w1rdq',
-    api_key:'525564794518691',
-    api_secret:"2r-XpxOUZPYsf8eUpI9lBt9Aziw"
+    cloud_name:String(process.env.cloud_name),
+    api_key:String(process.env.api_key),
+    api_secret:String(process.env.api_secret)
 });
 
 // this function wants only file to upload on cloudinary!
