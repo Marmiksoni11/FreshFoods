@@ -39,10 +39,11 @@ app.use(express.static(path.join(__dirname, 'dist')));
 // })
 
 //* json middleware
+
 app.use(express.json())
 
 const corsOptions = {
-  origin: ['https://fresh-food-69gcqzp3c-smit-trivedis-projects.vercel.app'],
+  origin: '*',
   // Other CORS options if needed
 };
   
