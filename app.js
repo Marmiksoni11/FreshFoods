@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.json())
 
 const corsOptions = {
-  origin: ['http://localhost:4008', 'https://fresh-food-flame.vercel.app/'],
+  origin: ['https://fresh-food-69gcqzp3c-smit-trivedis-projects.vercel.app'],
   // Other CORS options if needed
 };
   
