@@ -1574,7 +1574,13 @@ body{
       flex-direction: column;
     }
   }
+  /* SMITT */
   @media screen and (max-width:765px) {
+
+    #bestSellers{
+      width:98%;
+    }
+    
     #best-seller-box h1{
       font-size:2.9rem;
       font-weight: 900;
@@ -1584,6 +1590,7 @@ body{
       
       flex-direction: column;
     }
+    
   }
 
 .item {
@@ -1650,6 +1657,10 @@ body{
 
 @media screen and (max-width:768px) {
 
+  #lefthelp{
+    position: relative;
+    top: 2%;
+   }
   #reachUs{
    
     margin-top: 10%;
@@ -1679,6 +1690,9 @@ body{
 
 }
 @media screen and (min-width:560px) and (max-width:589px) {
+  #lefthelp{
+    width: 100%;
+   }
   .rightSideIcon{
     position: relative;
   bottom: 25%;
@@ -1686,6 +1700,123 @@ body{
   }
 
 }
+/* SMIT */
+@media screen and (min-width:500px) and (max-width:561px) {
+  
+
+  #lefthelp{
+   width: 100%;
+  }
+  .rightSideIcon{
+    position: relative;
+    bottom: 28%;
+    right: 28%;
+  }
+ .helpbox h2{
+  
+  margin: 1rem 0rem;
+  color: #a5afb6;
+  font-size: 1rem;
+  font-weight:600;
+}
+
+  
+
+}
+@media screen and (min-width:450px) and (max-width:499px) {
+  
+  
+
+  #lefthelp{
+   width: 100%;
+  }
+  .helpbox{
+    width: 100%;
+  }
+
+  .rightSideIcon{
+    position: relative;
+    bottom: 33%;
+    right: 30%;
+  }
+
+ .helpbox h2{
+  
+  margin: 1rem 0rem;
+  color: #a5afb6;
+  font-size: 1rem;
+  font-weight:600;
+}
+
+  
+
+}
+@media screen and (min-width:450px) and (max-width:499px) {
+  
+  
+
+  #lefthelp{
+    position: relative;
+    right: 20%;
+   width: 100%;
+  }
+  .helpbox{
+    width: 100%;
+  }
+
+  .rightSideIcon{
+    position: relative;
+    bottom: 33%;
+    right: 30%;
+  }
+
+ .helpbox h2{
+  
+  margin: 1rem 0rem;
+  color: #a5afb6;
+  font-size: 1rem;
+  font-weight:600;
+}
+
+  
+
+}
+@media screen and (min-width:400px) and (max-width:449px) {
+  
+  #righthelp{
+    position: relative;
+    left: 10%;
+    
+   
+  }
+
+  #lefthelp{
+    position: relative;
+    right: 20%;
+   width: 100%;
+  }
+  .helpbox{
+    width: 100%;
+  }
+
+  .rightSideIcon{
+    position: relative;
+    bottom: 33%;
+    right: 30%;
+  }
+
+ .helpbox h2{
+  
+  margin: 1rem 0rem;
+  color: #a5afb6;
+  font-size: 1rem;
+  font-weight:600;
+}
+
+  
+
+}
+
 
 #lefthelp{
   position: relative;

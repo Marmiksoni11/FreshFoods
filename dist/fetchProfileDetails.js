@@ -1,3 +1,4 @@
+const authToken = localStorage.getItem('')
 
 if (authToken) {
     // Fetch user details using the authentication token

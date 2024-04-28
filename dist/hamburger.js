@@ -53,6 +53,7 @@ menuToggle.onclick = function () {
 // Check if the token exists
 
 if(authToken) {
+    
     // Fetch user details using the authentication token
     fetch('http://localhost:3020/api/v1/user', {
         method: 'GET',
