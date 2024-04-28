@@ -46,11 +46,42 @@ if (authToken) {
         </svg>`;
         
       }
-      document.querySelector(".font-semibold").textContent = data.username;
-      document.querySelector(".useremail").textContent = data.email;
-      document.querySelector(".cover-image").src = data.coverImage;
-      document.querySelector(".avatar-image").src = data.avatar;
-      document.querySelector(".userfullname").textContent = data.fullname;
+      // document.querySelector(".avatarImage").src = data.avatar;
+      // document.querySelector(".cover-image").src = data.coverImage;
+      // document.querySelector(".userfullname").textContent = data.fullname;
+      // document.querySelector(".font-semibold").textContent = data.username;
+      // document.querySelector(".useremail").textContent = data.email;
+
+      const avatarImage = document.querySelector("#avatarImage");
+      if (avatarImage) {
+          avatarImage.src = data.avatar;
+      }
+
+      const coverImage = document.querySelector(".cover-image");
+      if (coverImage) {
+          coverImage.src = data.coverImage;
+      }
+
+      const userFullName = document.querySelector(".userfullname");
+      if (userFullName) {
+          userFullName.textContent = data.fullname;
+      }
+
+      const usernameHamburger = document.querySelector("#uname");
+      if (usernameHamburger) {
+        usernameHamburger.textContent = data.username;
+      }
+
+      const username = document.querySelector(".font-semibold");
+      if (username) {
+          username.textContent = data.username;
+      }
+
+      const userEmail = document.querySelector(".useremail");
+      if (userEmail) {
+          userEmail.textContent = data.email;
+      }
+      
     })
     .catch((error) => {
       console.error("Error fetching user details:", error);

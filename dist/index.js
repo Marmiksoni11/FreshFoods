@@ -164,6 +164,23 @@ function myFunction() {
 //     categoryBox.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 // });
 
+// remove ad link anchor from slideshow div
+function removeAnchorTag() {
+    setTimeout(function() {
+        const elfsightDiv = document.querySelector(".elfsight-app-25eefd3b-863d-49b9-bbb1-16a6b53d2a6f");
+        if (elfsightDiv) {
+            const anchorTag = elfsightDiv.querySelector("div > a");
+            
+            if (anchorTag) {
+                anchorTag.remove();
+            }
+        }
+    }, 3000); 
+}
+document.addEventListener("DOMContentLoaded", function() {
+    removeAnchorTag();
+});
+
 //* automatic scroll on page load + click functions
 
 //! Slider  main:
@@ -227,10 +244,3 @@ preBtn.addEventListener('click', () => {
 
 
 
-
-
-
-
-
-
-//  mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
