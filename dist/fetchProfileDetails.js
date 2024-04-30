@@ -2,7 +2,7 @@ const authToken = localStorage.getItem('')
 
 if (authToken) {
     // Fetch user details using the authentication token
-    fetch('http://localhost:3020/api/v1/profile/update-avatar', {
+    fetch('https://fresh-food-flame.vercel.app/api/v1/profile/update-avatar', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${authToken}`, // Include the authentication token in the headers
@@ -28,7 +28,7 @@ if (authToken) {
 // COVER IMAGE
 if (authToken) {
     // Fetch user details using the authentication token
-    fetch('http://localhost:3020/api/v1/profile/update-cover-image', {
+    fetch('https://fresh-food-flame.vercel.app/api/v1/profile/update-cover-image', {
         method: 'GET',
         headers: {
             'Authorization': `Bearer ${authToken}`,

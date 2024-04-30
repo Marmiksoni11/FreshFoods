@@ -3,7 +3,7 @@
 const updateCoverImage = async (formData) => {
   try {
     const authToken = localStorage.getItem('token');
-    const response = await fetch('http://localhost:3020/api/v1/profile/update-cover-image', {
+    const response = await fetch('https://fresh-food-flame.vercel.app/api/v1/profile/update-cover-image', {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
@@ -24,7 +24,7 @@ const updateCoverImage = async (formData) => {
     try {
       const authToken = localStorage.getItem('token');
 
-      const response = await fetch('http://localhost:3020/api/v1/profile/update-avatar', {
+      const response = await fetch('https://fresh-food-flame.vercel.app/api/v1/profile/update-avatar', {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
