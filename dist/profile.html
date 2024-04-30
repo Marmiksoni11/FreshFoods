@@ -52,6 +52,7 @@
               <img src="" alt="" srcset="" id="getAvtar" style="
               width: 50px;
               height: 50px;
+              border-radius: 30px;
          ">
          
           </a>
@@ -64,7 +65,7 @@
 <div class="hamburgerManu">
     <div class="userBx">
       <div class="imgBx">
-        <img id="avatarImage" class="avatarlogo" src="" alt="user avatar" />
+        <img id="getAvtar" class="avatarlogo" src="" alt="user avatar" />
       </div>
       <p id="uname" class="username">FreshFoods</p>
     </div>
@@ -216,7 +217,7 @@
                   <form id="avatar-form" enctype="multipart/form-data" action="/api/v1/profile/update-avatar">
                       <input type="file" name="avatar" class="hidden" id="avatar-input">
                       <label for="avatar-input">
-                          <img src=""  alt="Avatar" class="w-16 h-16 rounded-full absolute bottom-0 left-4 -mb-8 border-2 border-white avatar-image cursor-pointer">
+                          <img src=""  alt="Avatar" id="avatarImage" class=" getAvtarw-16 h-16 rounded-full absolute bottom-0 left-4 -mb-8 border-2 border-white avatar-image cursor-pointer">
                         </label>
                         <!-- <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload Avatar</button> -->
                   </form>

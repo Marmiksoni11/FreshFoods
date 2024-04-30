@@ -292,37 +292,37 @@ const checkCategory = (clickedTerm) => {
 
   const navigate = (categoryMatch) => {
     if (categoryMatch === "Best Sellers" || categoryMatch === "bestSellers") {
-        window.location.href = `https://fresh-foods-alpha.vercel.app/home.html#bestSellers`;
+        window.location.href = `http://localhost:3020/home.html#bestSellers`;
         return;
       } 
 
       if (categoryMatch === "Burgers" || categoryMatch === "burger" ) {
-        window.location.href = `https://fresh-foods-alpha.vercel.app/Burgers.html`;
+        window.location.href = `http://localhost:3020/Burgers.html`;
         return;
       } 
 
       if (categoryMatch === "Pizzas" || categoryMatch === "pizza") {
-        window.location.href = `https://fresh-foods-alpha.vercel.app/pizzas.html`;
+        window.location.href = `http://localhost:3020/pizzas.html`;
         return;
       } 
 
       if (categoryMatch === "Thalis"  || categoryMatch === "thali") {
-        window.location.href = `https://fresh-foods-alpha.vercel.app/Thali.html`;
+        window.location.href = `http://localhost:3020/Thali.html`;
         return;
       } 
 
       if (categoryMatch === "Wraps" || categoryMatch === "Rolls"  || categoryMatch === "wrapsAndRolls")  {
-        window.location.href = `https://fresh-foods-alpha.vercel.app/wrapsNrolls.html`;
+        window.location.href = `http://localhost:3020/wrapsNrolls.html`;
         return;
       } 
 
       if (categoryMatch === "Beverages"  || categoryMatch === "beverages" )  {
-        window.location.href = `https://fresh-foods-alpha.vercel.app/Beverages.html`;
+        window.location.href = `http://localhost:3020/Beverages.html`;
         return;
       }
 
       if (categoryMatch === "Chinese"  || categoryMatch === "chinese")  {
-        window.location.href = `https://fresh-foods-alpha.vercel.app/chinese.html`;
+        window.location.href = `http://localhost:3020/chinese.html`;
         return;
       } 
   }

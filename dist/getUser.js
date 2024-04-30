@@ -3,7 +3,7 @@ const getUser = () => {
 // Retrieve the authentication token from local storage
 const authToken = localStorage.getItem("token");
 if (authToken) {
-  fetch("https://fresh-foods-alpha.vercel.app/api/v1/user", {
+  fetch("http://localhost:3020/api/v1/user", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -19,8 +19,10 @@ if (authToken) {
     .then((data) => {
 
       if(data.avatar){
+        
         const temp = document.querySelector("#getAvtar")
         document.querySelector("#getAvtar").src = data.avatar;
+
       } else {
         document.querySelector("#profileLink").innerHTML = `<svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_15_82)">
