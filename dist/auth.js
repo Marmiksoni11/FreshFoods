@@ -47,7 +47,7 @@ formDOM.addEventListener('submit', async (e) => {
   const password = passwordInputDOM.value
   
   try {
-    const { data } = await axios.post('https://fresh-foods-alpha.vercel.app/api/v1/auth/login', { email, password })
+    const { data } = await axios.post('/api/v1/auth/login', { email, password })
     console.log(data);
     
     // formAlertDOM.style.display = 'block'
