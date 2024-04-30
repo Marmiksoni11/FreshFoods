@@ -17,11 +17,12 @@ if (authToken) {
       throw new Error("Failed to fetch user details");
     })
     .then((data) => {
-
+      
       if(data.avatar){
         
         const temp = document.querySelector("#getAvtar")
         document.querySelector("#getAvtar").src = data.avatar;
+        document.querySelector("#getAvtar1").src = data.avatar;
 
       } else {
         document.querySelector("#profileLink").innerHTML = `<svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
