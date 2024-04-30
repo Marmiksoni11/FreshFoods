@@ -47,7 +47,7 @@ submitButton.addEventListener('click', async (event) => {
   const password = document.querySelector('.inputs input[type="password"]').value;
 
   try {
-    const { data } = await axios.post('/api/v1/auth/register', {
+    const { data } = await axios.post('https://fresh-foods-alpha.vercel.app/api/v1/auth/register', {
       name, 
       email,
       password,
