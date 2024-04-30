@@ -3,11 +3,12 @@
 const updateCoverImage = async (formData) => {
   try {
     const authToken = localStorage.getItem('token');
+    const boundary = '----WebKitFormBoundaryTadMSl6LiDSkAKtW'; 
     const response = await fetch('https://fresh-food-flame.vercel.app/api/v1/profile/update-cover-image', {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
-          
+          'Content-Type': `multipart/form-data; boundary=${boundary}`          
 
         },
         body: formData
@@ -23,12 +24,12 @@ const updateCoverImage = async (formData) => {
   const updateAvatar = async (formData) => {
     try {
       const authToken = localStorage.getItem('token');
-
+      const boundary = '----WebKitFormBoundaryTadMSl6LiDSkAKtW'; 
       const response = await fetch('https://fresh-food-flame.vercel.app/api/v1/profile/update-avatar', {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
-          
+          'Content-Type': `multipart/form-data; boundary=${boundary}`
         },
         body: formData
       });
