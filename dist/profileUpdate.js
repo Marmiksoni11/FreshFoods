@@ -6,8 +6,8 @@ const updateCoverImage = async (formData) => {
     const response = await fetch('https://fresh-food-flame.vercel.app/api/v1/profile/update-cover-image', {
         method: 'POST',
         headers: {
-          'authorization': `Bearer ${authToken}`, // Include authentication token if needed
-          
+            'authorization': `Bearer ${authToken}`, // Include authentication token if needed
+            'Content-Type': 'image/png'
 
         },
         body: formData
@@ -28,6 +28,7 @@ const updateCoverImage = async (formData) => {
         method: 'POST',
         headers: {
           'authorization': `Bearer ${authToken}`, // Include authentication token if needed
+          'Content-Type': 'image/png'
           
         },
         body: formData
@@ -43,6 +44,7 @@ const updateCoverImage = async (formData) => {
   };
   
   // Event listener for updating cover image
+  
   document.getElementById('cover-image-form').addEventListener('submit', function(event) {
     
     event.preventDefault();
