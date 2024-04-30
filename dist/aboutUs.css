@@ -172,13 +172,13 @@ body{
     color: rgb(255, 71, 71);
     cursor: pointer;
 }
-#righthelp{
+/* #righthelp{
     position: relative;
     left: 20%;
     top: 50%;
     height: 16%;
     width: 27%;
-}
+} */
 #righthelp a{
     margin: 0rem 0.2rem;
 }
@@ -187,7 +187,7 @@ body{
     display: inline;
     vertical-align: 0%;
 }
-#righthelp a:nth-child(3){
+/* #righthelp a:nth-child(3){
     position: relative;
     bottom:27%;
 }
@@ -198,7 +198,7 @@ body{
 #righthelp a:nth-child(5){
     position: relative;
     bottom:27%;
-}
+} */
 
 #righthelp a:nth-child(3) path{
     transition: all .2s cubic-bezier(.15,.69,.83,.67);

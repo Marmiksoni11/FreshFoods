@@ -41,8 +41,14 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.json())
 
 
-//* Enable CORS
-app.use(cors());
+// var corsOptions = {
+//     origin: "http://localhost:3030"
+//   };
+  
+// //* Enable CORS
+// app.use(cors(corsOptions));
+
+  app.use(cors());
 //! handling errors after wrapping the contorllers so that our previos errors can work
 
 app.use(errorHandlerMiddleware)

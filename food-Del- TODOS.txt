@@ -25,3 +25,13 @@ add navbar js in all the html files  ---- (DONE)
 tommorow :
 
 3. After adding products implement searching and sorting functionalities
+
+
+
+// {
+//     "version": 2,
+//     "rewrites": [
+//       { "source": "/api/v1/(.*)", "destination": "/api/v1/" },
+//       { "source": "/(.*)", "destination": "/" }
+//     ]
+//   }

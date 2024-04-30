@@ -1026,180 +1026,6 @@ body{
   display: none;
 }
 
-@media screen and (max-width:769px){
-
-  #links{
-  display: none;  
-}
-
-.hamburgerManu{
-  display: none;
-}
-
-.hamburgerManu {
-  position: absolute;
-  right: 50%;
-  width: 120px;
-  height: 60px;
-  background: #fff;
-  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  transition: height 0.5s, width 0.5s;
-  transition-delay: 0s, 0.75s;
-  overflow: hidden;
-}
-
-.hamburgerManu.active {
-  width: 300px;
-  height: 400px;
-  transition: width 0.5s, height 0.5s;
-  transition-delay: 0s, 0.75s;
-  z-index: 5;
-}
-
-.hamburgerManu .userBx {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  transition: 0.5s;
-  transition-delay: 0.5s;
-}
-
-.hamburgerManu.active .userBx {
-  width: calc(100% - 60px);
-  transition-delay: 0s;
-}
-
-.hamburgerManu .userBx .username {
-  white-space: nowrap;
-  color: #555;
-  font-size: 1.1em;
-}
-
-.hamburgerManu .userBx .imgBx {
-  position: relative;
-  min-width: 60px;
-  height: 60px;
-  overflow: hidden;
-  background: #000;
-  border-radius: 50%;
-  border: 10px solid #fff;
-}
-
-.hamburgerManu .userBx .imgBx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.menu {
-  position: absolute;
-  width: 100%;
-  height: calc(100% - 60px);
-  margin-top: 60px;
-  padding: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.menu li {
-  list-style: none;
-}
-
-.menu li a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 20px 0;
-  font-size: 1em;
-  text-decoration: none;
-  color: #555;
-}
-
-.menu li a:hover {
-  color: #4e65ff;
-}
-
-.menu li a ion-icon {
-  font-size: 1.5em;
-}
-
-.hamburgerManu .menuToggle {
-  position: relative;
-  width: 60px;
-  height: 60px; /* Ensure it has a defined size */
-  background: #fff;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Styles for the hamburger lines */
-.hamburgerManu .menuToggle::before,
-.hamburgerManu .menuToggle::after {
-  content: "";
-  position: absolute;
-  width: 32px;
-  height: 2px;
-  background: #555;
-  transition: 0.5s;
-}
-
-/* Positioning for the hamburger lines */
-.hamburgerManu .menuToggle::before {
-  transform: translateY(-10px);
-  box-shadow: 0 10px #555;
-}
-
-.hamburgerManu .menuToggle::after {
-  transform: translateY(10px);
-}
-
-/* Animation for the active state */
-.hamburgerManu.active .menuToggle::before {
-  transform: translateY(0px) rotate(45deg);
-  box-shadow: 0 0 #555;
-}
-
-.hamburgerManu.active .menuToggle::after {
-  transform: translateY(0px) rotate(-45deg);
-}
-
-/* End Hamburger */
-
-@media (max-width:770px){
-  
-  .hamburgerManu{
-    display: flex;
-    position: absolute;
-    right: 0;
-    margin-top: 2.5%;
-    }
-}
-.hamburgerManu .menuToggle::before,
-  .hamburgerManu .menuToggle::after {
-    display: block; /* Ensure the lines are visible */
-  }
-.hamlinks {
-  display: none;
-}
-
-.hamburgerMenu {
-  position: relative;
-  z-index: 999; /* Ensure the hamburger menu appears above the content but below the navbar */
-}
-
-
-
-}
 
 /* Hamburger Animation */
 @keyframes slide-in-right {
@@ -1318,6 +1144,10 @@ body{
   padding-left: 1rem;
   border: 2px solid black;
   font-size: 1.1rem;
+  padding: 0.5rem 3rem;
+  padding-right: 15rem;
+  z-index: 1;
+  position: relative;
 }
 
 #submitInput{
@@ -1333,7 +1163,7 @@ body{
 
 .relative svg{
   position: absolute;
-  z-index: 3;
+  z-index: 1;
 }
 .pos{
   position: relative;
@@ -1607,7 +1437,7 @@ body{
 
 .photo img {
   width: 100%;
-  max-width: 20vw;
+  /* max-width: 20vw; */
   height: 225px;
   border-radius: 8px;
 }
@@ -1672,45 +1502,6 @@ body{
   grid-template-rows: 100%;
   height: 26vh;
   border-top: 1px solid #e7e7e7;
-}
-
-@media screen and (max-width:768px) {
-
-  #reachUs{
-   
-    margin-top: 10%;
-    margin-left: 10%;
-    width: 70%;
-    height:100%;
-    grid-template-columns:50% 50% ;
-    grid-template-rows:100%;
-    
-   
-   
-  }
-  .rightSideIcon{
-    position: relative;
-    bottom: 20%;
-    right: 7%;
-  }
- 
-}
-
-@media screen and (min-width:590px) and (max-width:768px) {
-  .rightSideIcon{
-    position: relative;
-  bottom: 25%;
-    right: 20%;
-  }
-
-}
-@media screen and (min-width:560px) and (max-width:589px) {
-  .rightSideIcon{
-    position: relative;
-  bottom: 25%;
-    right: 20%;
-  }
-
 }
 
 #lefthelp{
@@ -1785,8 +1576,8 @@ body{
 #righthelp{
   display: grid;
   grid-gap: 0px;
-  top: 10%;
-  left: 50%;
+  /* top: 10%;
+  left: 50%; */
   grid-template-rows: 50% 50%;
   height: auto;
   width: 100%;
@@ -1871,7 +1662,7 @@ footer{
   border-top: 1px solid #e4e4e4;
 }
 @media only screen and (max-width: 768px) {
-  #reachUs {
+  /* #reachUs {
     flex-direction: column;
     height: auto;
   }
@@ -1889,7 +1680,7 @@ footer{
     height: auto;
     width: auto;
     margin-top: 1rem;
-  }
+  } */
 }
 
 
@@ -2049,6 +1840,31 @@ footer{
   .twoItems {
     grid-template-columns: minmax(100px, 1fr);
   }
+  .item{
+    margin: 1rem;
+    margin-left: 1rem;
+    width: 300px;
+}
+  
+  #logo p {
+    font-size: 1.2rem;
+  }
+  #logo img {
+    height: 3em;
+  }
+  #navbar {
+    height: 4.5rem;
+  }
+  #logo {
+    left: 3%;
+  }
+  .relative svg {
+    z-index: 1;
+  }
+  #searchInput {
+    z-index: 1;
+  
+}
 }
 /* for shopping cart */
 
@@ -2560,17 +2376,243 @@ input:-moz-placeholder {
 
 
 
+  @media screen and (max-width:768px) {
+    #reachUs{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 34vh;
+      border: none;
+    }
+    #reachUs a {
+      margin: 0.5rem 0rem;
+    }
+    .rightSideIcon{        
+      padding-left: 2.5rem;
+      margin-top: 1rem;
+    }
+    #lefthelp{
+          display: flex;
+      flex-direction: column;
+      height: 50vh;
+      margin: 0rem;
+      bottom: 0%;
+    }
+    footer {
+      margin-top: 20rem;
+    }
+    #righthelp{
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+    }
+    .leftSideIcon {        
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-left: 2.5rem;
+      margin-top: -1.2rem;
+      margin-bottom: 1rem;
+    }
+  
+}
+/* 
+  @media screen and (min-width:590px) and (max-width:768px) {
+    .rightSideIcon{
 
+    }
+  
+  }
+  @media screen and (min-width:560px) and (max-width:589px) {
+    .rightSideIcon{
 
-#newSearch{
-  /* font-family: "Inter", sans-serif;
-  font-weight: 300; */
+    }
+  
+  } */
+  
+  @media screen and (max-width:769px){
 
+    #links{
+    display: none;  
+  }
+  
+  .hamburgerManu{
+    display: none;
+  }
+  
+  .hamburgerManu {
+    position: absolute;
+    right: 50%;
+    width: 120px;
+    height: 60px;
+    background: #fff;
+    /* box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    justify-content: space-between;
+    transition: height 0.5s, width 0.5s;
+    transition-delay: 0s, 0.75s;
+    overflow: hidden;
+  }
+  
+  .hamburgerManu.active {
+    width: 300px;
+    height: 400px;
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s, 0.75s;
+    z-index: 5;
+  }
+  
+  .hamburgerManu .userBx {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+  }
+  
+  .hamburgerManu.active .userBx {
+    width: calc(100% - 60px);
+    transition-delay: 0s;
+  }
+  
+  .hamburgerManu .userBx .username {
+    white-space: nowrap;
+    color: #555;
+    font-size: 1.1em;
+  }
+  
+  .hamburgerManu .userBx .imgBx {
+    position: relative;
+    min-width: 60px;
+    height: 60px;
+    overflow: hidden;
+    background: #000;
+    border-radius: 50%;
+    border: 10px solid #fff;
+  }
+  
+  .hamburgerManu .userBx .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .menu {
+    position: absolute;
+    width: 100%;
+    /* height: calc(100% - 60px); */
+    margin-top: 60px;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 1em;
+    text-decoration: none;
+    color: #555;
+  }
+  
+  .menu li a:hover {
+    color: #4e65ff;
+  }
+  
+  .menu li a ion-icon {
+    font-size: 1.5em;
+  }
+  
+  .hamburgerManu .menuToggle {
+    position: relative;
+    width: 60px;
+    height: 60px; /* Ensure it has a defined size */
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Styles for the hamburger lines */
+  .hamburgerManu .menuToggle::before,
+  .hamburgerManu .menuToggle::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #555;
+    transition: 0.5s;
+  }
+  
+  /* Positioning for the hamburger lines */
+  .hamburgerManu .menuToggle::before {
+    transform: translateY(-10px);
+    box-shadow: 0 10px #555;
+  }
+  
+  .hamburgerManu .menuToggle::after {
+    transform: translateY(10px);
+  }
+  
+  /* Animation for the active state */
+  .hamburgerManu.active .menuToggle::before {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #555;
+  }
+  
+  .hamburgerManu.active .menuToggle::after {
+    transform: translateY(0px) rotate(-45deg);
+  }
+  
+  /* End Hamburger */
+  
+  @media (max-width:770px){
+    
+    .hamburgerManu{
+      display: flex;
+      position: absolute;
+      right: 0;
+      margin-top: 2.5%;
+      }
+  }
+  .hamburgerManu .menuToggle::before,
+    .hamburgerManu .menuToggle::after {
+      display: block; /* Ensure the lines are visible */
+    }
+  .hamlinks {
+    display: none;
+  }
+  
+  .hamburgerMenu {
+    position: relative;
+    z-index: 999;
+  }
+  
+  }
+  
+  
+#contactBG{
+  background-image: url('../dist/images/noodles-with-vegetables-with-copy-space.jpg'); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
 }
 
-#searchInput {
-  padding: 0.5rem 3rem;
-  padding-right: 15rem;
-  z-index: 3;
-  position: relative;
+.inputsFromForm textarea::placeholder, 
+.inputsFromForm  input::placeholder{
+  color: #000;
 }
